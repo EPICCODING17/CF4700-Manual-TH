@@ -1,0 +1,26 @@
+<!--TITLE:3.2 ตารางคำสั่ง Key ตั้งค่าการวัด-->
+<div class="subhead"><span class="sq"></span>คำสั่ง Key ตั้งค่าการวัด (Measurement Setting Key Commands)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Average</strong></td><td>ตั้งค่า Average</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Mode</strong></td><td>ตั้งค่าโหมด Average</td><td><span class="code">SetAverageModeFlag</span></td><td>0: Time axis arithmetic mean<br>1: Time axis exponential mean<br>2: Power spectrum arithmetic mean<br>3: Power spectrum exponential mean<br>4: Power spectrum peak hold<br>7: Fourier spectrum arithmetic mean<br>8: Fourier spectrum exponential mean<br>9: Histogram arithmetic mean<br>10: Power spectrum MAX O.A.<br>11: Fourier spectrum MAX O.A.</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAverageModeFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Type</strong></td><td>เงื่อนไขการ Average</td><td><span class="code">SetAverageTypeFlag</span></td><td>0: Number of times<br>1: Duration</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAverageTypeFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Count</strong></td><td>จำนวนครั้งของการ Average</td><td><span class="code">SetAverageNumberValue</span></td><td>1 to 65535</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAverageNumberValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Time</strong></td><td>เวลาที่ใช้ Average</td><td><span class="code">SetAverageSecValue</span></td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAverageSecValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Exponential Weight</strong></td><td>ค่าถ่วงน้ำหนักของ Exponential average</td><td><span class="code">SetAverageWeightValue</span></td><td>1 to 65535</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAverageWeightValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Start Overlap 0%</strong></td><td>Overlap 0% ที่จุดเริ่มต้น</td><td><span class="code">SetAverageStartOverlapOnOff</span></td><td>0: OFF<br>1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAverageStartOverlapOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Data Type</strong></td><td>ประเภทข้อมูล</td><td><span class="code">SetDataKindFlag</span></td><td>1: Time waveform<br>8: Fourier spectrum<br>11: Power spectrum<br>12: Bundled octave<br>17: Histogram<br>19: Tracking (power)</td></tr>
+<tr><td></td><td></td><td><span class="code">GetDataKindFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Data Disp Format</strong></td><td>รูปแบบการแสดงผลข้อมูล</td><td><span class="code">SetDataAttrFlag</span></td><td>0: Real<br>1: Imag<br>2: Mag<br>3: Phese<br>0: PDF<br>1: CDF<br>0: 1/1<br>1: 1/3</td></tr>
+<tr><td></td><td></td><td><span class="code">GetDataAttrFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Schedule</strong></td><td>ตั้งค่า Schedule</td><td><span class="code">OpenDialogTrackInput</span></td><td>&mdash;</td></tr>
+<tr><td><strong>File to Current</strong></td><td>เชื่อมต่อกับข้อมูลปัจจุบัน (Current)</td><td><span class="code">ExecuteConnectCurrent</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

@@ -1,0 +1,59 @@
+<!--TITLE:3.1 คลาส CF9000Controller ภาษา VBA-->
+<h3><span class="h3-num">3</span>รายการคำสั่งอ้างอิง (Command Reference)</h3>
+<h3><span class="h3-num">3.1</span>คลาส CF9000Controller (CF9000Controller Class)</h3>
+<p>เมื่อเขียนโปรแกรมสำหรับฟังก์ชันควบคุมภายนอกผ่าน LAN ของ CF-4700 ห้ามเรียกใช้คำสั่งแต่ละคำสั่งโดยตรง แต่ให้เรียกผ่านเมธอดของคลาส CF9000Controller ดังแสดงด้านล่าง โดยแต่ละคำสั่งจะถูกเรียกใช้งานด้วยการกำหนดชื่อคำสั่งที่เกี่ยวข้องไว้ในอาร์กิวเมนต์ของฟังก์ชัน Execute</p>
+
+<div class="subhead"><span class="sq"></span>การใช้งานด้วย VBA (Commands using VBA)</div>
+<p>ใน VBA คำสั่ง Execute เป็นฟังก์ชันที่มีให้เลือกใช้ตามจำนวนอาร์กิวเมนต์ (0 ถึง 6)</p>
+
+<div class="subhead"><span class="sq"></span>ชื่อคลาส (Class name)</div>
+<p><span class="code">CF9000Controller</span></p>
+<p>ตัวอย่าง (Example) — การสร้างอินสแตนซ์ (Instance generation)</p>
+<div class="codeblock">Dim cFController As New CF9000Controller</div>
+
+<div class="subhead"><span class="sq"></span>เมธอดคำสั่ง (Command methods)</div>
+
+<div class="api-card">
+  <div class="api-sig">Execute (commandName As String) As String</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+  <div class="api-example codeblock">cFController.Execute(<span class="cm">"KeySTART"</span>);</div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">Execute_2 (commandName As String, arg1 As String) As String</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>Argument 2</div><div>arg1</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+  <div class="api-example codeblock">cFController.Execute_2(<span class="cm">"SetAverageTypeFlag"</span>,<span class="cm">"0"</span>);</div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">Execute_3 (commandName As String, arg1 As String, arg2 As String) As String</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>Argument 2</div><div>arg1</div>
+    <div>Argument 3</div><div>arg2</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+  <div class="api-example codeblock">cFController.Execute_3(<span class="cm">"SetInputCCLDOnOff"</span>,<span class="cm">"0"</span>,<span class="cm">"1"</span>);</div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">Execute_4 (commandName As String, arg1 As String, arg2 As String, arg3 As String) As String</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>Argument 2</div><div>arg1</div>
+    <div>Argument 3</div><div>arg2</div>
+    <div>Argument 4</div><div>arg3</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+</div>

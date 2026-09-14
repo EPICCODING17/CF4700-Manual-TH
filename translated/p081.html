@@ -1,0 +1,35 @@
+<!--TITLE:3.2 ตารางคำสั่ง Key ตั้งค่า Input-->
+<div class="subhead"><span class="sq"></span>คำสั่ง Key ตั้งค่า Input (Input Setting Key Commands)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Input Cond</strong></td><td>ตั้งค่า Input</td><td><span class="code">OpenDialogInputCond</span></td><td>&mdash;</td></tr>
+<tr><td><strong>EU</strong></td><td>ตั้งค่าหน่วยและการคาลิเบรต</td><td><span class="code">OpenDialogEUYUnit</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Sample</strong></td><td>ตั้งค่าเงื่อนไขการสุ่มตัวอย่าง (Sample)</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Sample Clock</strong></td><td>เลือกประเภทการสุ่มตัวอย่างของ FFT</td><td><span class="code">SetSampleClockFlag</span></td><td>0: Internal<br>1: External</td></tr>
+<tr><td></td><td></td><td><span class="code">GetSampleClockFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Sample Length</strong></td><td>จำนวนตัวอย่าง (Sample)</td><td><span class="code">SetSampleFrameFlag</span></td><td>2: 256<br>3: 512<br>4: 1024<br>5: 2018<br>6: 4096<br>7: 8192<br>8: 16384</td></tr>
+<tr><td></td><td></td><td><span class="code">GetSampleFrameFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Frequency Resolution</strong></td><td>ความละเอียดความถี่</td><td><span class="code">GetDeltaFreqValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Overlap</strong></td><td>ปริมาณ Overlap</td><td><span class="code">SetSampleOverlapFlag</span></td><td>0: Max<br>1: 75%<br>2: 66.7%<br>3: 50%<br>4: 25%<br>5: 0%<br>6: Custom</td></tr>
+<tr><td></td><td></td><td><span class="code">GetSampleOverlapFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>User-Set Overlap</strong></td><td>ปริมาณ Overlap ที่ผู้ใช้กำหนดเอง</td><td><span class="code">SetSampleOverlap</span></td><td>0 to 99</td></tr>
+<tr><td></td><td></td><td><span class="code">GetSampleOverlap</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Over Cancel</strong></td><td>ยกเลิกสัญญาณ A/D overflow</td><td><span class="code">SetSampleADOverCancelOnOff</span></td><td>0: OFF<br>1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetSampleADOverCancelOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Trigger</strong></td><td>Trigger</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Trigger Set</strong></td><td>ตั้งค่าเงื่อนไข Trigger</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Mode</strong></td><td>โหมด Trigger</td><td><span class="code">SetTrigModeFlag</span></td><td>0: Repeat<br>1: Single<br>2: OneShot</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigModeFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Source</strong></td><td>แหล่งสัญญาณ Trigger</td><td><span class="code">SetTrigSourceFlag</span></td><td>0: Internal<br>1: External</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigSourceFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Position</strong></td><td>ตำแหน่ง Trigger</td><td><span class="code">TrigPositionValue</span></td><td>&minus;8191 to +8191 points</td></tr>
+<tr><td><strong>Int Trigger</strong></td><td>Trigger ภายใน (Internal)</td><td><span class="code">OpenViewTrig</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Ext Trigger</strong></td><td>Trigger ภายนอก (External)</td><td><span class="code">OpenExtViewTrig</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Window</strong></td><td>ตั้งค่าฟังก์ชัน Window</td><td><span class="code">SetWindowTypeFlag</span></td><td>0: Rectangular<br>1: Hanning<br>2: FlatTop</td></tr>
+<tr><td></td><td></td><td><span class="code">GetWindowTypeFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Time Pre</strong></td><td>ตั้งค่าการประมวลผลก่อนของแกนเวลา (time-axis)</td><td><span class="code">OpenDialogTimePre</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Ext Sample</strong></td><td>ตั้งค่า Input การหมุน (Rotation)</td><td><span class="code">OpenViewExtSampleCond</span></td><td>&mdash;</td></tr>
+<tr><td><strong>BPF &amp; Monitor</strong></td><td>ฟังก์ชันแยกส่วนประกอบความผันผวน (Fluctuation)</td><td><span class="code">OpenDialogFluctuationFrequency</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

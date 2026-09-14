@@ -1,0 +1,29 @@
+<!--TITLE:ตาราง Shape Comparator (ต่อ) และเงื่อนไข Comparator-->
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Cancel</strong></td><td>จำนวนครั้ง NG ของแกนเวลา &bull; ตั้งค่าจำนวนครั้งยกเลิก NG สำหรับรูปคลื่นแกนเวลา (Time axis waveform) &bull; ใช้เมื่อชนิดข้อมูล (data type) เป็น Time</td><td><span class="code">SetCompareShapeTimeNGCancelCountValue</span></td><td>0 to 50</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareShapeTimeNGCancelCountValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>TEXT LOAD</strong></td><td>กล่องโต้ตอบโหลดไฟล์ TEXT &bull; สามารถเลือกไฟล์ข้อมูลชนิด TEXT และลงทะเบียนข้อมูลการตั้งค่า Shape ได้</td><td><span class="code">OpenDialogCompareShapeLoadFile</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="subhead"><span class="sq"></span>คำสั่ง Dialog Box เงื่อนไข Comparator (Comp Cond Dialog Box Command (Comparator Condition))</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>NG Judgment Condition</strong></td><td>เงื่อนไขการตัดสิน NG &bull; เงื่อนไขการตัดสิน NG</td><td><span class="code">SetCompareCondNGJudgeOutFlag</span></td><td>0: ALL &nbsp;1: ONE</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareCondNGJudgeOutFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Single Compare On Off</strong></td><td>เปิด/ปิดโหมดทำงาน SINGLE &bull; เปิด/ปิดโหมดทำงาน SINGLE ของ Comparator</td><td><span class="code">SetCompareCondSingleModeOnOff</span></td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareCondSingleModeOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Compare Timer On Off</strong></td><td>เปิด/ปิดตัวจับเวลาของ Comparator &bull; เปิด/ปิดตัวจับเวลาของ Comparator</td><td><span class="code">SetCompareCondTimerOnOff</span></td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareCondTimerOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Start Delay</strong></td><td>START DELAY &bull; ตั้งค่าเวลาหน่วง (delay) ก่อนเริ่มทำงานของ Comparator &bull; มีผลเมื่อเปิดใช้งานตัวจับเวลาของ Comparator</td><td><span class="code">SetCompareCondStartDelayValue</span></td><td>START DELAY</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareCondStartDelayValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Compare Time</strong></td><td>COMP TIME &bull; ตั้งค่าเวลาทำงานของ Comparator &bull; มีผลเมื่อเปิดใช้งานตัวจับเวลาของ Comparator</td><td><span class="code">SetCompareCondCompTimeValue</span></td><td>COMP TIME</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareCondCompTimeValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>NG Result Clear On Off</strong></td><td>START CLEAR ON/OFF &bull; เปิด/ปิดฟังก์ชันล้างผลการตัดสิน (clear/delete) ของ Comparator โดยอัตโนมัติ</td><td><span class="code">SetCompareCondStartClearOnOff</span></td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareCondStartClearOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Condition Protect On Off</strong></td><td>ป้องกันเงื่อนไขการวัด &bull; เมื่อเปิดใช้งาน หากเงื่อนไขแตกต่างจากการตั้งค่าครั้งก่อนหรือการทำงานครั้งก่อน จะแสดงไดอะล็อก Condition Project เมื่อกำหนดค่าการตัดสินหรือสั่งทำงานการตัดสิน</td><td><span class="code">SetCompareCondConditionCheckOnOff</span></td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareCondConditionCheckOnOff</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

@@ -1,0 +1,40 @@
+<!--TITLE:3.3 คำสั่ง Dialog Box: Ext Sample และ BPF/Monitor-->
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Level Mode</strong></td><td>โหมดระดับตรวจจับ ตั้งค่าโหมดระดับตรวจจับของช่อง Rotary Input (TTL, Voltage)</td><td><span class="code">SetExtSampleLevelMode</span></td><td>0 [ExtCh1]</td><td>0: TTL &nbsp; 1: Voltage</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleLevelMode</span></td><td>0 [ExtCh1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Detection Level</strong></td><td>ระดับตรวจจับ ตั้งค่าระดับตรวจจับของช่อง Rotary Input</td><td><span class="code">SetExtSampleLevelValue</span></td><td>0 [ExtCh1]</td><td>&minus;12.0 ถึง 12.0 V</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleLevelValue</span></td><td>0 [ExtCh1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Hysteresis</strong></td><td>ฮิสเทอรีซิส ตั้งค่าฮิสเทอรีซิสของช่อง Rotary Input</td><td><span class="code">SetExtSampleHysValue</span></td><td>0 [ExtCh1]</td><td>0.025 ถึง 24.0 V</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleHysValue</span></td><td>0 [ExtCh1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Hardware Divider</strong></td><td>ตัวหารฮาร์ดแวร์ เปิด/ปิดตัวหารฮาร์ดแวร์ (Hardware divider ON/OFF)</td><td><span class="code">SetExtSampleDivideOnOff</span></td><td>0 [ExtCh1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleDivideOnOff</span></td><td>0 [ExtCh1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Divider Value</strong></td><td>ค่าตัวหาร ตั้งค่าตัวหาร (Divisor setting)</td><td><span class="code">SetExtSampleDivideFactor</span></td><td>0 [ExtCh1]</td><td>1 ถึง 1024</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleDivideFactor</span></td><td>0 [ExtCh1]</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ฟิลเตอร์แถบความถี่และมอนิเตอร์ (BPF and Monitor Dialog Box Commands — Bandpass Filter)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Envelope On Off</strong></td><td>เปิด/ปิดเอนเวโลป (Envelope ON/OFF)</td><td><span class="code">SetInputEnvelopeOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputEnvelopeOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Monitor Volume</strong></td><td>ตั้งค่าระดับเสียงมอนิเตอร์ (Monitor volume setting)</td><td><span class="code">SetFluctuationFrequencyMonitorVolume</span></td><td>0 ถึง 100 (เปอร์เซ็นต์ของระดับเสียงมอนิเตอร์)</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetFluctuationFrequencyMonitorVolume</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Band Type Flag</strong></td><td>ชนิดแถบความถี่ ตั้งค่าการเลือกแบนด์ (Setting band selection)</td><td><span class="code">SetFluctuationFrequencyBandTypeFlag</span></td><td>0: 1/1 oct. &nbsp; 1: 1/3 oct. &nbsp; 2: Manual</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetFluctuationFrequencyBandTypeFlag</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>LPFilter Value</strong></td><td>ค่า LPF (LPF setting)</td><td><span class="code">SetInputBPLPFilterValue</span></td><td>0 fix [Ch1]</td><td>50 Hz ถึง 10 kHz</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputBPLPFilterValue</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>LPFilter Flag</strong></td><td>ฟิลเตอร์ LP อนาล็อก (Analog LP filter)</td><td><span class="code">SetInputLPFilterFlag</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: 1 kHz &nbsp; 2: 10 kHz &nbsp; 3: Optional filter</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputLPFilterFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>HPFilter Value</strong></td><td>ค่า HPF (HPF setting)</td><td><span class="code">SetInputBPHPFilterValue</span></td><td>0 fix [Ch1]</td><td>50 Hz ถึง 10 kHz</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputBPHPFilterValue</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>HPFilter Flag</strong></td><td>ฟิลเตอร์ HP อนาล็อก (Analog HP filter)</td><td><span class="code">SetInputHPFilterFlag</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: 1 Hz &nbsp; 2: 3 Hz &nbsp; 3: 10 Hz &nbsp; 4: Optional filter</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputHPFilterFlag</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Lin Log Flag</strong></td><td>Lin/Log ตั้งค่าสเกลแกน X แบบ Lin/Log (X-axis scale lin/log setting)</td><td><span class="code">SetDispXLinLogFlag</span></td><td>0: Lin &nbsp; 1: Log</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetDispXLinLogFlag</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

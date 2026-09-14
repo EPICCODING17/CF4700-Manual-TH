@@ -1,0 +1,17 @@
+<!--TITLE:2.2 การยืนยันการเชื่อมต่อด้วยคำสั่ง ping-->
+<div class="subhead"><span class="sq"></span>การยืนยันการเชื่อมต่อ (Confirming the Connections)</div>
+<p>หลังจากติดตั้งซอฟต์แวร์ client ตั้งค่าเงื่อนไขเครือข่าย และยืนยันการเชื่อมต่อตามที่กล่าวมาแล้ว ให้ตรวจสอบการเชื่อมต่อระหว่าง Client PC กับเครื่อง CF-4700 FFT Comparator ในขณะที่ Client PC และเครื่อง CF-4700 FFT Comparator เชื่อมต่อกันทางกายภาพด้วยสาย LAN ก่อนอื่นให้สั่งคำสั่ง ping เพื่อตรวจสอบว่าการสื่อสารในระดับ IP ของ TCP/IP ใช้งานได้หรือไม่ จากนั้นให้สั่งคำสั่งทดสอบเพื่อยืนยันว่าคำสั่งเหล่านั้นถูกส่งจาก Client PC ไปยังเครื่อง CF-4700 FFT Comparator ได้ตามปกติ และเครื่องวิเคราะห์ทำงานตอบสนองอย่างถูกต้อง</p>
+
+<div class="subhead" style="margin-left:14px"><span class="sq"></span>ขั้นตอนการใช้คำสั่ง ping ตรวจสอบการเชื่อมต่อ (ตรวจสอบการสื่อสารในระดับ IP)</div>
+<p>คำสั่ง ping ใช้ตรวจสอบว่าการสื่อสารในระดับ IP ของ TCP/IP ใช้งานได้หรือไม่ โดย ping เป็นโปรแกรมที่ส่งแพ็กเก็ต ICMP และขอให้ฝั่งตรงข้ามตอบกลับ</p>
+
+<div class="step">
+  <div class="step-head"><div class="num">1</div><div class="step-title">เปิด Command Prompt</div></div>
+  <p>คลิกปุ่ม Start &gt; All Programs &gt; Accessories &gt; Command Prompt เพื่อเปิด &ldquo;Command Prompt&rdquo;</p>
+</div>
+
+<div class="step">
+  <div class="step-head"><div class="num">2</div><div class="step-title">สั่งคำสั่ง ping</div></div>
+  <p>ป้อน IP address ของเครื่อง CF-4700 FFT Comparator (ในตัวอย่างนี้คือ 192.168.3.59) ต่อท้ายคำสั่ง ping แล้วกดปุ่ม Enter บนคีย์บอร์ด หากเชื่อมต่อได้ถูกต้อง (ภาพซ้าย) จะมีการตอบกลับที่ถูกต้องสำหรับทุกแพ็กเก็ต หากเชื่อมต่อไม่ถูกต้อง (ภาพขวา) จะแสดงข้อความว่าไม่มีการตอบกลับ ให้ตรวจสอบสภาพการเชื่อมต่อและการตั้งค่า TCP/IP</p>
+</div>
+<p class="small">ต้นฉบับมีภาพหน้าจอ Command Prompt ประกอบ 2 ภาพ (กรณีเชื่อมต่อสำเร็จ &lt;Normal connection&gt; และกรณีเชื่อมต่อผิดพลาด &lt;Connection error&gt;) จึงแสดงเป็นคำอธิบายแทนภาพ</p>

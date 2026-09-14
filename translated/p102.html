@@ -1,0 +1,33 @@
+<!--TITLE:ตาราง Tracking (ต่อ) และคำสั่งตั้งค่าสี-->
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Lower-limit Rot Speed</strong></td><td>ความเร็วรอบต่ำสุดที่วัดได้ &bull; อ่านค่าต่ำสุดของความเร็วรอบที่สามารถวัดได้</td><td><span class="code">GetExtSampleRpmLimitMaxOrdLower</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Upper-limit Rot Speed</strong></td><td>ความเร็วรอบสูงสุดที่วัดได้ &bull; อ่านค่าสูงสุดของความเร็วรอบที่สามารถวัดได้</td><td><span class="code">GetExtSampleRpmLimitMaxOrdUpper</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Upper-limit Rot Speed to Pulse Setting</strong></td><td>ความเร็วรอบสูงสุดที่สอดคล้องกับการตั้งค่าพัลส์ &bull; อ่านค่าความเร็วรอบสูงสุดที่วัดได้</td><td><span class="code">GetExtSampleRpmLimitPulseUpper</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Regular Time Schedule</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Interval</strong></td><td>ช่วงห่าง &bull; ตั้งค่าช่วงเวลาของการวิเคราะห์ Track แบบเป็นคาบ</td><td><span class="code">SetTrackTimeModeIntervalTime</span></td><td>Depends on the measurement mode.</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackTimeModeIntervalTime</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Total Completion Time</strong></td><td>เวลารวมที่ใช้เสร็จสิ้น &bull; ตั้งค่าเวลารวมที่ใช้เสร็จสิ้นสำหรับการวิเคราะห์ Track แบบเป็นคาบ</td><td><span class="code">SetTrackTimeScheduleDesiredRecTime</span></td><td>0.1 to 600000.0</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackTimeScheduleDesiredRecTime</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Recordable Data Count</strong></td><td>จำนวนข้อมูลที่บันทึกได้สูงสุด &bull; อ่านจำนวนข้อมูลที่บันทึกได้ของการวิเคราะห์ Track แบบเป็นคาบ</td><td><span class="code">GetTrackTimeScheduleEnableDataCount</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Recordable Time Display</strong></td><td>การแสดงเวลาที่บันทึกได้ &bull; อ่านเวลารวมที่เสร็จสิ้นที่สามารถวัดได้</td><td><span class="code">GetTrackTimeScheduleEnableRecTime</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Time Schedule Elapsed Time</strong></td><td>เวลาที่ผ่านไป &bull; อ่านเวลาที่ผ่านไปในการวิเคราะห์ Track แบบเป็นคาบ</td><td><span class="code">GetTrackTimeScheduleElapsedTime</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="subhead"><span class="sq"></span>คำสั่ง Dialog Box ตั้งค่าสี (Color Dialog Box Commands (Color Setting))</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Background Color</strong></td><td>สีพื้นหลัง &bull; ตั้งค่าสีพื้นหลังของหน้าต่างกราฟ</td><td><span class="code">SetGraphColorBackGround</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorBackGround</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Graph Grid Line Color</strong></td><td>สีเส้นกรอบกราฟ &bull; ตั้งค่าสีเส้นกรอบของกราฟ</td><td><span class="code">SetGraphColorFrameLine</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorFrameLine</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Graph Background Color</strong></td><td>สีพื้นหลังของกราฟ &bull; ตั้งค่าสีพื้นหลังของกราฟ</td><td><span class="code">SetGraphColorFrameBackGround</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorFrameBackGround</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Graph Line Color</strong></td><td>สีเส้นกราฟ &bull; ตั้งค่าสีเส้นข้อมูลของกราฟ</td><td><span class="code">SetGraphColorDataLine</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorDataLine</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Overlay Line Color</strong></td><td>สีเส้น Overlay &bull; ตั้งค่าสีเส้นข้อมูลสำหรับการซ้อนทับ (Overlay) ของกราฟ</td><td><span class="code">SetGraphColorDataLineOverlay</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorDataLineOverlay</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

@@ -1,0 +1,100 @@
+<!--TITLE:3.1 C# — GetData และ System methods-->
+<div class="api-card">
+  <div class="api-sig">string Execute (string commandName, string arg1, string arg2, string arg3, string arg4)</div>
+  <div class="kv">
+    <div>Argument 4</div><div>arg3</div>
+    <div>Argument 5</div><div>arg4</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">string Execute (string commandName, string arg1, string arg2, string arg3, string arg4, string arg5)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>Argument 2</div><div>arg1</div>
+    <div>Argument 3</div><div>arg2</div>
+    <div>Argument 4</div><div>arg3</div>
+    <div>Argument 5</div><div>arg4</div>
+    <div>Argument 6</div><div>arg5</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+</div>
+
+<div class="subhead"><span class="sq"></span>วิธี GetData ทั้งบรรทัด (All-line data acquisition method)</div>
+
+<div class="api-card">
+  <div class="api-sig">string GetData (ref float [] XDatas, ref float [] YDatas)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>อ่านข้อมูลทั้งบรรทัดของกราฟที่ใช้งานอยู่ (Acquisition of all line data of active graphs)</div>
+    <div>Argument 1</div><div>ข้อมูลแกน X (X-axis data)</div>
+    <div>Argument 2</div><div>ข้อมูลแกน Y (Y-axis Data)</div>
+    <div>ค่าที่คืนกลับ</div><div>คืนค่า "0" เมื่ออ่านข้อมูลสำเร็จ / คืนค่า "Time out error." เมื่อเกิด timeout / คืนค่า "Receive error." เมื่อเกิดข้อผิดพลาดจากข้อยกเว้น (exception)</div>
+  </div>
+</div>
+
+<div class="subhead"><span class="sq"></span>System methods</div>
+
+<div class="api-card">
+  <div class="api-sig">void SetCommandInterval (int timeMilliSec)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>สามารถตั้งค่าระยะเวลาห่างในการส่งคำสั่งได้ (The command execution interval can be set.)</div>
+    <div>Argument 1</div><div>ระยะเวลาห่างในการทำงาน (ms) (Execution interval)</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">string SetIPAddress (string newIPAddress)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ระบุ IP address ของ CF-4700 FFT comparator ที่จะควบคุม (Specifies the IP address of CF-4700 FFT comparator to be controlled.)<br>• เมธอดนี้ไม่สามารถเขียนทับ IP address ของตัวเครื่อง CF-4700 comparator ได้<br>• หลังจากเริ่มโปรแกรมแล้ว ให้ส่งเมธอดนี้เป็นลำดับแรกเพื่อระบุ IP address ของ CF-4700 FFT comparator (ไม่จำเป็นต้องส่งซ้ำอีก)</div>
+    <div>Argument 1</div><div>IP address (IPv4)</div>
+    <div>ค่าที่คืนกลับ</div><div>คืนค่า 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">void Wait (int timeMilliSec)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>สามารถตั้งเวลาหน่วงรอได้ (The waiting time can be set.)</div>
+    <div>Argument 1</div><div>เวลาหน่วงรอ (ms) (Waiting Time)</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">void WaitForStopEvent ()</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>รอจนกว่าการวัดจะสิ้นสุด (The end of measurement can be waited.)</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">void SetCommunicationMode(int comMode)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ตั้งค่าโหมดการสื่อสาร (Sets the communication mode.)</div>
+    <div>Argument 1</div><div>0: High &nbsp; 1: Default &nbsp; 2: Low</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">int GetCommunicationMode()</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>อ่านโหมดการสื่อสาร (Obtains the communication mode.)</div>
+    <div>ค่าที่คืนกลับ</div><div>0: High &nbsp; 1: Default &nbsp; 2: Low</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">void Disconnect()</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ตัดการเชื่อมต่อสื่อสาร (Disconnects communication.)</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">string Connected()</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>อ่านสถานะการเชื่อมต่อ (Obtains the connection status.)</div>
+    <div>ค่าที่คืนกลับ</div><div>0 (ตัดการเชื่อมต่อ) &nbsp; 1 (เชื่อมต่ออยู่)</div>
+  </div>
+</div>

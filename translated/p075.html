@@ -1,0 +1,15 @@
+<!--TITLE:2.3 เขียนโค้ด C# เริ่มการวัดผ่าน LAN-->
+<div class="step">
+  <div class="step-head"><div class="num">5</div><div class="step-title">เขียนโปรแกรม</div></div>
+  <p>คลิกแท็บ Form1.cs แล้วป้อนโปรแกรมต่อไปนี้ลงในหน้าจอ</p>
+  <p>เพิ่ม Using ต่อไปนี้</p>
+  <div class="codeblock">using CF9000ControlModule;</div>
+  <p>เพิ่มโพรเซสต่อไปนี้ลงในโพรเซสที่เริ่มทำงานเมื่อกดปุ่ม</p>
+  <div class="codeblock">private void button1_Click (object sender, EventArgs e)<br>{<br>&nbsp;&nbsp;// IP Address of FFT Analyzer<br>&nbsp;&nbsp;cfController.SetIPAddress (<span class="cm">"192.168.3.59"</span>);<br>&nbsp;&nbsp;// Start<br>&nbsp;&nbsp;cfController.Execute (<span class="cm">"KeySTART"</span>);<br>}</div>
+</div>
+
+<div class="step">
+  <div class="step-head"><div class="num">6</div><div class="step-title">เริ่มโปรแกรมและสั่งวัด</div></div>
+  <p>กดปุ่ม "▶Start" เพื่อเริ่มโปรแกรม</p>
+  <p>จากนั้นคลิกปุ่ม [button1] เพื่อเริ่มการวัด</p>
+</div>

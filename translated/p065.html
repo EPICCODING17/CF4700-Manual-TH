@@ -1,0 +1,21 @@
+<!--TITLE:2.1 การติดตั้ง Client Software-->
+<div class="subhead"><span class="sq"></span>2.1 การติดตั้ง Client Software (Installing Client Software)</div>
+<p>ติดตั้งซอฟต์แวร์เฉพาะทาง (CF-9000 Control Module) สำหรับควบคุมเครื่อง CF-4700 FFT Comparator ลงในเครื่องคอมพิวเตอร์ของลูกค้า</p>
+<div class="warning"><strong>ข้อควรระวัง:</strong> ซอฟต์แวร์ client ตัวเดียวกับที่ใช้บนเครื่องวิเคราะห์ซีรีส์ CF-9000 ของ Ono Sokki ถูกนำมาใช้กับเครื่อง CF-4700 FFT Comparator</div>
+
+<div class="subhead" style="margin-left:14px"><span class="sq"></span>ขั้นตอนการติดตั้ง Client Software (Client Software Installation Procedure)</div>
+
+<div class="step">
+  <div class="step-head"><div class="num">1</div><div class="step-title">ใส่แผ่น CD ที่มีตัวติดตั้งลงในไดรฟ์</div></div>
+  <p>ใส่แผ่น Appendix CD ที่มาพร้อมกับเครื่อง CF-4700 FFT Comparator ลงในไดรฟ์ CD ของคอมพิวเตอร์ ใช้ Explorer เปิดโฟลเดอร์ Control ที่เก็บอยู่ในแผ่น Appendix CD เพื่อตรวจสอบว่ามีไฟล์ LanCtrlSetup.msi อยู่</p>
+</div>
+
+<div class="step">
+  <div class="step-head"><div class="num">2</div><div class="step-title">ดำเนินการติดตั้ง</div></div>
+  <p>ดับเบิลคลิกไฟล์ LanCtrlSetup.msi ที่อยู่ในโฟลเดอร์ Control เพื่อเริ่มการติดตั้งซอฟต์แวร์ ตัวติดตั้ง (installer) จะเริ่มทำงาน คลิกปุ่ม Next บนตัวติดตั้งเพื่อดำเนินการติดตั้งต่อ เมื่อการติดตั้งเสร็จสมบูรณ์ จะแสดงข้อความ &ldquo;Installation Complete&rdquo; ให้คลิกปุ่ม Close</p>
+</div>
+
+<div class="step">
+  <div class="step-head"><div class="num">3</div><div class="step-title">ตรวจสอบการติดตั้ง</div></div>
+  <p>เมื่อการติดตั้งเสร็จสมบูรณ์ จะมีการสร้างโฟลเดอร์ Onosokki CF-9000\CF9000Control ขึ้นภายใต้โฟลเดอร์ C:\Program Files\ หรือ C:\Program Files(x86)\ ใช้ Explorer ตรวจสอบว่าโฟลเดอร์ CF9000Control มีไฟล์ทั้ง 4 ไฟล์ต่อไปนี้ครบถ้วน: CF9000ControlModule.dll, CF9000ControlModule.tlb, CustumControl.dll, CustumControl.InstallState</p>
+</div>

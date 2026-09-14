@@ -1,0 +1,38 @@
+<!--TITLE:3.3 คำสั่ง Dialog Box: Input Cond และ EU-->
+<h3><span class="h3-num">3.3</span>ตารางเทียบคำสั่งกับ Dialog Box ของ CF-4700 (CF-4700 Dialog Box Command Correspondences)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>เงื่อนไขอินพุต (Input Cond Dialog Box Commands — Input Condition)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>CCLD Disconnection Detect</strong></td><td>ตรวจจับการขาดของสาย เปิด/ปิดฟังก์ชันตรวจจับวงจรเปิด (Open circuit detecting function ON/OFF)</td><td><span class="code">SetInputCCLDDisconnectionDetectOnOff</span></td><td>0: OFF &nbsp; 1: ON</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputCCLDDisconnectionDetectOnOff</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Voltage Range Unit</strong></td><td>หน่วยของช่วงแรงดัน ตั้งค่าหน่วยของช่วงแรงดัน (Voltage range unit setting)</td><td><span class="code">SetInputRangeUnitFlag</span></td><td>0 fix [Ch1]</td><td>0: V &nbsp; 1: Vrms &nbsp; 2: dBVrms</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputRangeUnitFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Ch</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Voltage Range</strong></td><td>ช่วงแรงดัน ตั้งค่าช่วงแรงดันของช่องอินพุต (Input channel voltage range setting)</td><td><span class="code">SetInputRangeFlag</span></td><td>0 fix [Ch1]</td><td>0: 0 dBVrms &nbsp; 1: 30 dBVrms</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputRangeFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Coupling</strong></td><td>คัปปลิ้ง ตั้งค่าเงื่อนไขคัปปลิ้งของช่องอินพุต (Input channel coupling condition setting)</td><td><span class="code">SetInputCoupleFlag</span></td><td>0 fix [Ch1]</td><td>0: AC &nbsp; 1: DC</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputCoupleFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>CCLD</strong></td><td>CCLD เปิด/ปิดไฟเลี้ยงเซนเซอร์ (CCLD sensor power) ของช่องอินพุต</td><td><span class="code">SetInputCCLDOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputCCLDOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Auto Zero</strong></td><td>ออโต้ซีโร่ เปิด/ปิดฟังก์ชันออโต้ซีโร่ของช่องอินพุต (Input channel auto zero ON/OFF)</td><td><span class="code">SetInputAutoZeroOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputAutoZeroOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Filter</strong></td><td>ฟิลเตอร์อนาล็อก ตั้งค่าฟิลเตอร์อนาล็อกของช่องอินพุต (Input channel analogue filter setting)</td><td><span class="code">SetInputFilterFlag</span></td><td>0 fix [Ch1]</td><td>1: Flat (Z) &nbsp; 2: A-weight &nbsp; 3: C-weight</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputFilterFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การคาลิเบรต EU (EU Dialog Box Commands — Calibration Settings)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Ch</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>EU</strong></td><td>เปิด/ปิด EU ฟังก์ชันแปลงหน่วยทางกายภาพ (physical quantity conversion) ของช่องอินพุต</td><td><span class="code">SetEUYUnitOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEUYUnitOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Unit Name</strong></td><td>ชื่อหน่วย เลือกชื่อหน่วยของช่องอินพุต (Input channel unit name selection)</td><td><span class="code">SetEUYUnitName</span></td><td>0 fix [Ch1]</td><td>0: m/s2 &nbsp;1: m/s &nbsp;2: m &nbsp;3: N &nbsp;4: mm &nbsp;5: um &nbsp;6: Pa &nbsp;7: SPL &nbsp;8: V &nbsp;9: nm</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEUYUnitName</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

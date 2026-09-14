@@ -1,0 +1,33 @@
+<!--TITLE:3.2 ตารางคำสั่ง Key ตั้งค่าการวิเคราะห์-->
+<div class="subhead"><span class="sq"></span>คำสั่ง Key ตั้งค่าการวิเคราะห์ (Analysis Setting Key Commands)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Time Calc</strong></td><td>การวิเคราะห์ข้อมูลแกนเวลา (Time-axis)</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Time Analy</strong></td><td>การประมวลผลทางสถิติของแกนเวลา</td><td><span class="code">SetCalcTimeAnalyzeOnOff</span></td><td>0: OFF<br>1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcTimeAnalyzeOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>d/dt</strong></td><td>แคลคูลัสของแกนเวลา</td><td><span class="code">SetCalcTimeJwFlag</span></td><td>0: OFF<br>1: First order differentiation<br>2: Second order differentiation<br>3: Single integration<br>4: Dual integration</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcTimeJwFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>DC Remove</strong></td><td>ตัดค่า DC ออก</td><td><span class="code">SetCalcTimeJwDCCancel</span></td><td>0: OFF<br>1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcTimeJwDCCancel</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Unit Conv</strong></td><td>แปลงหน่วยของการอินทิเกรต</td><td><span class="code">SetCalcTimeJwUnitCnvOnOff</span></td><td>0: OFF<br>1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcTimeJwUnitCnvOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>&int; Unit</strong></td><td>หน่วยแปลงเป็นความเร็ว</td><td><span class="code">SetCalcTimeJw1CnvType</span></td><td>0: m/s<br>2: mm/s<br>3: µm/s<br>4: nm/s</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcTimeJw1CnvType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>&int;&int; Unit</strong></td><td>หน่วยแปลงเป็นการกระจัด (Displacement)</td><td><span class="code">SetCalcTimeJw2CnvType</span></td><td>0: m<br>2: mm<br>3: µm<br>4: nm</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcTimeJw2CnvType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Freq Calc</strong></td><td>การวิเคราะห์ข้อมูลความถี่</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>j&omega;</strong></td><td>แคลคูลัสของความถี่</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Type</strong></td><td>แคลคูลัสของความถี่</td><td><span class="code">SetCalcSpecJwStat</span></td><td>0: OFF<br>1: First order differentiation<br>2: Second order differentiation<br>3: Single integration<br>4: Dual integration</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcSpecJwStat</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Unit Conv</strong></td><td>แปลงหน่วยของการอินทิเกรต</td><td><span class="code">SetCalcSpecJwUnitCnvOnOff</span></td><td>0: OFF<br>1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcSpecJwUnitCnvOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>1/j&omega; Unit</strong></td><td>หน่วยแปลงเป็นความเร็ว</td><td><span class="code">SetCalcSpecJw1CnvType</span></td><td>0: m/s<br>2: mm/s<br>3: µm/s<br>4: nm/s</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcSpecJw1CnvType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>1/j&omega;^2 Unit</strong></td><td>หน่วยแปลงเป็นการกระจัด (Displacement)</td><td><span class="code">SetCalcSpecJw2CnvType</span></td><td>0: m<br>2: mm<br>3: µm<br>4: nm</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcSpecJw2CnvType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Weight</strong></td><td>การถ่วงน้ำหนักความถี่ (Weighting)</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Type</strong></td><td>การถ่วงน้ำหนักความถี่</td><td><span class="code">SetCalcSpecFilter</span></td><td>0: Flat (Z)<br>1: A-weight<br>2: C-weight</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCalcSpecFilter</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

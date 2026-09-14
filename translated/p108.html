@@ -1,0 +1,34 @@
+<!--TITLE:ตาราง Block Comparator (ต่อ) และ Shape Comparator-->
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Y Lower</strong></td><td>ค่าต่ำสุดแกน Y ของ Block &bull; ป้อนค่าต่ำสุดของแกน Y</td><td><span class="code">SetCompareBlockYLowLevelValue</span></td><td>Y-axis lower limit value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareBlockYLowLevelValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Y Upper</strong></td><td>ค่าสูงสุดแกน Y ของ Block &bull; ป้อนค่าสูงสุดของแกน Y</td><td><span class="code">SetCompareBlockYUpLevelValue</span></td><td>Y-axis upper limit value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareBlockYUpLevelValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>NG Num</strong></td><td>จำนวนครั้ง NG ของ Block &bull; ตั้งค่าจำนวนครั้ง NG สำหรับหน่วยความจำ Block Comparator แต่ละชุด</td><td><span class="code">SetCompareBlockNGCountValue</span></td><td>Number of NG setting</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareBlockNGCountValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Limit</strong></td><td>ระดับการตัดสินของ Block &bull; ระดับการตัดสินสำหรับหน่วยความจำ Block Comparator แต่ละชุด</td><td><span class="code">SetCompareBlockJudgeLevelFlag</span></td><td>0: U&amp;L &nbsp;1: LOWER &nbsp;2: UPPER</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareBlockJudgeLevelFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Method</strong></td><td>วิธีการตัดสินของ Block &bull; วิธีการตัดสินเปรียบเทียบ</td><td><span class="code">SetCompareBlockCompLimitFlag</span></td><td>0: LEVEL &nbsp;1: PK.MAX &nbsp;2: AREA &nbsp;3: P.O &nbsp;4: PK.LEVEL &nbsp;5: INSIDE MAX</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareBlockCompLimitFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Area Up</strong></td><td>ค่าสูงสุดของสัดส่วนพื้นที่ Block &bull; AREA UP LEVEL</td><td><span class="code">SetCompareBlockAreaUpLevelValue</span></td><td>Upper limit of area content percentage</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareBlockAreaUpLevelValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Area Low</strong></td><td>ค่าต่ำสุดของสัดส่วนพื้นที่ Block &bull; AREA LOW LEVEL</td><td><span class="code">SetCompareBlockAreaLowLevelValue</span></td><td>Lower limit of area content percentage</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareBlockAreaLowLevelValue</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="subhead"><span class="sq"></span>คำสั่ง Dialog Box ตั้งค่า Shape Comparator (Shape Setting Dialog Box Command (Shape Comparator Setting))</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>No</strong></td><td>ข้อมูลที่ Active &bull; หมายเลขหน่วยความจำ Shape Comparator ที่กำลังแก้ไข</td><td><span class="code">SetCompareShapeActiveNo</span></td><td>1 to 20</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareShapeActiveNo</span></td><td>&mdash;</td></tr>
+<tr><td><strong>NG Num</strong></td><td>จำนวนครั้ง NG ของ Shape &bull; ตั้งค่าจำนวนครั้ง NG สำหรับหน่วยความจำ Shape Comparator แต่ละชุด</td><td><span class="code">SetCompareShapeNGCountValue</span></td><td>Number of NG setting</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareShapeNGCountValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Limit</strong></td><td>ระดับการตัดสินของ Shape &bull; ระดับการตัดสินสำหรับหน่วยความจำ Shape Comparator แต่ละชุด</td><td><span class="code">SetCompareShapeCompLimitFlag</span></td><td>0: OVER &nbsp;1: UNDER</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareShapeCompLimitFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Cancel</strong></td><td>จำนวนครั้งยกเลิก NG ของ Shape &bull; ตั้งค่าจำนวนครั้งยกเลิก NG (NG cancel) สำหรับหน่วยความจำ Shape Comparator แต่ละชุด</td><td><span class="code">SetCompareShapeNGCancelCountValue</span></td><td>0 to 10</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareShapeNGCancelCountValue</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

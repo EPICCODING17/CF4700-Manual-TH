@@ -1,0 +1,32 @@
+<!--TITLE:2.2 ตั้งค่า IP ของ CF-4700 / เงื่อนไข Excel Macro-->
+<div class="subhead" style="margin-left:28px"><span class="sq"></span>การตั้งค่า IP address ของเครื่อง CF-4700 FFT Comparator (Setting the IP Address of the CF-4700 FFT Comparator)</div>
+<p>ตั้งค่า IP address ของเครื่อง CF-4700 FFT Comparator ตามขั้นตอนต่อไปนี้</p>
+
+<div class="step">
+  <div class="step-head"><div class="num">1</div><div class="step-title">ยืนยันว่าเครื่อง CF-4700 Comparator และคอมพิวเตอร์เชื่อมต่อกันด้วยสาย LAN</div></div>
+  <p>ตรวจสอบว่าเครื่อง CF-4700 FFT Comparator และคอมพิวเตอร์ของลูกค้าเชื่อมต่อกันด้วยสาย LAN อย่างถูกต้อง หากยังไม่ได้เชื่อมต่อ ให้เชื่อมต่อให้ถูกต้องโดยอ้างอิงหัวข้อ &ldquo;1.3 โครงสร้างการควบคุมภายนอก&rdquo; ในหน้า 61</p>
+</div>
+
+<div class="step">
+  <div class="step-head"><div class="num">2</div><div class="step-title">เข้าสู่โหมด CF-4700 Configuration Mode</div></div>
+  <p>แตะปุ่มซอฟต์คีย์ตามลำดับ <span class="code">Home</span> (mode top) &rarr; <span class="code">System</span> &rarr; <span class="code">Env Set</span> &rarr; <span class="code">Config Mode</span> แล้วแตะ OK ในกล่องข้อความที่แสดงขึ้น เครื่อง CF-4700 FFT Comparator จะรีสตาร์ทเข้าสู่โหมด configuration และแสดงหน้าจอ CF-4700 Configuration Mode</p>
+</div>
+
+<div class="step">
+  <div class="step-head"><div class="num">3</div><div class="step-title">ตั้งค่า IP address และ subnet mask ของเครื่อง CF-4700 Comparator</div></div>
+  <p>ในเมนู CF-4700 Configuration Mode แตะ Network Configuration เพื่อเปิดกล่องโต้ตอบ &ldquo;Network Configuration&rdquo; ก่อนอื่น ป้อน IP address (ในตัวอย่างนี้คือ 192.168.3.59) ที่แตกต่างจาก Client PC ในช่อง IP address ของกล่องโต้ตอบ &ldquo;Network Configuration&rdquo; จากนั้นป้อน subnet mask (ในตัวอย่างนี้คือ 255.255.255.0) ให้ตรงกับ Client PC ที่ช่อง [Subnet Mask] ของ &ldquo;Network Configuration&rdquo; สุดท้าย แตะปุ่ม OK เพื่อยืนยันการตั้งค่า</p>
+</div>
+
+<div class="step">
+  <div class="step-head"><div class="num">4</div><div class="step-title">กลับสู่โหมดการวัดและวิเคราะห์ปกติ</div></div>
+  <p>แตะ Exit ในเมนู CF-4700 Configuration Mode เพื่อรีสตาร์ทเครื่อง FFT Comparator กลับเข้าสู่โหมดการวัดและวิเคราะห์ปกติ</p>
+</div>
+
+<div class="subhead"><span class="sq"></span>การตั้งค่าเงื่อนไขสำหรับการรัน Excel Macro (Setting Conditions For Excel Macro Execution)</div>
+<div class="warning"><strong>ข้อควรระวัง:</strong>
+<ul>
+<li>การเปลี่ยนระดับความปลอดภัยของ macro ใน Microsoft® Office Excel® เป็น &ldquo;Enable All Macros&rdquo; จะทำให้สามารถรัน macro ได้โดยไม่ต้องตั้งค่าที่ยุ่งยาก แต่ในแง่ความปลอดภัย ไม่แนะนำให้เปลี่ยนเป็น &ldquo;Enable All Macros&rdquo;</li>
+<li>โปรดเข้าใจว่า Ono Sokki Co., Ltd. ไม่รับผิดชอบและไม่รับข้อเรียกร้องใดๆ ต่อความผิดพลาดที่เกิดจากการเปลี่ยนระดับความปลอดภัยดังกล่าว</li>
+</ul>
+</div>
+<p>เมื่อจะรัน macro ที่สร้างด้วย Visual Basic® ซึ่งมาพร้อมกับ Microsoft® Office Excel® จำเป็นต้องเปิดใช้งานการตั้งค่า macro ของ Microsoft® Office Excel® ไว้ล่วงหน้า โดยปกติ เมื่อเปิดไฟล์ Microsoft® Office Excel® ที่มี macro อยู่ จะมีข้อความเตือนด้านความปลอดภัยแสดงอยู่ใต้ ribbon ให้คลิกปุ่ม [Option...] เพื่อเปิดกล่องโต้ตอบ &ldquo;Microsoft Office Security Option&rdquo; แล้วเลือก [Enable this content] จากนั้นคลิกปุ่ม OK</p>

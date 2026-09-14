@@ -1,0 +1,44 @@
+<!--TITLE:3.5 ตารางเทียบ Control Key-->
+<h3><span class="h3-num">3.5</span>ตารางเทียบ Control Key (Control Key Correspondences)</h3>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Class</th><th>Key name</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td>เคอร์เซอร์ (Cursor)</td><td>SEARCH</td><td><span class="code">KeySearchOnOff</span></td><td>&mdash;</td></tr>
+<tr><td>เคอร์เซอร์ (Cursor)</td><td>&Delta;SET</td><td><span class="code">KeyDeltaSet</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>FREQ &rarr;</td><td><span class="code">KeyFreqRangeUp</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>FREQ &larr;</td><td><span class="code">KeyFreqRangeDown</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>TRIG</td><td><span class="code">KeyTRIGON</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>SAVE</td><td><span class="code">KeySAVE</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>AVG</td><td><span class="code">KeyAVG</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>START</td><td><span class="code">KeySTART</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>PAUSE</td><td><span class="code">KeyPAUSE</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>STOP</td><td><span class="code">KeySTOP</span></td><td>&mdash;</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>TIME</td><td><span class="code">KeyTIME</span></td><td>0 (FIX)</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>SPECT</td><td><span class="code">KeySPECT</span></td><td>0 (fixed)</td></tr>
+<tr><td>การควบคุมการวัด (Measurement control)</td><td>SCHED</td><td><span class="code">KeySCH</span></td><td>&mdash;</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>COMP</td><td><span class="code">KeyCOMPARE</span></td><td>&mdash;</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>VIEW</td><td><span class="code">SetCompareBlockViewWaveModeOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>LIST</td><td><span class="code">SetCompareBlockViewListModeOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>REGISTER</td><td>Block: <span class="code">ExecuteCompareBlockActiveNoEntry</span><br>Shape: <span class="code">ExecuteCompareShapeActiveNoEntry</span></td><td>&mdash;</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>DELETE</td><td>Block: <span class="code">ExecuteCompareBlockActiveNoDelete</span><br>Shape: <span class="code">ExecuteCompareShapeActiveNoDelete</span></td><td>&mdash;</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>+ No</td><td>Block: <span class="code">ExecuteCompareBlockActiveNoUp</span><br>Shape: <span class="code">ExecuteCompareShapeActiveNoUp</span></td><td>&mdash;</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>- No</td><td>Block: <span class="code">ExecuteCompareBlockActiveNoDown</span><br>Shape: <span class="code">ExecuteCompareShapeActiveNoDown</span></td><td>&mdash;</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>TEXT LOAD</td><td><span class="code">OpenDialogCompareShapeLoadFile</span></td><td>&mdash;</td></tr>
+<tr><td>คอมพาเรเตอร์ (Comparator)</td><td>ActiveNo</td><td>Block: <span class="code">SetCompareBlockActiveNo</span><br>Block: <span class="code">GetCompareBlockActiveNo</span><br>Shape: <span class="code">SetCompareShapeActiveNo</span><br>Shape: <span class="code">GetCompareShapeActiveNo</span></td><td>1 to 20</td></tr>
+</tbody>
+</table></div>
+
+<div class="subhead"><span class="sq"></span>คำสั่งที่เกี่ยวข้องกับ Tracking</div>
+<div class="table-wrap"><table>
+<thead><tr><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td>เปิด/ปิดโหมดวิเคราะห์ Tracking</td><td><span class="code">SetTrackAnalysisModeOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td><span class="code">GetTrackAnalysisModeOnOff</span></td><td>&mdash;</td></tr>
+<tr><td>เปิด/ปิด Trigger</td><td><span class="code">SetTrigOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td><span class="code">GetTrigOnOff</span></td><td>&mdash;</td></tr>
+<tr><td>เปิด/ปิดโหมดการทำ averaging</td><td><span class="code">SetAverageOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td><span class="code">GetAverageOnOff</span></td><td>&mdash;</td></tr>
+<tr><td>เปิดโหมด averaging พร้อมเริ่มการวัดทันที</td><td><span class="code">DoAverageStart</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

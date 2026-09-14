@@ -1,0 +1,44 @@
+<!--TITLE:3.2 คำสั่งตั้งค่าระบบ (System Setting)-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่าระบบ (System Setting Key Commands)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>New Condition</strong></td><td>โปรเจกต์ใหม่ (New Project)</td><td><span class="code">ExecuteFilePanelCondInitialize</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Cond View</strong></td><td>มุมมองเงื่อนไข (Condition view)</td><td><span class="code">OpenDialogEnvCondView</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Ch Set</strong></td><td>ตั้งค่าช่องสัญญาณ (Channel settings)</td><td><span class="code">OpenDialogInputCHUsage</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Backlight</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Timer Off</strong></td><td>เปิด/ปิดฟังก์ชันปิดหน้าจออัตโนมัติ</td><td><span class="code">SetEnvLightOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvLightOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Off Time Set</strong></td><td>ตั้งค่าเวลาปิดหน้าจออัตโนมัติ</td><td><span class="code">SetEnvLightOFFTime</span></td><td>1 ถึง 60</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvLightOFFTime</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Notification</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Confirm Dialog</strong></td><td>ตั้งค่ากล่องยืนยัน (Confirmation dialog box)</td><td><span class="code">SetHideConfirmDialog</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetHideConfirmDialog</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Beep</strong></td><td>เสียงบี๊บ (Beep sound)</td><td><span class="code">SetEnvBeepOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Done Event</strong></td><td>เหตุการณ์ที่ทำงานเสร็จสิ้น (Executed event)</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Average Done</strong></td><td>สิ้นสุดการเฉลี่ยค่า (End of averaging)</td><td><span class="code">SetEnvBeepEventAverageDone</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepEventAverageDone</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Schedule Done</strong></td><td>สิ้นสุดการวัดตามตารางเวลา (End of scheduled measurement)</td><td><span class="code">SetEnvBeepEventScheduleDone</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepEventScheduleDone</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Record Done</strong></td><td>สิ้นสุดการบันทึก (End of record)</td><td><span class="code">SetEnvBeepEventRecordDone</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepEventRecordDone</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Compare Done</strong></td><td>สิ้นสุดการเปรียบเทียบ (End of comparator)</td><td><span class="code">SetEnvBeepEventCompareDone</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepEventCompareDone</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Status Event</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Trig'd</strong></td><td>ตรวจพบทริกเกอร์ (Detection of a trigger)</td><td><span class="code">SetEnvBeepEventTriged</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepEventTriged</span></td><td>&mdash;</td></tr>
+<tr><td><strong>A/D Over</strong></td><td>ตรวจพบระดับสัญญาณเกิน (Detection of level over)</td><td><span class="code">SetEnvBeepEventADOver</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepEventADOver</span></td><td>&mdash;</td></tr>
+<tr><td><strong>CCLD Disconnect</strong></td><td>ตรวจพบสาย CCLD หลุด (Detection of CCLD disconnection)</td><td><span class="code">SetEnvBeepEventCCLDDetect</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepEventCCLDDetect</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Compare NG</strong></td><td>ผลตัดสิน NG (fail) ของ Comparator</td><td><span class="code">SetEnvBeepEventCompareNG</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvBeepEventCompareNG</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Event Log</strong></td><td>บันทึกเหตุการณ์ (Event log)</td><td><span class="code">OpenDialogExentLog</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Common Graph</strong></td><td>ตั้งค่าร่วมของข้อมูล (Common setting of data)</td><td><span class="code">SetEnvDataAllSetOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEnvDataAllSetOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Env Set</strong></td><td>การตั้งค่าสภาพแวดล้อม (Environmental setting)</td><td>&mdash;</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

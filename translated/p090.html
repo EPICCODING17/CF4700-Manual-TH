@@ -1,0 +1,45 @@
+<!--TITLE:3.2 ตารางคำสั่ง Key แสดงผล/Comparator/หน่วยความจำ (ต่อ)-->
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Line</strong></td><td>สั่งตั้งค่าตำแหน่ง Cursor (เส้นที่ 1)</td><td><span class="code">ExecuteEntryOrdAnalysisLinePos</span></td><td>0: Line 1</td></tr>
+<tr><td></td><td>สั่งตั้งค่าตำแหน่ง Cursor (เส้นที่ 2)</td><td><span class="code">ExecuteEntryOrdAnalysisLinePos</span></td><td>1: Line 2</td></tr>
+<tr><td></td><td>สั่งตั้งค่าตำแหน่ง Cursor (เส้นที่ 3)</td><td><span class="code">ExecuteEntryOrdAnalysisLinePos</span></td><td>2: Line 3</td></tr>
+<tr><td></td><td>สั่งตั้งค่าตำแหน่ง Cursor (เส้นที่ 4)</td><td><span class="code">ExecuteEntryOrdAnalysisLinePos</span></td><td>3: Line 4</td></tr>
+<tr><td></td><td>สั่งตั้งค่าตำแหน่ง Cursor (เส้นที่ 5)</td><td><span class="code">ExecuteEntryOrdAnalysisLinePos</span></td><td>4: Line 5</td></tr>
+<tr><td></td><td>สั่งตั้งค่าตำแหน่ง Cursor (เส้นที่ 6)</td><td><span class="code">ExecuteEntryOrdAnalysisLinePos</span></td><td>5: Line 6</td></tr>
+<tr><td></td><td>สั่งตั้งค่าตำแหน่ง Cursor (เส้นที่ 7)</td><td><span class="code">ExecuteEntryOrdAnalysisLinePos</span></td><td>6: Line 7</td></tr>
+<tr><td></td><td>สั่งตั้งค่าตำแหน่ง Cursor (เส้นที่ 8)</td><td><span class="code">ExecuteEntryOrdAnalysisLinePos</span></td><td>7: Line 8</td></tr>
+<tr><td><strong>Schedule Disp</strong></td><td>กล่องโต้ตอบแสดงผล Schedule</td><td><span class="code">OpenDialogTrackDisplay</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+
+<div class="subhead"><span class="sq"></span>คำสั่ง Key ตั้งค่า Comparator (Comp Setting Key Commands)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Block View</strong></td><td>เปิด/ปิดโหมดแสดงรูปคลื่นของ Block Comparator</td><td><span class="code">SetCompareBlockRunScreenWaveModeOnOff</span></td><td>0: OFF<br>1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetCompareBlockRunScreenWaveModeOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Type</strong></td><td>ประเภทของ Comparator</td><td><span class="code">CompareRunModeFlag</span></td><td>0: Block Comparator<br>1: Shape Comparator</td></tr>
+<tr><td><strong>Comp Cond</strong></td><td>กล่องโต้ตอบเงื่อนไข Comparator</td><td><span class="code">OpenDialogCompareCondition</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Assist</strong></td><td>ฟังก์ชัน Assist</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Block Count</strong></td><td>จำนวน Block ที่ใช้ได้สำหรับ Comparator</td><td><span class="code">SetAssistBlockCount</span></td><td>• Number of blocks to use for assist</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAssistBlockCount</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Freq Span</strong></td><td>ช่วงความถี่ที่จะถูกรับรู้เป็นพีค (Peak)</td><td><span class="code">SetAssistFrequencySpan</span></td><td>• Frequency span to be accepted as peak in assist</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAssistFrequencySpan</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+
+<div class="subhead"><span class="sq"></span>คำสั่ง Key ตั้งค่าหน่วยความจำ (Memory Setting Key Commands)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Data</strong></td><td>หน่วยความจำข้อมูล (Data Memory)</td><td><span class="code">OpenDialogFileDataList</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Select</strong></td><td>การเลือกข้อมูล</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>All On</strong></td><td>เปิดทั้งหมด</td><td><span class="code">ExecuteFileDataSelectClearAllon</span></td><td>&mdash;</td></tr>
+<tr><td><strong>All Off</strong></td><td>ปิดทั้งหมด</td><td><span class="code">ExecuteFileDataSelectClearAlloff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Copy Selected Data</strong></td><td>สั่งคัดลอก (COPY)</td><td><span class="code">ExecuteFileDataSelectCopy</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Move Selected Data</strong></td><td>สั่งย้าย (MOVE)</td><td><span class="code">ExecuteFileDataSelectMove</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Delete Selected Data</strong></td><td>สั่งลบ (CLEAR)</td><td><span class="code">ExecuteFileDataSelectClear</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

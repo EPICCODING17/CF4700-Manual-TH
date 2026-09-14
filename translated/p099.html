@@ -1,0 +1,36 @@
+<!--TITLE:3.3 คำสั่ง Dialog Box: Time Pre และ Ext Sample-->
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Absolute Value</strong></td><td>ค่าสัมบูรณ์ เปิด/ปิดการแปลงเป็นค่าสัมบูรณ์ (Absolute value conversion ON/OFF)</td><td><span class="code">SetTimePreAbsOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTimePreAbsOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>DC Cancel</strong></td><td>ตัด DC เปิด/ปิดการตัดสัญญาณไฟตรง (DC cancellation)</td><td><span class="code">SetTimePreDcCancelOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTimePreDcCancelOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Polarity Inversion</strong></td><td>กลับขั้ว เปิด/ปิดการกลับขั้วสัญญาณ (Polarity inversion ON/OFF)</td><td><span class="code">SetTimePreInvertOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTimePreInvertOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Smoothing</strong></td><td>สมูทติ้ง เปิด/ปิดฟังก์ชันสมูทติ้ง (ค่าเฉลี่ยเคลื่อนที่ / moving average)</td><td><span class="code">SetTimePreSmoozeOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTimePreSmoozeOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Smoothing Point Count</strong></td><td>จำนวนจุดสมูทติ้ง ตั้งค่าจำนวนจุดของสมูทติ้ง (Smoothing / moving average point setting)</td><td><span class="code">SetTimePreSmoozeNumValue</span></td><td>0 fix [Ch1]</td><td>3 ถึง 63</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTimePreSmoozeNumValue</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Time-Axis Calculus</strong></td><td>แคลคูลัสแกนเวลา ตั้งค่าลำดับและจำนวนรอบของการหาอนุพันธ์/อินทิกรัลตามแกนเวลา</td><td><span class="code">SetTimePreJwFlag</span></td><td>0 fix [Ch1]</td><td>0: OFF<br>1: อนุพันธ์อันดับ 1 (First order differentiation)<br>2: อนุพันธ์อันดับ 2 (Second order differentiation)<br>3: อินทิกรัลครั้งเดียว (Single integration)<br>4: อินทิกรัลสองครั้ง (Dual integration)</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTimePreJwFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>DC Removal</strong></td><td>กำจัด DC เปิด/ปิดฟังก์ชันกำจัดองค์ประกอบ DC หลังการอินทิกรัลตามแกนเวลา</td><td><span class="code">SetTimePreJwDCCancelOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTimePreJwDCCancelOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>สุ่มตัวอย่างภายนอก (Ext Sample Dialog Box Commands — External Sample)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Ch Num</strong></td><td>แสดงช่อง Rotary Input สูงสุด อ่านค่าช่อง Rotary Input สูงสุดของการเชื่อมต่อเป้าหมาย</td><td><span class="code">GetExtSampleMaxCHNum</span></td><td>1 หรือมากกว่า ขึ้นอยู่กับจำนวนช่อง Rotary Input สูงสุดที่มี</td><td>&mdash;</td></tr>
+<tr><td><strong>Ch</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Pulse Count</strong></td><td>จำนวนพัลส์ ตั้งค่าจำนวนพัลส์ (Setting the number of pulses)</td><td><span class="code">SetExtSamplePulseRevValue</span></td><td>0 [ExtCh1]</td><td>0.5 ถึง 1024.0 P/R</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSamplePulseRevValue</span></td><td>0 [ExtCh1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Coupling</strong></td><td>คัปปลิ้ง ตั้งค่าเงื่อนไขคัปปลิ้งของช่อง Rotary Input</td><td><span class="code">SetExtSampleCouplingFlag</span></td><td>0 [ExtCh1]</td><td>0: AC &nbsp; 1: DC</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleCouplingFlag</span></td><td>0 [ExtCh1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Edge</strong></td><td>ขอบสัญญาณ ตั้งค่าขอบสัญญาณของช่อง Rotary Input</td><td><span class="code">SetExtSampleSlopeFlag</span></td><td>0 [ExtCh1]</td><td>0: Rising &nbsp; 1: Falling</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleSlopeFlag</span></td><td>0 [ExtCh1]</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

@@ -1,0 +1,41 @@
+<!--TITLE:3.3 คำสั่งกล่องโต้ตอบ Data / Condition / RS-232C-->
+<div class="subhead"><span class="sq"></span>คำสั่งกล่องโต้ตอบ Data (Data Dialog Box Commands — Data File)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Folder No</strong></td><td>เลือกโฟลเดอร์จัดเก็บที่เตรียมไว้ล่วงหน้า (1 ถึง 10)</td><td><span class="code">SetMemorySaveFolderNo</span></td><td>0: 1 &nbsp; 1: 2 &nbsp; 2: 3 &nbsp; 3: 4 &nbsp; 4: 5 &nbsp; 5: 6 &nbsp; 6: 7 &nbsp; 7: 8 &nbsp; 8: 9 &nbsp; 9: 10</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemorySaveFolderNo</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Load</strong></td><td>อ่านไฟล์ข้อมูลการวัด (Measurement data file)</td><td><span class="code">ExecuteFileDataLoad</span></td><td>พาธแบบเต็มของไฟล์ข้อมูล (Full path of the data file)</td></tr>
+<tr><td><strong>Show</strong></td><td>แสดงไฟล์ BMP</td><td><span class="code">ExecuteFileDataLoadBMP</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+
+<div class="subhead"><span class="sq"></span>คำสั่งกล่องโต้ตอบ Condition (Condition Dialog Box Commands — Condition File)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Save</strong></td><td>บันทึกไฟล์โปรเจกต์ (Project file)</td><td><span class="code">ExecuteFilePanelCondSaveWithNo</span></td><td>หมายเลขไฟล์ (File No.)</td></tr>
+<tr><td><strong>Load</strong></td><td>อ่านไฟล์โปรเจกต์ (Project file)</td><td><span class="code">ExecuteFilePanelCondLoadWithNo</span></td><td>หมายเลขไฟล์ (File No.)</td></tr>
+<tr><td><strong>Register</strong></td><td>ระบุชื่อไฟล์เริ่มต้นทำงาน (Start-up file name)</td><td><span class="code">SetMemoryPanelStartFileName</span></td><td>พาธแบบเต็มของไฟล์ (Full path of the file)</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryPanelStartFileName</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+
+<div class="subhead"><span class="sq"></span>คำสั่งกล่องโต้ตอบ RS-232C (RS-232C Dialog Box Commands — RS-232C Settings)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>BPS</strong></td><td>ตั้งค่าความเร็วการสื่อสาร (bps)</td><td><span class="code">SetRS232CBPS</span></td><td>0: 1200 &nbsp; 1: 2400 &nbsp; 2: 4800 &nbsp; 3: 9600 &nbsp; 4: 19200 &nbsp; 5: 38400 &nbsp; 6: 57600 &nbsp; 7: 115200</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRS232CBPS</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Character Bit</strong></td><td>ตั้งค่าความยาวข้อมูล (data bit)</td><td><span class="code">SetRS232CCharacterBit</span></td><td>0: 7 &nbsp; 1: 8</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRS232CCharacterBit</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Parity Check</strong></td><td>ตั้งค่าการตรวจสอบพาริตี (Parity check)</td><td><span class="code">SetRS232CParityCheck</span></td><td>0: None &nbsp; 1: Odd &nbsp; 2: Even</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRS232CParityCheck</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Stop Bit</strong></td><td>ตั้งค่าความยาว stop bit</td><td><span class="code">SetRS232CStopBit</span></td><td>0: 1 &nbsp; 1: 2</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRS232CStopBit</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Flow Control</strong></td><td>ตั้งค่าการควบคุมการรับส่งข้อมูล (handshake)</td><td><span class="code">SetRS232CFlowControl</span></td><td>0: None &nbsp; 1: XON/OFF &nbsp; 2: Hardware</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRS232CFlowControl</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Terminator</strong></td><td>ตั้งค่าตัวจบบรรทัด (line break/feed)</td><td><span class="code">SetRS232CTerminator</span></td><td>0: CR &nbsp; 1: CRLF</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRS232CTerminator</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

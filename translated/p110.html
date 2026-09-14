@@ -1,0 +1,32 @@
+<!--TITLE:คำสั่งเลือกไฟล์ Assist และตั้งค่า Memory-->
+<div class="subhead"><span class="sq"></span>คำสั่ง Dialog Box เลือกไฟล์ Assist (Assist File Select Dialog Box Command (Assist File Select))</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Block Count</strong></td><td>จำนวน Block ที่ใช้ได้สำหรับ Comparator</td><td><span class="code">SetAssistBlockCount</span></td><td>Number of blocks to use for assist</td><td></td></tr>
+<tr><td></td><td></td><td><span class="code">GetAssistBlockCount</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Freq Span</strong></td><td>ช่วงความถี่ที่ใช้พิจารณาเป็น Peak</td><td><span class="code">SetAssistFrequencySpan</span></td><td>Frequency span to accept as peak in assist</td><td></td></tr>
+<tr><td></td><td></td><td><span class="code">GetAssistFrequencySpan</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Execute Assist</strong></td><td>สั่งทำงาน Assist</td><td><span class="code">ExecuteAssist</span></td><td>Full path of the OK file.</td><td>Full path of the NG file.</td></tr>
+<tr><td><strong>Select Media OK</strong></td><td>ระบุสื่อบันทึกข้อมูล &bull; เลือกสื่อบันทึกข้อมูลที่จะแสดงในรายการไฟล์ OK ได้แก่ หน่วยความจำภายใน, SD card, USB memory</td><td><span class="code">SetMemoryMediaTypeAssistOK</span></td><td>0: Internal &nbsp;1: SD &nbsp;2: USB (F:) &nbsp;3: USB (G:)</td><td></td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryMediaTypeAssistOK</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Folder No OK</strong></td><td>หมายเลขโฟลเดอร์ &bull; เลือกโฟลเดอร์จัดเก็บ (ที่เตรียมไว้ล่วงหน้า) ให้แสดงในรายการไฟล์ OK หมายเลข 1 ถึง 10</td><td><span class="code">SetMemorySaveFolderNoAssistOK</span></td><td>0: 1 &nbsp;1: 2 &nbsp;2: 3 &nbsp;3: 4 &nbsp;4: 5 &nbsp;5: 6 &nbsp;6: 7 &nbsp;7: 8 &nbsp;8: 9 &nbsp;9: 10</td><td></td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemorySaveFolderNoAssistOK</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Select Media NG</strong></td><td>ระบุสื่อบันทึกข้อมูล &bull; เลือกสื่อบันทึกข้อมูลที่จะแสดงในรายการไฟล์ NG (fail) ได้แก่ หน่วยความจำภายใน, SD card, USB memory</td><td><span class="code">SetMemoryMediaTypeAssistNG</span></td><td>0: Internal &nbsp;1: SD &nbsp;2: USB (F:) &nbsp;3: USB (G:)</td><td></td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryMediaTypeAssistNG</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Folder No NG</strong></td><td>หมายเลขโฟลเดอร์ &bull; เลือกโฟลเดอร์จัดเก็บ (ที่เตรียมไว้ล่วงหน้า) ให้แสดงในรายการไฟล์ NG (fail) หมายเลข 1 ถึง 10</td><td><span class="code">SetMemorySaveFolderNoAssistNG</span></td><td>0: 1 &nbsp;1: 2 &nbsp;2: 3 &nbsp;3: 4 &nbsp;4: 5 &nbsp;5: 6 &nbsp;6: 7 &nbsp;7: 8 &nbsp;8: 9 &nbsp;9: 10</td><td></td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemorySaveFolderNoAssistNG</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Swap OK file</strong></td><td>นำกราฟ OK มาไว้ด้านหน้า</td><td><span class="code">ExecuteAssistOKDataFront</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Swap NG file</strong></td><td>นำกราฟ NG มาไว้ด้านหน้า</td><td><span class="code">ExecuteAssistNGDataFront</span></td><td>&mdash;</td><td></td></tr>
+</tbody>
+</table></div>
+<div class="subhead"><span class="sq"></span>คำสั่ง Dialog Box ตั้งค่า Memory (Memory Dialog Box Commands (Memory Settings))</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Select Media</strong></td><td>ระบุสื่อบันทึกข้อมูล &bull; เลือกสื่อจัดเก็บข้อมูล ได้แก่ หน่วยความจำภายใน, SD card, USB memory</td><td><span class="code">SetMemoryMediaType</span></td><td>0: Internal &nbsp;1: SD &nbsp;2: USB (F:) &nbsp;3: USB (G:)</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryMediaType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Select Destination Media</strong></td><td>สื่อปลายทางสำหรับคัดลอกหรือย้ายข้อมูล &bull; สามารถเลือกปลายทางสำหรับคัดลอกหรือย้ายข้อมูลได้จาก หน่วยความจำภายใน, SD card หรือ USB memory</td><td><span class="code">SetMemoryMediaCopyMoveType</span></td><td>0: Internal &nbsp;1: SD &nbsp;2: USB (F:) &nbsp;3: USB (G:)</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryMediaCopyMoveType</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

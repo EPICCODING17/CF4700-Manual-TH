@@ -1,0 +1,34 @@
+<!--TITLE:3.3 คำสั่งกล่องโต้ตอบ DO / Ch Set / Event Log-->
+<div class="subhead"><span class="sq"></span>คำสั่งกล่องโต้ตอบ DO (DO Dialog Box Commands — DO Setting)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Busy Out</strong></td><td>เลือกเงื่อนไขสถานะเอาต์พุตสัมผัส (Output contact condition)</td><td><span class="code">SetRelayOutputBusyOutFlag</span></td><td>0: Judge &nbsp; 1: Compare</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRelayOutputBusyOutFlag</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Judge Out</strong></td><td>ตั้งค่าเงื่อนไขสำหรับ OUT 1 ถึง 4</td><td><span class="code">SetRelayOutputCompareJudgeOutFlag</span></td><td>Judge ID</td><td>0: OFF &nbsp; 1: Comp Busy &nbsp; 2: OK &nbsp; 3: NG &nbsp; 4: Error &nbsp; 5: Analysis Done<br>6: Panel Cond Read &nbsp; 7: CCLD Disconnection Detect</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRelayOutputCompareJudgeOutFlag</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Status Memory Out</strong></td><td>กำหนดขั้วเอาต์พุต (STATUS)<br>&bull; กำหนดขั้วเอาต์พุต (MEMORY OUT): OUT1 ถึง OUT5</td><td><span class="code">SetRelayOutputCompareMemoryTypeFlag</span></td><td>Memory ID</td><td>0: OFF &nbsp; 1: Block &nbsp; 2: Shape</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRelayOutputCompareMemoryTypeFlag</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Block Memory Num</strong></td><td>หมายเลขหน่วยความจำ block comparator<br>&bull; กำหนดขั้วเอาต์พุต (MEMORY OUT) ให้กับหมายเลขหน่วยความจำ block comparator</td><td><span class="code">SetRelayOutputCompareMemoryBlockNo</span></td><td>Memory ID</td><td>1 to 20</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRelayOutputCompareMemoryBlockNo</span></td><td>&mdash;</td><td></td></tr>
+<tr><td><strong>Shape Memory Num</strong></td><td>หมายเลขหน่วยความจำ shape comparator<br>&bull; กำหนดขั้วเอาต์พุต (MEMORY OUT) ให้กับหมายเลขหน่วยความจำ shape comparator</td><td><span class="code">SetRelayOutputCompareMemoryShapeNo</span></td><td>Memory ID</td><td>1 to 20</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRelayOutputCompareMemoryShapeNo</span></td><td>&mdash;</td><td></td></tr>
+</tbody>
+</table></div>
+
+<div class="subhead"><span class="sq"></span>คำสั่งกล่องโต้ตอบ Channel Setting (Ch Set Dialog Box Commands)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Rotary Input Ch</strong></td><td>เปิด/ปิดช่อง (CH) รับสัญญาณแบบ rotary input</td><td><span class="code">SetExtSampleCHOnOff</span></td><td>0 [ExtCh1]</td><td>0: Disabled &nbsp; 1: Enabled</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleCHOnOff</span></td><td>&mdash;</td><td></td></tr>
+</tbody>
+</table></div>
+
+<div class="subhead"><span class="sq"></span>คำสั่งกล่องโต้ตอบ Event Log (Event Log Dialog Box Commands)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Clear</strong></td><td>ล้างประวัติ event log</td><td><span class="code">ExecuteClearEventLog</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

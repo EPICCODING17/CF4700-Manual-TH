@@ -1,0 +1,47 @@
+<!--TITLE:3.3 คำสั่ง Dialog Box: EU/SP (ต่อ)-->
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Sample Length</strong></td><td>จำนวนตัวอย่าง ตั้งค่าจำนวนตัวอย่าง (Setting the number of samples)</td><td><span class="code">SetSampleFrameFlag</span></td><td>2: 256 &nbsp;3: 512 &nbsp;4: 1024 &nbsp;5: 2048 &nbsp;6: 4096 &nbsp;7: 8192 &nbsp;8: 16384</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetSampleFrameFlag</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Frequency Range</strong></td><td>ช่วงความถี่ ตั้งค่าช่วงความถี่ (Frequency range setting)</td><td><span class="code">SetFreqRangeFlag</span></td><td>ดูตาราง “ค่าการตั้งค่าช่วงความถี่” ท้ายหน้านี้</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetFreqRangeFlag</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Lin/Log</strong></td><td>Lin/Log ตั้งค่าสเกลแกน X แบบ Lin/Log (X-axis scale lin/log setting)</td><td><span class="code">SetDispXLinLogFlag</span></td><td>0: Lin &nbsp; 1: Log</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetDispXLinLogFlag</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Averaging Time</strong></td><td>เวลาเฉลี่ย ตั้งค่าเวลาเฉลี่ย (Averaging time setting)</td><td><span class="code">SetAverageSecValue</span></td><td>0.1 ถึง 999.9</td><td>&mdash;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetAverageSecValue</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Calibration Value</strong></td><td>ค่าคาลิเบรต สามารถตั้งค่าทางกายภาพได้โดยคำนวณค่าสัมประสิทธิ์แปลงหน่วยทางกายภาพ (EU value) จากค่าที่ค้นหาในไดอะล็อกตั้งค่าเวฟฟอร์ม (waveform setting dialog box)</td><td><span class="code">SetYEUSPEUSearchPosValue</span></td><td>0 fix [Ch1]</td><td>&minus;1.7E+19f ถึง +1.7E+19f</td></tr>
+<tr><td></td><td></td><td><span class="code">GetYEUSPEUSearchPosValue</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Execute Cal</strong></td><td>การคาลิเบรต สั่งให้ทำการคาลิเบรต (Executes the calibration)</td><td><span class="code">ExecuteCalibration</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="note">
+<strong>ค่าการตั้งค่าช่วงความถี่ (Frequency range setting values)</strong>
+<div class="table-wrap"><table>
+<thead><tr><th>ค่า</th><th>ความถี่</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>40 kHz</td></tr>
+<tr><td>1</td><td>20 kHz</td></tr>
+<tr><td>2</td><td>10 kHz</td></tr>
+<tr><td>3</td><td>5 kHz</td></tr>
+<tr><td>4</td><td>4 kHz</td></tr>
+<tr><td>5</td><td>3.2 kHz</td></tr>
+<tr><td>6</td><td>2 kHz</td></tr>
+<tr><td>7</td><td>1.6 kHz</td></tr>
+<tr><td>8</td><td>1 kHz</td></tr>
+<tr><td>9</td><td>800 Hz</td></tr>
+<tr><td>10</td><td>500 Hz</td></tr>
+<tr><td>11</td><td>400 Hz</td></tr>
+<tr><td>12</td><td>200 Hz</td></tr>
+<tr><td>13</td><td>100 Hz</td></tr>
+<tr><td>14</td><td>50 Hz</td></tr>
+<tr><td>15</td><td>40 Hz</td></tr>
+<tr><td>16</td><td>20 Hz</td></tr>
+<tr><td>17</td><td>10 Hz</td></tr>
+<tr><td>18</td><td>5 Hz</td></tr>
+<tr><td>19</td><td>4 Hz</td></tr>
+<tr><td>20</td><td>2 Hz</td></tr>
+<tr><td>21</td><td>1 Hz</td></tr>
+</tbody>
+</table></div>
+</div>

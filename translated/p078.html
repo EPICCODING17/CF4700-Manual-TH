@@ -1,0 +1,73 @@
+<!--TITLE:3.1 C# — คลาสและเมธอด Execute-->
+<div class="api-card">
+  <div class="api-sig">Connected() As String</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>อ่านสถานะการเชื่อมต่อ (Obtains connection state)</div>
+    <div>ค่าที่คืนกลับ</div><div>0 (สถานะตัดการเชื่อมต่อ) &nbsp; 1 (สถานะเชื่อมต่ออยู่)</div>
+  </div>
+</div>
+
+<div class="subhead"><span class="sq"></span>การใช้งานด้วย C# (C#)</div>
+<p>ใน C# คำสั่ง Execute เป็นการโอเวอร์โหลด (overload) ตามจำนวนอาร์กิวเมนต์ (0 ถึง 6)</p>
+
+<div class="subhead"><span class="sq"></span>ชื่อคลาส (Class name)</div>
+<p><span class="code">CF9000Controller</span></p>
+<p>ตัวอย่าง (Example) — การสร้างอินสแตนซ์ (Instance generation)</p>
+<div class="codeblock">CF9000Controller cFController = new CF9000Controller ();</div>
+
+<div class="subhead"><span class="sq"></span>เมธอดคำสั่ง (Command methods)</div>
+
+<div class="api-card">
+  <div class="api-sig">string Execute (string commandName)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+  <div class="api-example codeblock">cFController.Execute(<span class="cm">"KeySTART"</span>);</div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">string Execute (string commandName, string arg1)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>Argument 2</div><div>arg1</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+  <div class="api-example codeblock">cFController.Execute(<span class="cm">"SetAverageTypeFlag"</span>,<span class="cm">"0"</span>);</div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">string Execute (string commandName, string arg1, string arg2)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>Argument 2</div><div>arg1</div>
+    <div>Argument 3</div><div>arg2</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+  <div class="api-example codeblock">cFController.Execute(<span class="cm">"SetInputCCLDOnOff"</span>,<span class="cm">"0"</span>,<span class="cm">"1"</span>);</div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">string Execute (string commandName, string arg1, string arg2, string arg3)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>Argument 2</div><div>arg1</div>
+    <div>Argument 3</div><div>arg2</div>
+    <div>Argument 4</div><div>arg3</div>
+    <div>ค่าที่คืนกลับ</div><div>กรณีคำสั่ง Get จะได้ค่าที่อ่าน / คำสั่งอื่นได้ 0 (สำเร็จ) หรือ &minus;1 (ล้มเหลว)</div>
+  </div>
+</div>
+
+<div class="api-card">
+  <div class="api-sig">string Execute (string commandName, string arg1, string arg2, string arg3, string arg4)</div>
+  <div class="kv">
+    <div>คำอธิบาย</div><div>ส่งคำสั่ง (Command transmission)</div>
+    <div>Argument 1</div><div>ชื่อคำสั่ง (Command name)</div>
+    <div>Argument 2</div><div>arg1</div>
+    <div>Argument 3</div><div>arg2</div>
+  </div>
+</div>

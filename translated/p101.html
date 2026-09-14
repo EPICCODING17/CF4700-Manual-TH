@@ -1,0 +1,25 @@
+<!--TITLE:คำสั่ง Dialog Box ตั้งค่า Tracking (Schedule)-->
+<div class="subhead"><span class="sq"></span>คำสั่ง Dialog Box ตั้งค่า Tracking (Schedule Dialog Box Commands (Tracking Setting))</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Max Analysis Order</strong></td><td>ตั้งค่าลำดับการวิเคราะห์สูงสุด</td><td><span class="code">SetExtSampleMaxOrder</span></td><td>0: 6.25 ord &nbsp;1: 12.5 ord &nbsp;2: 25 ord &nbsp;3: 50 ord &nbsp;4: 100 ord &nbsp;5: 200 ord &nbsp;6: 400 ord &nbsp;7: 800 ord</td></tr>
+<tr><td></td><td></td><td><span class="code">GetExtSampleMaxOrder</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Order Resolution</strong></td><td>ความละเอียดของลำดับ (Order) &bull; คำนวณความละเอียดของลำดับได้จากลำดับการวิเคราะห์สูงสุดและจำนวนตัวอย่างที่ตั้งไว้ในปัจจุบัน</td><td><span class="code">GetTrackDeltaOrder</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Frequency Resolution</strong></td><td>ความละเอียดของความถี่ &bull; คำนวณความละเอียดของความถี่ได้จากช่วงความถี่และจำนวนตัวอย่างที่ตั้งไว้ในปัจจุบัน</td><td><span class="code">GetTrackDeltaFreq</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Schedule Mode</strong></td><td>ตั้งค่าโหมด Tracking</td><td><span class="code">SetTrackScheduleType</span></td><td>0: Rotation tracking analysis &nbsp;1: Time tracking analysis</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackScheduleType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Rotation Tracking</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Lower-limit</strong></td><td>ค่าต่ำสุด &bull; ความเร็วรอบต่ำสุดสำหรับ Rotation Tracking</td><td><span class="code">SetTrackStartRpmValue</span></td><td>0.0 to 260000.0 r/min</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackStartRpmValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Upper-limit</strong></td><td>ค่าสูงสุด &bull; ความเร็วรอบสูงสุดสำหรับ Rotation Tracking</td><td><span class="code">SetTrackStopRpmValue</span></td><td>0.0 to 260000.0 r/min</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackStopRpmValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Interval</strong></td><td>ช่วงห่าง &bull; ช่วงห่างของความเร็วรอบสำหรับ Rotation Tracking</td><td><span class="code">SetTrackRpmIntervalValue</span></td><td>0.1 to 260000.0 r/min</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackRpmIntervalValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Max Recordable Data Count</strong></td><td>จำนวนข้อมูลที่บันทึกได้สูงสุด &bull; อ่านจำนวนข้อมูลที่สามารถบันทึกได้สูงสุด</td><td><span class="code">GetTrackMaxSampleNum</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Slope</strong></td><td>ทิศทางตรวจจับ (Slope) &bull; ตั้งค่าทิศทางตรวจจับความเร็วรอบสำหรับ Rotation Tracking</td><td><span class="code">SetTrackSlopeFlag</span></td><td>0: Rise &nbsp;1: Fall</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackSlopeFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Continuous Rising/Falling Mode</strong></td><td>โหมดขึ้น/ลงต่อเนื่อง &bull; เปิด/ปิดโหมดที่ทิศทางตรวจจับความเร็วรอบของ Rotation Tracking ขึ้นและลงต่อเนื่องกัน</td><td><span class="code">SetTrackAutoSaveOnOff</span></td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackAutoSaveOnOff</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

@@ -1,0 +1,48 @@
+<!--TITLE:3.3 คำสั่ง Dialog Box: ทริกเกอร์-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ทริกเกอร์ภายใน (Int Trigger Dialog Box Commands — Internal Trigger)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Detection Level</strong></td><td>ระดับตรวจจับ ตั้งค่าระดับตรวจจับของทริกเกอร์ภายใน (Internal trigger detection level setting)</td><td><span class="code">SetTrigLevelValue</span></td><td>-99.0 ถึง +99.0%</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigLevelValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>EU Level</strong></td><td>ระดับตรวจจับ (ค่าทางกายภาพ) สามารถตั้งค่าระดับทริกเกอร์แบบกำหนดเองด้วยค่าทางกายภาพได้</td><td><span class="code">SetTrigLevelEUValue</span></td><td>&minus;1.7E+19f ถึง +1.7E+19f</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigLevelEUValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Detection Level</strong></td><td>ระดับตรวจจับ ตั้งค่าระดับตรวจจับของทริกเกอร์ภายใน (Internal trigger detection level setting)</td><td><span class="code">SetTrigIntLevelDbValue</span></td><td>&minus;50 ถึง 150 dB</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigIntLevelDbValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Position</strong></td><td>ตำแหน่งทริกเกอร์ (Trigger position setting)</td><td><span class="code">SetTrigPositionValue</span></td><td>&minus;8191 ถึง +8191 points</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigPositionValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Hysteresis</strong></td><td>ฮิสเทอรีซิส ตั้งค่าฮิสเทอรีซิสในการตรวจจับของทริกเกอร์ภายใน</td><td><span class="code">SetTrigHysValue</span></td><td>0.0 ถึง 99.0%</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigHysValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Slope</strong></td><td>ทิศทางความชัน ตั้งค่าทิศทางความชันในการตรวจจับของทริกเกอร์ภายใน</td><td><span class="code">SetTrigSlopeFlag</span></td><td>0: + &nbsp; 1: &minus; &nbsp; 2: +/&minus;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigSlopeFlag</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ทริกเกอร์ภายนอก (Ext Trigger Dialog Box Commands — External Trigger)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Coupling</strong></td><td>คัปปลิ้ง ตั้งค่าคัปปลิ้งของทริกเกอร์ภายนอก (External trigger coupling setting)</td><td><span class="code">SetTrigExtCopuleFlag</span></td><td>0: AC &nbsp; 1: DC</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigExtCopuleFlag</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Detection Level</strong></td><td>ระดับตรวจจับ ตั้งค่าระดับตรวจจับของทริกเกอร์ภายนอก (External trigger detection level setting)</td><td><span class="code">SetTrigExtLevelVoltValue</span></td><td>&minus;12 ถึง 12 V</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigExtLevelVoltValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Hysteresis</strong></td><td>ฮิสเทอรีซิส ตั้งค่าฮิสเทอรีซิสในการตรวจจับของทริกเกอร์ภายนอก</td><td><span class="code">SetTrigExtHysVoltValue</span></td><td>0.025 ถึง 24 V</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigExtHysVoltValue</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Slope</strong></td><td>ทิศทางความชัน ตั้งค่าทิศทางความชันในการตรวจจับของทริกเกอร์ภายนอก</td><td><span class="code">SetTrigExtSlopeFlag</span></td><td>0: + &nbsp; 1: &minus;</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrigExtSlopeFlag</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การประมวลผลก่อนแกนเวลา (Time Pre Dialog Box Commands — Time-axis Preprocessing)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Ch</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Detrend</strong></td><td>ดีเทรนด์ เปิด/ปิดการตัดแนวโน้ม (Trend / primary component) ออก</td><td><span class="code">SetTimePreTrendOnOff</span></td><td>0 fix [Ch1]</td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTimePreTrendOnOff</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

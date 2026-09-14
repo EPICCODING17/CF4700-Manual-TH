@@ -1,0 +1,37 @@
+<!--TITLE:ตารางสี (ต่อ) และคำสั่ง Trace Line-->
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Grid Line Color</strong></td><td>สีเส้นกริด &bull; ตั้งค่าสีเส้นกริดของกราฟ</td><td><span class="code">SetGraphColorGridLine</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorGridLine</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Character Color</strong></td><td>สีตัวอักษร &bull; ตั้งค่าสีตัวอักษรของหน้าต่างกราฟ</td><td><span class="code">SetGraphColorAnnoActive</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorAnnoActive</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Active Graph Grid Line Color</strong></td><td>สีเส้นกริดของกราฟที่ Active &bull; ตั้งค่าสีของกราฟที่ Active</td><td><span class="code">SetGraphColorActiveArea</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorActiveArea</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Select Data Line Color</strong></td><td>สีตัวอักษรที่แสดงผล Active &bull; ตั้งค่าสีเส้นข้อมูลที่เลือก (Selection)</td><td><span class="code">SetGraphColorSelectDataLine</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorSelectDataLine</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Search Cursor Color</strong></td><td>สี Search Cursor &bull; ตั้งค่าสี Search Cursor ของกราฟ</td><td><span class="code">SetGraphColorCursor</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorCursor</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Delta Cursor Line Color</strong></td><td>ตั้งค่าสีเส้น Delta Cursor &bull; ตั้งค่าสีเส้น Delta Cursor ของกราฟ</td><td><span class="code">SetGraphColorDelta</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorDelta</span></td><td>&mdash;</td></tr>
+<tr><td><strong>List Selection Background Color</strong></td><td>สีพื้นหลังของรายการที่เลือก &bull; ตั้งค่าสีพื้นหลังของ List</td><td><span class="code">SetGraphColorListBackGround</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorListBackGround</span></td><td>&mdash;</td></tr>
+<tr><td><strong>List Selection Character Color</strong></td><td>สีตัวอักษรของรายการที่เลือก &bull; ตั้งค่าสีตัวอักษรของ List</td><td><span class="code">SetGraphColorListFontColor</span></td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorListFontColor</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="subhead"><span class="sq"></span>คำสั่ง Dialog Box ตั้งค่า Trace Line (Trace Line Dialog Box Commands (Trace Line Setting Dialog))</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Line</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Display</strong></td><td>แสดงผล &bull; เปิด/ปิดการแสดงเส้นข้อมูล Tracking Analysis</td><td><span class="code">SetOrdAnalysisLineOnOff</span></td><td>0 to 7 (line 1 to 8)</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetOrdAnalysisLineOnOff</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Data Line Color</strong></td><td>สีเส้นข้อมูล &bull; ตั้งค่าสีเส้นข้อมูลของ Tracking Analysis</td><td><span class="code">SetGraphColorDataLineSchedule</span></td><td>Trace line number (0: Line 1, 7: Line 8)</td><td>RGB value</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphColorDataLineSchedule</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Data Line Type</strong></td><td>ชนิดเส้นข้อมูล &bull; ตั้งค่าชนิดเส้นข้อมูลของ Tracking Analysis</td><td><span class="code">SetGraphTypeDataLineSchedule</span></td><td>Trace line number (0: Line 1, 7: Line 8)</td><td>0: Solid line &nbsp;1: Dotted line &nbsp;2: Dashed line &nbsp;3: Dash-dot line &nbsp;4: Dash-two-dot line</td></tr>
+<tr><td></td><td></td><td><span class="code">GetGraphTypeDataLineSchedule</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Trace Order</strong></td><td>ลำดับการ Trace &bull; ตั้งค่าลำดับ (Order) การ Trace เส้นข้อมูลของ Tracking Analysis</td><td><span class="code">SetOrdAnalysisLineOrd</span></td><td>0 to 7 (line 1 to 8)</td><td>0.000 to 800.000 ord</td></tr>
+<tr><td></td><td></td><td><span class="code">GetOrdAnalysisLineOrd</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

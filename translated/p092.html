@@ -1,0 +1,25 @@
+<!--TITLE:3.2 คำสั่งการควบคุมภายนอก (Ext Control)-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การควบคุมภายนอก (Ext Control Setting Key Commands)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>RS-232C</strong></td><td>ตั้งค่า RS-232C (RS-232C settings)</td><td><span class="code">OpenDialogRS</span></td><td>&mdash;</td></tr>
+<tr><td><strong>DI</strong></td><td>ตั้งค่า DI (DI settings)</td><td><span class="code">OpenDialogRelayInputMemoryList</span></td><td>&mdash;</td></tr>
+<tr><td><strong>4Level Comp</strong></td><td>เปิด/ปิดโหมด Comparator 4 ระดับของ DI</td><td><span class="code">SetRelayInputCommand4LevelCompOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRelayInputCommand4LevelCompOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Panel Cond</strong></td><td>เปิด/ปิดการโหลดเงื่อนไขแผงควบคุม (Panel condition) ของ DI</td><td><span class="code">SetRelayInputPanelCondLoadOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRelayInputPanelCondLoadOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Load</strong></td><td>เปิดรายการไฟล์ CSV</td><td><span class="code">OpenDialogRelayInputLoadFile</span></td><td>&mdash;</td></tr>
+<tr><td><strong>View</strong></td><td>เปิดหน้าต่างดูไฟล์ CSV</td><td><span class="code">OpenDialogRelayInputCommandList</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Start</strong></td><td>เริ่มคำสั่ง (Command start)</td><td><span class="code">ExecuteRelayInputCommandStart</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Stop</strong></td><td>หยุดคำสั่ง (Command stop)</td><td><span class="code">ExecuteRelayInputCommandStop</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Copy</strong></td><td>คัดลอกไฟล์คำสั่ง (จากตัวเครื่องไปยัง USB)</td><td><span class="code">ExecuteRelayInputCommandCopy</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Clear</strong></td><td>ลบการกำหนดไฟล์คำสั่ง</td><td><span class="code">ExecuteRelayInputCommandDelete</span></td><td>&mdash;</td></tr>
+<tr><td><strong>All Export</strong></td><td>ส่งออกทั้งหมด (All Export)</td><td><span class="code">SetMemoryMediaAllExportType</span></td><td>0: SD &nbsp; 1: USB (F:) &nbsp; 2: USB (G:)</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryMediaAllExportType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>DI File</strong></td><td>ไฟล์ DI (DI File)</td><td><span class="code">ExecuteRelayInputCommand</span></td><td>1 ถึง 4096 ตัวอักษร</td></tr>
+<tr><td><strong>DO</strong></td><td>ตั้งค่า DO (DO settings)</td><td><span class="code">OpenDialogDO</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

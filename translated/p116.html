@@ -1,0 +1,26 @@
+<!--TITLE:3.6 ตารางเทียบคำสั่งอ่านสถานะ-->
+<h3><span class="h3-num">3.6</span>ตารางเทียบคำสั่งอ่านสถานะ (Condition Acquisition Command Correspondences)</h3>
+
+<div class="table-wrap"><table>
+<thead><tr><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td>อ่านข้อมูลว่ามีการเกิดเหตุการณ์ trigger หรือไม่</td><td><span class="code">GetDoneTriggedFlag</span></td><td>0: False &nbsp; 1: True</td></tr>
+<tr><td>ล้างข้อมูลว่ามีการเกิดเหตุการณ์ trigger หรือไม่</td><td><span class="code">ClearTriggedFlag</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านข้อมูลการเกิด A/D Over</td><td><span class="code">GetDoneADOverFlag</span></td><td>0: False &nbsp; 1: True</td></tr>
+<tr><td>ล้างข้อมูลการเกิด A/D Over</td><td><span class="code">ClearADOverFlag</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านข้อมูลว่ามีการตรวจพบสายขาดหรือไม่</td><td><span class="code">GetDoneDisconnectCCLDFlag</span></td><td>0: False &nbsp; 1: True</td></tr>
+<tr><td>ล้างข้อมูลว่ามีการตรวจพบสายขาดหรือไม่</td><td><span class="code">ClearDisconnectCCLDFlag</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านจำนวนครั้งปัจจุบันของการทำ averaging</td><td><span class="code">GetCurrentAverageNum</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านสถานะการเล่นไฟล์ offline</td><td><span class="code">GetCurrentOfflineAnalyzingValue</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านจำนวนบล็อกปัจจุบันระหว่างการวัดแบบ tracking</td><td><span class="code">GetCurrentTrackingRecieveNum</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านความเร็วรอบปัจจุบัน</td><td><span class="code">GetCurrentScanRpmValue</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านจำนวนข้อผิดพลาดที่เกิดขึ้น</td><td><span class="code">GetEventNum</span></td><td>&mdash;</td></tr>
+<tr><td>ล้างประวัติ event log</td><td><span class="code">ClearEventLog</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านสถานะการเริ่มวิเคราะห์</td><td><span class="code">GetStatStartOnOff</span></td><td>0: Stop condition &nbsp; 1: Start condition</td></tr>
+<tr><td>อ่านสถานะการแสดงผลหน้าจอทำงานคอมพาเรเตอร์</td><td><span class="code">GetStatCompareExecuteModeOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td>อ่านผลการตัดสิน (อ่านผลแบบไดนามิกตามการตัดสินของ block/shape)</td><td><span class="code">GetCompareStatusOkNg</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านจำนวนการตัดสินทั้งหมด (อ่านผลแบบไดนามิกตามการตัดสินของ block/shape)</td><td><span class="code">GetCompareTotalJudgeNum</span></td><td>&mdash;</td></tr>
+<tr><td>อ่านผลการตัดสินของหมายเลขที่ระบุ</td><td><span class="code">GetCompareNoStatusOkNg</span></td><td>Specified No.</td></tr>
+<tr><td>อ่านจำนวนครั้งของการตัดสิน NG ของหมายเลขที่ระบุ</td><td><span class="code">GetCompareNoStausNgJudgeNum</span></td><td>Specified No.</td></tr>
+</tbody>
+</table></div>

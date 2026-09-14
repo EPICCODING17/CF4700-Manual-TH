@@ -1,0 +1,37 @@
+<!--TITLE:3.2 คำสั่งบันทึกไฟล์และเงื่อนไข (ต่อ)-->
+<div class="table-wrap"><table>
+<thead><tr><th>Setting Key</th><th>คำอธิบาย</th><th>ชื่อคำสั่ง</th><th>Arg1</th></tr></thead>
+<tbody>
+<tr><td><strong>Load Selected Data</strong></td><td>สั่งโหลดข้อมูลที่เลือกไว้ (SELECT LOAD)</td><td><span class="code">ExecuteFileDataSelectLoad</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Save Type</strong></td><td>รูปแบบการบันทึกไฟล์ (Saving Format)</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>TEXT</strong></td><td>บันทึกในรูปแบบ TEXT</td><td><span class="code">SetMemoryDataTextOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryDataTextOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>TRC</strong></td><td>บันทึกในรูปแบบ TRC</td><td><span class="code">SetTrackMemoryTRCOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetTrackMemoryTRCOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>BMP</strong></td><td>บันทึกในรูปแบบ BMP</td><td><span class="code">SetMemoryDataBMPOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryDataBMPOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Label</strong></td><td>ป้ายชื่อข้อมูล (Data label)</td><td><span class="code">SetServoMemoryMeasurementComment</span></td><td>1 ถึง 39 ตัวอักษร</td></tr>
+<tr><td></td><td></td><td><span class="code">GetServoMemoryMeasurementComm</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Insert</strong></td><td>แทรกข้อมูล (INSERT)</td><td><span class="code">ExecuteMemoryDataInsertBlockNo</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Protect</strong></td><td>ป้องกันข้อมูล (PROTECT)</td><td><span class="code">SetMemoryDataProtectMode</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryDataProtectMode</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Auto Save</strong></td><td>บันทึกอัตโนมัติ (Auto Save)</td><td><span class="code">SetMemoryAutoStoreOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemoryAutoStoreOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Save Result Type</strong></td><td>ผลการตัดสินที่จะบันทึก (Data judgment results to be saved)</td><td><span class="code">SetMemorySaveResultType</span></td><td>&minus;1: NG (fail) &nbsp; 0: All &nbsp; 1: OK</td></tr>
+<tr><td></td><td></td><td><span class="code">GetMemorySaveResultType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Condition</strong></td><td>หน่วยความจำเงื่อนไข (Condition memory)</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>Select</strong></td><td>การเลือกเงื่อนไข (Condition selection)</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><strong>All On</strong></td><td>เลือกทั้งหมด ON (All ON)</td><td><span class="code">ExecuteFilePanelCondSelectClearAllon</span></td><td>&mdash;</td></tr>
+<tr><td><strong>All Off</strong></td><td>เลือกทั้งหมด OFF (All OFF)</td><td><span class="code">ExecuteFilePanelCondSelectClearAlloff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Copy Selected Data</strong></td><td>คัดลอกข้อมูลที่เลือก (COPY EXECUTE)</td><td><span class="code">ExecuteFilePanelCondSelectCopy</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Move Selected Data</strong></td><td>ย้ายข้อมูลที่เลือก (MOVE EXECUTE)</td><td><span class="code">ExecuteFilePanelCondSelectMove</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Delete Selected Data</strong></td><td>ลบข้อมูลที่เลือก (CLEAR EXECUTE)</td><td><span class="code">ExecuteFilePanelCondSelectClear</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Label</strong></td><td>หมายเหตุไฟล์โปรเจกต์ (Project file comment)</td><td><span class="code">SetPanelMeasurementComment</span></td><td>1 ถึง 60 ตัวอักษร</td></tr>
+<tr><td></td><td></td><td><span class="code">GetPanelMeasurementComment</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Start Type</strong></td><td>การตั้งค่าโปรเจกต์เมื่อเริ่มระบบ (Project settings on startup)</td><td><span class="code">SetPanelStartType</span></td><td>0: Previous condition &nbsp; 1: New project &nbsp; 2: Specified project</td></tr>
+<tr><td></td><td></td><td><span class="code">GetPanelStartType</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Relay Load</strong></td><td>ตั้งค่าโหลดรีเลย์เป็น ON หรือ OFF ขณะโหลดเงื่อนไข</td><td><span class="code">SetRelayLoadOnOff</span></td><td>0: OFF &nbsp; 1: ON</td></tr>
+<tr><td></td><td></td><td><span class="code">GetRelayLoadOnOff</span></td><td>&mdash;</td></tr>
+<tr><td><strong>Media Format</strong></td><td>ฟอร์แมตสื่อบันทึกข้อมูล (Format)</td><td><span class="code">ExecuteMediaFormat</span></td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

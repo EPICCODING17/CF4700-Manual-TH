@@ -9,8 +9,8 @@ TRANSLATED = os.path.join(ROOT, "translated")
 IMAGES = os.path.join(ROOT, "assets", "pages_jpg")
 OUT = os.path.join(ROOT, "index.html")
 
-TOTAL_PAGES = 122  # full book; phase 1 only renders pages START..END
-START, END = 1, 60
+TOTAL_PAGES = 122  # full book
+START, END = 1, 122
 
 SECTIONS = [
     ("front", "หน้าปกและเกริ่นนำ", 1, 8, None),
@@ -18,6 +18,15 @@ SECTIONS = [
     ("cmdov", "2. ภาพรวมคำสั่ง RS-232C", 14, 16, None),
     ("ref", "3. รายการคำสั่ง RS-232C", 17, 55, None),
     ("compat", "4. ความเข้ากันได้กับ CF-4500", 56, 60, None),
+    ("lanov", "Chapter 2 — 1. ภาพรวม LAN External Control", 61, 64, None),
+    ("lanprep", "2. การเตรียมการใช้งาน LAN External Control", 65, 75, None),
+    ("api", "3.1 CF9000Controller Class", 76, 79, None),
+    ("setkey", "3.2 ตารางเทียบคำสั่งกับ Setting Key", 80, 94, None),
+    ("dialog", "3.3 ตารางเทียบคำสั่งกับ Dialog Box", 95, 112, None),
+    ("misc", "3.4-3.7 ตารางเทียบคำสั่งอื่นๆ", 113, 117, None),
+    ("ref4", "4. ภาคผนวก (Network Terms)", 118, 118, None),
+    ("index", "ดัชนีคำศัพท์ (Index)", 119, 121, None),
+    ("back", "หน้าปกหลัง", 122, 122, None),
 ]
 
 CSS = r"""
@@ -107,6 +116,13 @@ td.tabular,.tabular{font-variant-numeric:tabular-nums}
 .api-sig{font-family:Consolas,monospace;font-size:14px;font-weight:700;color:#0b3aa4;background:var(--primary-soft);border-radius:10px;padding:8px 12px;overflow-x:auto;white-space:nowrap}
 .api-card .kv{grid-template-columns:130px 1fr;margin-top:12px}
 
+.step{border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;background:#fff}
+.step-head{display:flex;align-items:flex-start;gap:13px;margin-bottom:8px}
+.step .num{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:800}
+.step-title{font-weight:800;font-size:16px;padding-top:4px}
+.step p{margin:0 0 8px}
+.step p:last-child{margin-bottom:0}
+
 /* page card = one original page, mirrors the printed book 1:1 */
 .pagecard{border:1px solid var(--line);border-radius:16px;padding:0;margin:0 0 22px;overflow:hidden;background:#fff}
 .pagecard:last-child{margin-bottom:0}
@@ -147,14 +163,19 @@ def load_page(n):
     title, body = m.group(1).strip(), m.group(2)
     return title, body
 
+EXTERNAL_IMAGES = False  # set True to reference pages/pNNN.jpg instead of embedding base64
+
 def pagecard(n):
     title, body = load_page(n)
-    img_b64 = b64_image(n)
+    if EXTERNAL_IMAGES:
+        img_src = f"pages/p{n:03d}.jpg"
+    else:
+        img_src = f"data:image/jpeg;base64,{b64_image(n)}"
     return f"""
   <div class="pagecard" id="p{n}">
     <div class="pagehead"><span class="pagebadge">หน้า {n} / {TOTAL_PAGES}</span><span class="pagetitle">{title}</span></div>
     <div class="pagebody">
-      <div class="pageshot"><img src="data:image/jpeg;base64,{img_b64}" alt="ต้นฉบับหน้า {n}" onclick="openLightbox(this.src)"><span class="zoomhint">&#128269; ดูรูปใหญ่</span></div>
+      <div class="pageshot"><img src="{img_src}" alt="ต้นฉบับหน้า {n}" onclick="openLightbox(this.src)"><span class="zoomhint">&#128269; ดูรูปใหญ่</span></div>
       <div class="pagetext">
 {body}
       </div>
@@ -166,6 +187,11 @@ def build():
     if missing:
         print("MISSING translated pages:", missing)
         return False
+
+    if END >= TOTAL_PAGES:
+        banner = ""
+    else:
+        banner = f'<div class="draft-banner"><div class="inner"><strong>หน้า {START}-{END} จาก {TOTAL_PAGES}:</strong> ส่วนที่เหลือกำลังแปลต่อ</div></div>'
 
     sidebar_links = "\n".join(
         f'    <a href="#sec-{key}">{label} <span class="small">(หน้า {lo}-{hi})</span></a>'
@@ -202,7 +228,7 @@ def build():
   </div>
 </header>
 
-<div class="draft-banner"><div class="inner"><strong>Phase 1 &mdash; Chapter 1 เท่านั้น (หน้า 1-60 จาก {TOTAL_PAGES}):</strong> Chapter 2 (LAN External Control) จะทำต่อในเฟสถัดไป</div></div>
+{banner}
 
 <div class="layout">
 <aside class="sidebar">
@@ -245,4 +271,8 @@ document.addEventListener('keydown', function(e){{
     return True
 
 if __name__ == "__main__":
+    import sys
+    if "--artifact" in sys.argv:
+        EXTERNAL_IMAGES = True
+        OUT = os.path.join(ROOT, "artifact_preview.html")
     build()

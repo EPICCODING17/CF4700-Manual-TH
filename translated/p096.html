@@ -1,0 +1,27 @@
+<!--TITLE:3.3 คำสั่ง Dialog Box: EU และ EU/SP-->
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>EU Value</strong></td><td>ค่า EU ตั้งค่าการแปลงหน่วยทางกายภาพของช่องอินพุต (Input channel physical quantity conversion setting)</td><td><span class="code">SetEUYUnitValue</span></td><td>0 fix [Ch1]</td><td>+1.7E&minus;19f ถึง +1.7E+19f</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEUYUnitValue</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>EU Type</strong></td><td>ประเภท EU เลือกวิธีตั้งค่าสัมประสิทธิ์แปลงหน่วย (EU/V value)</td><td><span class="code">SetEUYUnitFlag</span></td><td>0 fix [Ch1]</td><td>0: EU/V &nbsp; 1: V/EU</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEUYUnitFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Offset</strong></td><td>ค่าออฟเซ็ต สามารถตั้งค่าออฟเซ็ตของค่า EU แยกตามแต่ละช่องอินพุตได้</td><td><span class="code">SetEUYUnitOffsetFlag</span></td><td>0 fix [Ch1]</td><td>0: &minus;50 dB &nbsp;1: &minus;40 dB &nbsp;2: &minus;30 dB &nbsp;3: &minus;20 dB &nbsp;4: &minus;10 dB &nbsp;5: 0 dB<br>6: 10 dB &nbsp;7: 20 dB &nbsp;8: 30 dB &nbsp;9: 40 dB &nbsp;10: 50 dB</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEUYUnitOffsetFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>TEDS</strong></td><td>อ่านข้อมูล TEDS (TEDS information acquisition)</td><td><span class="code">ExecuteScanTEDS</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>EU/SP (EU/SP Dialog Box Commands)</div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>คำอธิบาย</th><th>คำสั่ง</th><th>Arg1</th><th>Arg2</th></tr></thead>
+<tbody>
+<tr><td><strong>Voltage Range</strong></td><td>ช่วงแรงดัน ตั้งค่าช่วงแรงดันของช่องอินพุต (Input channel voltage range setting)</td><td><span class="code">SetInputRangeFlag</span></td><td>0 fix [Ch1]</td><td>0: 0 dBVrms &nbsp; 1: 30 dBVrms</td></tr>
+<tr><td></td><td></td><td><span class="code">GetInputRangeFlag</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>Unit Name</strong></td><td>ชื่อหน่วย เลือกชื่อหน่วยของช่องอินพุต (Input channel unit name selection)</td><td><span class="code">SetEUYUnitName</span></td><td>0 fix [Ch1]</td><td>0: m/s2 &nbsp;1: m/s &nbsp;2: m &nbsp;3: N &nbsp;4: mm &nbsp;5: um &nbsp;6: Pa &nbsp;7: SPL &nbsp;8: V &nbsp;9: nm</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEUYUnitName</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+<tr><td><strong>0 dB Reference</strong></td><td>ค่าอ้างอิง 0 dB สามารถตั้งค่าอ้างอิง 0dB ได้ เป็นค่าอ้างอิงสำหรับแปลงเป็นลอการิทึม (dB) เช่น เสียง: 2.00E-5 Pa และระดับการสั่นสะเทือน: 1.00E-5 m/s2</td><td><span class="code">SetEUYCalibrationValue</span></td><td>0 fix [Ch1]</td><td>+1.7E&minus;19 ถึง +1.7E+19</td></tr>
+<tr><td></td><td></td><td><span class="code">GetEUYCalibrationValue</span></td><td>0 fix [Ch1]</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

@@ -1,0 +1,76 @@
+<!--TITLE:3.1 คำสั่งตั้งค่า Input — EU Setting-->
+<h3><span class="h3-num">3.1</span>คำสั่งตั้งค่า Input (Input Setting Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่า EU (EU Setting)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">STE</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">อ่านข้อมูล TEDS (Executes TEDS information readout)</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EUS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า EU เปิด/ปิด</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: OFF &nbsp; 1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EUU</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าประเภทของ EU</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: EU/V &nbsp; 1: V/EU</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EEV</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า EU value ด้วย EU/V (เมื่อเปิดใช้งาน EU)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">+1.7E&minus;19f ถึง +1.7E+19f</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EUG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะเปิด/ปิดของ EU</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp; 1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">YES</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าการคาลิเบรต (Calibration value)</span></div>
+  <div class="cmd-note">คำนวณค่าสัมประสิทธิ์แปลงหน่วยทางกายภาพ (EU value) จากค่าที่ค้นหา แล้วอ่านค่าที่ต้องตั้งจริง</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">&minus;1.7E+19f ถึง +1.7E+19f</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">YEU</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านหน่วยการคาลิเบรต (Calibration unit)</span></div>
+  <div class="cmd-note">คำนวณค่าสัมประสิทธิ์แปลงหน่วยทางกายภาพ (EU value) จากค่าที่ค้นหา แล้วอ่านหน่วยที่ต้องตั้งจริง</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">สูงสุด 16 ตัวอักษร</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EYU</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่า EU offset</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">0: &minus;50 dB &nbsp;1: &minus;40 dB &nbsp;2: &minus;30 dB &nbsp;3: &minus;20 dB &nbsp;4: &minus;10 dB &nbsp;5: 0 dB<br>6: 10 dB &nbsp;7: 20 dB &nbsp;8: 30 dB &nbsp;9: 40 dB &nbsp;10: 50 dB</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EUY</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่า EU ด้วย EU/V (เมื่อเปิดใช้งาน EU)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">+1.7E&minus;19f ถึง +1.7E+19f</div>
+  </div>
+</div>
+</div>

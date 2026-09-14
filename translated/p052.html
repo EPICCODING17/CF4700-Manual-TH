@@ -1,0 +1,63 @@
+<!--TITLE:3.22 Data Memory (ต่อ) และ 3.23 Analysis Control-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ประเภทไฟล์ข้อมูล (Type of Data File)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DST</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ระบุประเภทที่จะเพิ่มให้กับไฟล์ข้อมูล (.dat)</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: ไฟล์รูปภาพ (.BMP) &nbsp;2: ไฟล์ ASCII (.txt) &nbsp;3: ไฟล์ Tracking (TRC)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BMP</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า "Save as BMP format file" เปิด/ปิด</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MDB</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะ "Save as BMP format file" (ON หรือ OFF)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MET</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า "Save as text format file" เปิด/ปิด</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MDT</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะ "Save as text format file" (ON หรือ OFF)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+</div>
+
+<h3><span class="h3-num">3.23</span>คำสั่งควบคุม Analysis (Analysis Control Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>เริ่มทำงาน (Start)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CST</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เริ่มการวิเคราะห์ข้อมูล</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">AST</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เริ่ม Average (Average start)</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การวิเคราะห์ (Analysis)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CPS</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">หยุดการวิเคราะห์ข้อมูลชั่วคราว</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CCN</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ทำการวิเคราะห์ข้อมูลต่อ (AVG)</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>สถานะ (State)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CSC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านว่าการวิเคราะห์อยู่ในสถานะเริ่มทำงานหรือหยุดชั่วคราว</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">1: Start &nbsp;2: Pause</div></div>
+</div>
+</div>

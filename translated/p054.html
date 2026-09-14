@@ -1,0 +1,26 @@
+<!--TITLE:3.25 คำสั่ง Data Transfer (ต่อ)-->
+<div class="warning">
+<strong>ค่า Overall ของแกน X ในคำสั่ง LDD/UDD</strong>
+<p>สำหรับ Power spectrum ค่า overall ของแกน X จะถูกส่งออกเป็นผลรวมของความถี่วิเคราะห์สูงสุดกับความละเอียด (resolution)<br>
+ตัวอย่างเช่น หากสั่ง LDD3,799,801 ใน Power spectrum ที่ 800 lines ช่วง 40 kHz ค่าที่อ่านได้จะเป็นดังนี้</p>
+<div class="codeblock">3.995000E+04 terminator,<br>Y-axis value terminator,<br>4.000000E+04 terminator,<br>Y-axis value terminator,<br>4.005000E+04 terminator,<br>Overall value terminator.</div>
+<p>ค่า overall ของแกน X จะถูกส่งออกเป็นความถี่กลาง (center frequency) ที่ตามหลังความถี่วิเคราะห์สูงสุด สำหรับ 1/1 และ 1/3 octave<br>
+ตัวอย่างเช่น หากสั่ง LDD3,17,19 ใน 1/3 octave ที่ 800 lines ช่วง 40 kHz ค่าที่อ่านได้จะเป็น</p>
+<div class="codeblock">3.150000E+04 terminator,<br>Y-axis value terminator,<br>4.000000E+04 terminator,<br>Y-axis value terminator,<br>5.000000E+04 terminator,<br>Overall value terminator.</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>อ่านข้อมูลแบบ Binary (Read Binary Data)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BDR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูลแบบ binary</span></div>
+  <div class="cmd-note">ข้อมูลถูกส่งเป็น 4 ไบต์ × จำนวนจุดข้อมูล + 2 (CRLF) โดยจำนวนข้อมูลอ่านได้จากคำสั่ง BDL<br>ส่งค่าทศนิยมแบบ single-precision ตามมาตรฐาน IEEE ขนาด 4 ไบต์ เรียงลำดับจากไบต์นัยสำคัญน้อยที่สุดไปยังไบต์นัยสำคัญมากที่สุด (least significant byte → most significant byte)</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: Time waveform &nbsp;2: Power spectrum &nbsp;3: Fourier spectrum &nbsp;4: Probability density function</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">WDR</span><span class="cmd-desc">อ่านข้อมูล waveform ที่กำลังแสดงผลแบบ binary</span></div>
+  <div class="cmd-note">ข้อมูลถูกส่งเป็น 4 ไบต์ × จำนวนจุดข้อมูล + 2 (CRLF) โดยจำนวนข้อมูลอ่านได้จากคำสั่ง WLC<br>ส่งค่าทศนิยมแบบ single-precision ตามมาตรฐาน IEEE ขนาด 4 ไบต์ เรียงลำดับจากไบต์นัยสำคัญน้อยที่สุดไปยังไบต์นัยสำคัญมากที่สุด (least significant byte → most significant byte)</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: Lower screen &nbsp;2: Upper screen</div></div>
+</div>
+</div>

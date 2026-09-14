@@ -1,0 +1,83 @@
+<!--TITLE:3.1 คำสั่งตั้งค่า Input — Analog Setting-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่า Analog (Analog Setting)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SIF</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า analog filter</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">1: Flat (Z) &nbsp;2: A-weight &nbsp;3: C-weight</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SIR</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าหน่วยของ voltage range</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: V &nbsp;1: Vrms &nbsp;2: dBVrms</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ICD</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าฟังก์ชันตรวจจับสายขาด (disconnection detection) เปิด/ปิด</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ICF</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า coupling</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: AC &nbsp;1: DC</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ICL</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า CCLD (ไฟเลี้ยงเซนเซอร์) เปิดหรือปิด</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">IFF</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะของ analog filter</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">1: Flat (Z) &nbsp;2: A-weight &nbsp;3: C-weight</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">IAZ</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะเปิด/ปิดของ autozero</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">INC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะเปิด/ปิดของ CCLD (ไฟเลี้ยงเซนเซอร์)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">IRU</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านหน่วยของ voltage range</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">0: V &nbsp;1: Vrms &nbsp;2: dBVrms</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DCC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูลว่ามีการตรวจพบสายขาดหรือไม่</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: False &nbsp;1: True</div>
+  </div>
+</div>
+</div>

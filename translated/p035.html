@@ -1,0 +1,70 @@
+<!--TITLE:3.13 คำสั่งฟังก์ชัน Trigger-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ระดับสัญญาณอินพุต (Input Level)</div>
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">AOC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะระดับสัญญาณอินพุต (Input level)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">1: ไม่มีโอเวอร์โฟลว์ (No overflow) &nbsp;2: โอเวอร์โฟลว์ (Overflow)</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>DC Cancel</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CAD</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ล้างข้อมูลว่าเกิด A/D Over หรือไม่</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DCO</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เปิดใช้งานฟังก์ชัน DC canceling</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DCF</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ปิดใช้งานฟังก์ชัน DC canceling</span></div>
+</div>
+</div>
+
+<h3><span class="h3-num">3.13</span>คำสั่งฟังก์ชัน Trigger (Trigger Function Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่า Trigger (Trigger Setting)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TEC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านการคัปปลิ้งของ external trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: AC &nbsp;1: DC</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TMF</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าโหมด trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: Repeat &nbsp;1: Single &nbsp;2: OneShot</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TRE</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สั่งให้ trigger ทำงานซ้ำ (Repeat) และเปิดใช้งานฟังก์ชัน trigger</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TSI</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับ trigger ไปเป็นโหมด single และเข้าสู่สถานะรอ trigger</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TOS</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">กำหนด trigger เป็น OneShot และเปิดใช้งานฟังก์ชัน trigger</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TGC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการตั้งค่า trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: FREE &nbsp;1: REPEAT &nbsp;2: SINGLE &nbsp;3: ONESHOT</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ฟังก์ชัน Trigger (Trigger Function)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TOO</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะ trigger (ON หรือ OFF)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TRG</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า trigger เป็น ON หรือ OFF</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+</div>

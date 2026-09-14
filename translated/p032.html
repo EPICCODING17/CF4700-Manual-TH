@@ -1,0 +1,72 @@
+<!--TITLE:3.10 คำสั่ง Comparator (ต่อ)-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หน้าสัมผัสอินพุต (Input Contact)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ICS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าสตริงคำสั่งของหน้าสัมผัสอินพุต</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 9: หมายเลขหน้าสัมผัสอินพุต</div>
+    <div class="lbl">Argument 2</div><div class="val">สตริงคำสั่ง</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ICG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสตริงคำสั่งของหน้าสัมผัสอินพุต</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 9: หมายเลขหน้าสัมผัสอินพุต</div>
+    <div class="lbl">Read value</div><div class="val">สตริงคำสั่ง</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">IFS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าหน้าสัมผัสอินพุตเป็น ON หรือ OFF</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 9: หมายเลขหน้าสัมผัสอินพุต</div>
+    <div class="lbl">Argument 2</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">IFG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะหน้าสัมผัสอินพุต (ON หรือ OFF)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 9: หมายเลขหน้าสัมผัสอินพุต</div>
+    <div class="lbl">Read value</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ISS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า 4LEVEL COMP เป็น ON หรือ OFF</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 Fix [4LEVEL COMP]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ISG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะ 4LEVEL COMP (ON หรือ OFF)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 Fix [4LEVEL COMP]</div>
+    <div class="lbl">Read value</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หน้าสัมผัสเอาต์พุต (Output Contact)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">RSS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าข้อมูลขั้วเอาต์พุตขนาด 16 บิตตามที่ระบุ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: ข้อมูลขั้วเอาต์พุตผลการตัดสิน (STATUS OUT) &nbsp;1: ข้อมูลขั้วเอาต์พุตของหน่วยความจำ comparator แต่ละหน่วย (BLOCK OUT)</div>
+    <div class="lbl">Argument 2</div><div class="val">ข้อมูลขั้วเอาต์พุตขนาด 16 บิต ตรงกับอาร์กิวเมนต์แรก</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">RSR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูลขั้วเอาต์พุตขนาด 16 บิตที่ตรงกัน</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: ข้อมูลขั้วเอาต์พุตผลการตัดสิน (STATUS OUT) &nbsp;1: ข้อมูลขั้วเอาต์พุตของหน่วยความจำ comparator แต่ละหน่วย (BLOCK OUT)</div>
+    <div class="lbl">Read value 1</div><div class="val">ข้อมูลขั้วเอาต์พุตขนาด 16 บิต ตรงกับอาร์กิวเมนต์แรก</div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,69 @@
+<!--TITLE:3.12 คำสั่ง Input Amplifier-->
+<h3><span class="h3-num">3.12</span>คำสั่ง Input Amplifier (Input Amplifier Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>แหล่งสัญญาณอินพุต (Signal Input Source)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SAV</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">แปลงแหล่งสัญญาณอินพุตเป็นสัญญาณแรงดันไฟฟ้า (Voltage signal)</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1, 2: BNC</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SAP</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">แปลงแหล่งสัญญาณอินพุตเป็นเซนเซอร์แบบพิกอัพ (Pickup sensor)</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1, 2: Sensor</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การคัปปลิ้ง (Coupling)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">AAC</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปใช้การคัปปลิ้งแบบ AC (AC coupling)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ADC</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปใช้การคัปปลิ้งแบบ DC (DC coupling)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ICC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสภาวะการคัปปลิ้งอินพุต (Input coupling)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: DC coupling &nbsp;1: AC coupling</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ความไวอินพุต (Input Sensitivity)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ARS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าช่วงแรงดันไฟฟ้าของช่องอินพุต (Input channel voltage range)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: (fix Ch1)</div>
+    <div class="lbl">Argument 2</div><div class="val">0: 1 Vrms &nbsp;1: 31.6 Vrms</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ARG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านช่วงแรงดันไฟฟ้าของช่องอินพุต</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: (fix Ch1)</div>
+    <div class="lbl">Read value 1</div><div class="val">0: 1 dBVrms &nbsp;1: 31.6 dBVrms</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">AAS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าความไวอินพุต (Input sensitivity)</span></div>
+  <div class="cmd-note">คำสั่งนี้มีไว้เพื่อความเข้ากันได้กับ CF-4500 หากเขียนโปรแกรมใหม่ ให้ใช้คำสั่ง <span class="code">ARS</span> แทน</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">ช่วงแรงดันไฟฟ้า / ค่าสถานะ (Voltage range / Flag value)<br>0: 10 mVrms &nbsp;1: 31.6 mVrms &nbsp;2: 100 mVrms &nbsp;3: 0.316 Vrms &nbsp;4: 1 Vrms &nbsp;5: 3.16 Vrms &nbsp;6: 10 Vrms &nbsp;7: 31.6 Vrms</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">AAR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านความไวอินพุต (Input sensitivity)</span></div>
+  <div class="cmd-note">คำสั่งนี้มีไว้เพื่อความเข้ากันได้กับ CF-4500 หากเขียนโปรแกรมใหม่ ให้ใช้คำสั่ง <span class="code">ARG</span> แทน</div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ช่วงแรงดันไฟฟ้า / ค่าสถานะ (Voltage range / Flag value)<br>0: 10 mVrms &nbsp;1: 31.6 mVrms &nbsp;2: 100 mVrms &nbsp;3: 0.316 Vrms &nbsp;4: 1 Vrms &nbsp;5: 3.16 Vrms &nbsp;6: 10 Vrms &nbsp;7: 31.6 Vrms</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">AMP</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านความไวอินพุตเป็นค่าแรงดันไฟฟ้า (V)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">รูปแบบค่าที่อ่านได้: #.####E±##</div></div>
+</div>
+</div>

@@ -1,0 +1,82 @@
+<!--TITLE:3.17 คำสั่งฟังก์ชัน Display-->
+<h3><span class="h3-num">3.17</span>คำสั่งฟังก์ชัน Display (Display Function Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ประเภทการแสดงผล (Display Type)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ATI</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">แสดงรูปคลื่นสัญญาณตามเวลา (Time waveform)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ASP</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">แสดง Power Spectrum</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MAG</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">แสดงค่า MAG</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PHS</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปแสดงผล Phase</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PSD</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปแสดงผล Power Spectrum Density</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">O3S</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">แสดงผล 1/3 Octave</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">O1S</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">แสดงผล 1/1 Octave</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">AHI</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">แสดง Histogram</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PDF</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปแสดงผล Probability Density Function (PDF)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CDF</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปแสดงผล Probability Density Distribution Function (CDF)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LST</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">แสดงผลแบบ List</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DOV</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปแสดงผลแบบซ้อนทับ (Overlay)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DSP</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปแสดงผลแบบแยกหน้าจอ (ยกเลิก Overlay)</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หน้าจอคู่ (Dual Screen)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SEC</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับไปแสดงผลแบบหน้าจอคู่ (Dual Screen)</span></div>
+  <div class="cmd-note">เมื่อสลับเป็นหน้าจอคู่แล้ว คำสั่งแสดงผลที่ส่งตามมาต่อจากคำสั่งนี้จะถูกกำหนดให้กับหน้าจอล่าง</div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หน้าจอล่าง (1) (Lower (1) Screen)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LDC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านประเภทการแสดงผลของหน้าจอล่าง (หรือหน้าจอที่ 1)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">1: Time waveform &nbsp;21: Spectrum &nbsp;49: Histogram &nbsp;53: Octave</div>
+    <div class="lbl">Read value 2</div><div class="val">1: REAL or PDF &nbsp;2: IMAG or CDF &nbsp;3: MAG &nbsp;4: PHASE &nbsp;7: OCTAVE &nbsp;9: LIST</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LXA</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าสเกลแกน X ของหน้าจอล่างในโหมดหน้าจอคู่ หรือของข้อมูลแสดงผลหน้าจอเดี่ยว</span></div>
+</div>
+</div>

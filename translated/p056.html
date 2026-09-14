@@ -1,0 +1,31 @@
+<!--TITLE:4.1 ความแตกต่างของช่วงแรงดัน Voltage Range-->
+<p><strong>4. ความเข้ากันได้กับ CF-4500 (Compatibility with CF-4500)</strong></p>
+<p>เนื้อหาส่วนนี้จัดทำขึ้นสำหรับผู้ใช้คำสั่ง RS-232C ของเครื่อง FFT comparator รุ่น CF-4500 เพื่ออธิบายข้อควรระวังในการเขียนโปรแกรมด้วยคำสั่ง RS-232C ของเครื่อง FFT comparator รุ่น CF-4700</p>
+
+<h3><span class="h3-num">4.1</span>ความแตกต่างของช่วงแรงดัน Voltage Range (Voltage Range Differences)</h3>
+
+<div class="subhead"><span class="sq"></span>การตั้งค่าช่วงแรงดันด้วยคำสั่ง AAS (Voltage Range Setting Using the AAS Command)</div>
+<p>เครื่อง FFT comparator รุ่น CF-4500 และรุ่น CF-4700 มีช่วงแรงดัน (voltage range) ที่แตกต่างกัน ดังนั้นหากต้องการตั้งค่าช่วงแรงดันด้วยคำสั่ง AAS ให้เปลี่ยนค่าอาร์กิวเมนต์ของคำสั่ง AAS ในโปรแกรมเป็นค่าตามตารางด้านล่างเพื่อตั้งค่าช่วงแรงดัน</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>ช่วงแรงดัน CF-4500</th><th></th><th>ช่วงแรงดัน CF-4700</th></tr></thead>
+<tbody>
+<tr><td>0: 10 mVrms (14.1 mV)</td><td rowspan="5">→</td><td rowspan="5">4: 1 Vrms (1.41 V)</td></tr>
+<tr><td>1: 31.6 mVrms (44.7 mV)</td></tr>
+<tr><td>2: 100 mVrms (0.141 V)</td></tr>
+<tr><td>3: 0.316 Vrms (0.447 V)</td></tr>
+<tr><td>4: 1 Vrms (1.41 V)</td></tr>
+<tr><td>5: 3.16 Vrms (4.47 V)</td><td rowspan="3">→</td><td rowspan="3">7: 31.6 Vrms (44.7 V)</td></tr>
+<tr><td>6: 10 Vrms (14.1 V)</td></tr>
+<tr><td>7: 31.6 Vrms (44.7 V)</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note">หมายเลข 4 (1 Vrms (1.41 V)) และ 7 (31.6 Vrms (44.7 V)) ไม่จำเป็นต้องเปลี่ยนแปลง ทั้งนี้เมื่อส่งคำสั่ง AAS ไปยังเครื่อง CF-4700 ช่วงแรงดันจะถูกแปลงค่าโดยอัตโนมัติ และเครื่อง CF-4700 จะตั้งค่าให้ตรงตามตารางด้านบน ตัวอย่างเช่น หากตั้งค่าเป็น "10 mVrms" เครื่องจะตั้งค่าเป็น "1 Vrms" แทน</div>
+
+<div class="subhead"><span class="sq"></span>การตั้งค่า Trigger Level และ Hysteresis ภายใน (Internal Trigger Level and Hysteresis Settings)</div>
+<p>ระดับ trigger (trigger level) และ hysteresis ของ trigger ภายในจะถูกตั้งค่าเป็นเปอร์เซ็นต์ของช่วงแรงดัน ดังนั้นเมื่อเปลี่ยนช่วงแรงดันด้วยคำสั่ง AAS จะต้องเปลี่ยนค่า trigger level ด้วยเช่นกัน</p>
+<p>ตัวอย่างเช่น หากบนเครื่อง CF-4500 ตั้งช่วงแรงดันไว้ที่ 10 mVrms และ trigger level ไว้ที่ 50% เมื่อเปลี่ยนไปใช้เครื่อง CF-4700 และตั้งช่วงแรงดันด้วยคำสั่ง AAS เป็น 1 Vrms หากตั้ง trigger level เป็น 50% ต่อไป แรงดัน trigger ที่ได้จะกลายเป็น 0.5 Vrms ดังนั้นสัญญาณที่เคยกระตุ้น trigger ได้ในการตั้งค่าเดิม จะไม่สามารถกระตุ้น trigger ที่เปลี่ยนไปนี้ได้อีก</p>
+<p>เพื่อแก้ปัญหานี้ ค่า trigger level % จะถูกแปลงโดยใช้อัตราส่วนระหว่างค่าช่วงแรงดันที่ใช้บนเครื่อง CF-4500 กับช่วงแรงดันที่จะตั้งบนเครื่อง CF-4700 หัวข้อถัดไปแสดงรายการชุดการแปลงค่าและตัวอย่างอย่างง่าย</p>

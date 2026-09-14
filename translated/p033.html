@@ -1,0 +1,35 @@
+<!--TITLE:3.11 คำสั่ง RS-232C Interface-->
+<h3><span class="h3-num">3.11</span>คำสั่ง RS-232C Interface (RS-232C Interface Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>RS-232C</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">R2B</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านความเร็วการสื่อสาร (bps)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: 1200 &nbsp;1: 2400 &nbsp;2: 4800 &nbsp;3: 9600 &nbsp;4: 19200 &nbsp;5: 38400 &nbsp;6: 57600 &nbsp;7: 115200</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">R2C</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านความยาวข้อมูล (Data bit length)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: 7 &nbsp;1: 8</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">R2P</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านการตรวจสอบพาริตี้ (Parity check)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: None &nbsp;1: Odd &nbsp;2: Even</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">R2S</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านความยาว stop bit</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: 1 &nbsp;1: 2</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">R2F</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านการจับมือสื่อสาร (Handshake / Flow control)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: None &nbsp;1: XON/OFF &nbsp;2: Hardware</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">R2T</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านการตั้งค่าการขึ้นบรรทัดใหม่ (Line break/feed)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: CR &nbsp;1: CR+LF</div></div>
+</div>
+</div>

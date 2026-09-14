@@ -1,0 +1,77 @@
+<!--TITLE:3.17 คำสั่งฟังก์ชัน Display (ต่อ)-->
+<div class="cmd-group">
+<div class="cmd-card">
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: ขีดจำกัดล่าง (Lower limit value) &nbsp;2: ขีดจำกัดบน (Upper limit value)</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าที่อ่านได้: #.####E&plusmn;##</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LYA</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าสเกลแกน Y ของหน้าจอล่างในโหมดหน้าจอคู่ หรือของข้อมูลแสดงผลหน้าจอเดี่ยว</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: ขีดจำกัดบน (Upper limit value) &nbsp;2: ขีดจำกัดล่าง (Lower limit value)</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าที่อ่านได้: #.####E&plusmn;##</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LYC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าสเกลแกน Y ของหน้าจอล่างในโหมดหน้าจอคู่ หรือของข้อมูลแสดงผลหน้าจอเดี่ยว</span></div>
+  <div class="cmd-note">ใช้งานได้เมื่อการตั้งค่าสเกลแกน Y ถูกตั้งเป็น MANUAL<br>แตะปุ่มตั้งค่าตามลำดับนี้เพื่อเปิดเมนูสำหรับสลับเป็น MANUAL ด้วยคำสั่ง YAS: Home &gt; DISPLAY &gt; Y SCALE &gt; SCALE &gt; MODE<br>ให้ระบุค่าด้วยรูปแบบ E notation เมื่อมีตัวเลขหลังจุดทศนิยม (ตัวอย่าง: 1.1 &rarr; 11E-1)</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: ขีดจำกัดบน (Upper limit value) &nbsp;2: ขีดจำกัดล่าง (Lower limit value)</div>
+    <div class="lbl">Argument 2</div><div class="val">ข้อมูลสเกล (Scale data)</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หน้าจอบน (Upper Screen)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">UDC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านประเภทการแสดงผลของหน้าจอบน</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">1: Time waveform &nbsp;21: Spectrum &nbsp;49: Histogram &nbsp;53: Octave</div>
+    <div class="lbl">Read value 2</div><div class="val">1: REAL or PDF &nbsp;2: IMAG or CDF &nbsp;3: MAG &nbsp;4: PHASE &nbsp;7: OCTAVE &nbsp;9: LIST</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">UXA</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าสเกลแกน X ของหน้าจอบนในโหมดหน้าจอคู่</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: ขีดจำกัดล่าง (Lower limit value) &nbsp;2: ขีดจำกัดบน (Upper limit value)</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าที่อ่านได้: #.####E&plusmn;##</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">UYA</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าสเกลแกน Y ของหน้าจอบนในโหมดหน้าจอคู่</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: ขีดจำกัดล่าง (Lower limit value) &nbsp;2: ขีดจำกัดบน (Upper limit value)</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าที่อ่านได้: #.####E&plusmn;##</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">UYC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าสเกลแกน Y ของหน้าจอบนเมื่ออยู่ในโหมดหน้าจอคู่</span></div>
+  <div class="cmd-note">ใช้งานได้เมื่อการตั้งค่าสเกลแกน Y ถูกตั้งเป็น MANUAL ซึ่งสามารถตั้งเป็น MANUAL ได้ด้วยคำสั่ง YAS เช่นกัน<br>แตะปุ่มตั้งค่าตามลำดับนี้เพื่อเปิดเมนู: Home &gt; DISPLAY &gt; Y SCALE &gt; SCALE &gt; MODE<br>ให้ระบุค่าด้วยรูปแบบ E notation เมื่อมีตัวเลขหลังจุดทศนิยม (ตัวอย่าง: 1.1 &rarr; 11E-1)</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: ขีดจำกัดล่าง (Lower limit value) &nbsp;2: ขีดจำกัดบน (Upper limit value)</div>
+    <div class="lbl">Argument 2</div><div class="val">ข้อมูลสเกล (Scale data)</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การแสดงเส้นกริด (Grid Display)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">GON</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">เปิดใช้งานการแสดงเส้นกริด (Grid Display)</span></div>
+  <div class="cmd-note">Argument 1: เส้นประ (dashed line)<br>Argument 2: เส้นจุด (dotted line)</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">ไม่ระบุพารามิเตอร์ = เส้นประ (dashed line)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">GOF</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ปิดใช้งานการแสดงเส้นกริด</span></div>
+</div>
+</div>

@@ -1,0 +1,88 @@
+<!--TITLE:3.10 คำสั่ง Comparator — Shape Comparator-->
+<h3><span class="h3-num">3.10</span>คำสั่ง Comparator (Comparator Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การแก้ไข Block และ Shape Comparator (Editing the Block and Shape Comparators)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">COA</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าหมายเลข memory active ของ block/shape comparator สำหรับแก้ไข</span></div>
+  <div class="cmd-note">ตั้งค่าแบบไดนามิกตามการตัดสิน (judgment) ของ block/shape</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 20</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CAN</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านหมายเลข memory active ของ block/shape comparator สำหรับแก้ไข</span></div>
+  <div class="cmd-note">อ่านแบบไดนามิกตามการตัดสิน (judgment) ของ block/shape</div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">1 ถึง 20</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>Shape Comparator</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CSL</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ระบุไฟล์ข้อมูลรูปแบบ text ใน flash memory อ่านไฟล์ข้อมูลรูปแบบ text นั้น แล้วลงทะเบียนเป็นข้อมูลการตั้งค่า shape</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ชื่อพาธแบบเต็มของไฟล์ shape comparator</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SAN</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าหมายเลข memory active ของ shape comparator สำหรับแก้ไข</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 20</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SNC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าจำนวนการตั้งค่า NG (fail) ของ shape comparator แต่ละหน่วยความจำ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">จำนวนการตั้งค่า NG</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SCL</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าระดับการตัดสิน (judgment level) ของ shape comparator แต่ละหน่วยความจำ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: OVER &nbsp;1: UNDER</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">STC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าจำนวนการยกเลิก NG ของ time-axis waveform</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 ถึง 50</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SVW</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการสลับไปยังโหมดตั้งค่า shape comparator (เปิดหรือปิด)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CSD</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนจุด (memory points) ที่ระบุของ shape comparator</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0 ขึ้นไป ขึ้นอยู่กับเส้น shape ที่ลงทะเบียนไว้</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CSA</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านหมายเลข memory active ของ shape comparator สำหรับแก้ไข</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">1 ถึง 20</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SNG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนการตั้งค่า NG ของ shape comparator แต่ละหน่วยความจำ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">จำนวนการตั้งค่า NG</div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,88 @@
+<!--TITLE:3.10 คำสั่ง Comparator (ต่อ) — Block Comparator-->
+<div class="cmd-group">
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SLF</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านระดับการตัดสิน (judgment level) ของ shape comparator แต่ละหน่วยความจำ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: Over &nbsp;1: Under</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">STJ</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนการตัดสินทั้งหมดของ shape comparator</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0 ถึง 65535</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">STN</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนการยกเลิก NG ของ time-axis waveform</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0 ถึง 50</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>Block Comparator</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BAN</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าหมายเลข memory active ของ block comparator สำหรับแก้ไข</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 20</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">COA</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าหมายเลข memory active ของ block/shape comparator สำหรับแก้ไข</span></div>
+  <div class="cmd-note">ตั้งค่าแบบไดนามิกตามการตัดสิน (judgment) ของ block/shape</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 20</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BVW</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการสลับไปยังโหมดตั้งค่า block comparator (หน้าจอ waveform) (เปิดหรือปิด)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CBA</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านหมายเลข memory active ของ block comparator สำหรับแก้ไข</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">1 ถึง 20</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CBV</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการสลับไปยังโหมดตั้งค่า block comparator (หน้าจอ list) (เปิดหรือปิด)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BRS</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะโหมด execution ของ block comparator (หน้าจอ waveform) (เปิดหรือปิด)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CAN</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านหมายเลข memory active ของ block/shape comparator สำหรับแก้ไข</span></div>
+  <div class="cmd-note">อ่านแบบไดนามิกตามการตัดสิน (judgment) ของ block/shape</div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">1 ถึง 20</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CBK</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าแต่ละ block</span></div>
+  <div class="cmd-note">คำสั่งนี้มีไว้เพื่อความเข้ากันได้ (interchangeability) กับ CF-4500 หากสร้างโปรแกรมใหม่ ให้ใช้ CBS แทน</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 20: หมายเลข block</div>
+    <div class="lbl">Argument 2</div><div class="val">1: ความถี่เริ่มต้น [Hz] &nbsp;2: ความถี่สิ้นสุด [Hz] &nbsp;3: ระดับขีดจำกัดบน &nbsp;4: ระดับขีดจำกัดล่าง &nbsp;5: จำนวน NG<br>ระบุค่าโดยใช้ E notation เมื่อระบุค่าที่มีทศนิยม เช่น 0.11 &rarr; 1.1E-01</div>
+    <div class="lbl">Argument 3</div><div class="val">ข้อมูลการตั้งค่า</div>
+  </div>
+</div>
+</div>

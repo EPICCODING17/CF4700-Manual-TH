@@ -1,0 +1,12 @@
+<!--TITLE:2.3–2.4 ข้อควรระวัง / คำสั่ง LAN ผ่าน RS-232C-->
+<div class="subhead"><span class="sq"></span>2.3 ข้อควรระวังการส่งคำสั่งแบบชุด</div>
+<p>เมื่อส่งคำสั่งต่อเนื่องกัน การประมวลผลคำสั่งภายในเครื่อง CF-4700 FFT Comparator อาจทำงานตามไม่ทัน เพื่อป้องกันปัญหานี้ เครื่องมี buffer รับข้อมูลชั่วคราวขนาด 1024 ไบต์ สำหรับรองรับข้อมูลที่รับเข้ามาต่อเนื่อง</p>
+<div class="warning"><strong>ข้อควรระวัง:</strong> หากส่งคำสั่งเป็นชุดต่อเนื่องกันมากเกินไป อาจเกินขนาด buffer และคำสั่งจะไม่ถูกประมวลผล ควรใส่เวลาหน่วง (standby time) ระหว่างคำสั่งตามความจำเป็นเมื่อส่งคำสั่งหลายชุดต่อเนื่องกัน</div>
+<div class="subhead"><span class="sq"></span>2.4 การใช้คำสั่ง LAN External Control ผ่าน RS-232C</div>
+<p>สามารถใช้คำสั่ง LAN External Control ผ่านทาง RS-232C interface ได้ โดยเติมตัวอักษร <span class="code">LAN</span> และจำนวนค่าตัวเลขที่คำสั่งนั้นต้องการไว้หน้าคำสั่ง</p>
+<div class="subhead" style="margin-left:14px"><span class="sq"></span>ตัวอย่างคำสั่ง LAN External Control ผ่าน RS-232C</div>
+<div class="cmd-group">
+<div class="cmd-card"><div class="cmd-head"><span class="cmd-desc"><strong>ไม่มีค่าตัวเลข</strong> &mdash; เริ่มการวัด (Start)</span></div><div class="cmd-args"><div class="lbl">คำสั่ง</div><div class="val"><span class="code">LAN0,DoStart</span></div></div></div>
+<div class="cmd-card"><div class="cmd-head"><span class="cmd-desc"><strong>ค่าตัวเลข 1 ค่า</strong> &mdash; ตั้งจำนวนตัวอย่างเป็น 1024</span></div><div class="cmd-args"><div class="lbl">คำสั่ง</div><div class="val"><span class="code">LAN1,SetSampleFrameFlag,4</span></div></div></div>
+<div class="cmd-card"><div class="cmd-head"><span class="cmd-desc"><strong>ค่าตัวเลข 2 ค่า</strong> &mdash; ตั้งค่าอ้างอิง 0-dB เป็น 2.0E-5</span></div><div class="cmd-args"><div class="lbl">คำสั่ง</div><div class="val"><span class="code">LAN2,SetEUYCalibrationValue,0,2.0E-5</span></div></div></div>
+</div>

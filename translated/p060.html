@@ -1,0 +1,23 @@
+<!--TITLE:4.2 คำสั่งที่เปลี่ยนแปลง-->
+<h3><span class="h3-num">4.2</span>คำสั่งที่เปลี่ยนแปลง (Changes Commands)</h3>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>คำสั่ง</th><th>คำอธิบาย</th><th>การเปลี่ยนแปลงจาก CF-4500</th></tr></thead>
+<tbody>
+<tr><td>AAS</td><td>ตั้งค่าความไวอินพุต</td><td>เปลี่ยนแปลงสเปกตามการเปลี่ยนแปลงฮาร์ดแวร์<br>เพิ่มกระบวนการแปลงช่วงแรงดันโดยอัตโนมัติให้เป็นค่าที่เหมาะสมที่สุด เมื่อส่งค่า 0–3, 5 หรือ 6</td></tr>
+<tr><td>TLS</td><td>ตั้งค่า trigger level ภายใน</td><td>เพิ่มกระบวนการแปลง trigger level โดยอัตโนมัติให้เป็นค่าที่เหมาะสมที่สุด เมื่อส่งคำสั่ง TLS หลังจากส่งค่า 0–3, 5 หรือ 6 ด้วยคำสั่ง AAS</td></tr>
+<tr><td>AMS</td><td>ระบุโหมด averaging</td><td>เพิ่มค่าต่อไปนี้ในอาร์กิวเมนต์:<br>7: Time exponential mean<br>8: Fourier spectrum exponential mean<br>9: Power spectrum MAX O.A.<br>10: Fourier spectrum MAX O.A.</td></tr>
+<tr><td>AMC</td><td>อ่านโหมด averaging</td><td>เพิ่มค่าต่อไปนี้ในค่าที่ส่งกลับ:<br>7: Time exponential mean<br>8: Fourier spectrum exponential mean<br>9: Power spectrum MAX O.A.<br>10: Fourier spectrum MAX O.A.</td></tr>
+<tr><td>AOC</td><td>อ่านสถานะระดับอินพุต</td><td>เปลี่ยนจากสถานะระดับอินพุตขณะรับสัญญาณ เป็นสถานะ AD over-flag<br>AD over-flag จะถูกล้างค่าเมื่อเริ่มทำงาน, เมื่อ initialize เงื่อนไข และเมื่อ reset และจะถูกตั้งค่าเมื่อ AD เกิด overflow</td></tr>
+<tr><td>YAS</td><td>ตั้งค่าโหมดสเกลของแกน Y</td><td>เพิ่มค่าต่อไปนี้ในอาร์กิวเมนต์:<br>0: Default</td></tr>
+<tr><td>SLP</td><td>เลือกประเภทของการค้นหารายการ</td><td>เพิ่มค่าต่อไปนี้ในอาร์กิวเมนต์:<br>5: All List</td></tr>
+<tr><td>XUS</td><td>ระบุหน่วยของแกน X</td><td>เพิ่มค่าต่อไปนี้ในอาร์กิวเมนต์:<br>4: r/min</td></tr>
+<tr><td>YUM</td><td>สลับหน่วยของแกน Y เป็น rms</td><td>เพิ่ม "3: p-p" ในอาร์กิวเมนต์ และเปลี่ยน "2: OFF" เป็น "2: 0-p"</td></tr>
+<tr><td>PCA</td><td>เปิดใช้งานการเรียกคืนเงื่อนไขพาเนลอัตโนมัติ</td><td>เพิ่ม "3: Specified Project" ในอาร์กิวเมนต์ และเปลี่ยน "2: OFF" เป็น "2: New Project"</td></tr>
+<tr><td>DFS</td><td>ระบุหมายเลขไฟล์ที่จะโหลด/บันทึก</td><td>เปลี่ยนค่าสูงสุดของ block memory เป็น 999</td></tr>
+<tr><td>DBL</td><td>ระบุหมายเลข block memory ที่จะโหลด/บันทึก</td><td>เปลี่ยนค่าสูงสุดของ block memory เป็น 999</td></tr>
+<tr><td>DST</td><td>ระบุประเภทที่จะเพิ่มให้กับไฟล์ข้อมูล (.dat)</td><td>เพิ่มค่าต่อไปนี้ในอาร์กิวเมนต์:<br>3: Tracking file (TRC)</td></tr>
+</tbody>
+</table>
+</div>

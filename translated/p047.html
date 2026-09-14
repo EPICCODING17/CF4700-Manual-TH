@@ -1,0 +1,89 @@
+<!--TITLE:3.19 คำสั่งฟังก์ชัน Search (ต่อ)-->
+<div class="cmd-group">
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SPS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าตำแหน่งค้นหาทั้งหน้าจอบนและล่างพร้อมกัน</span></div>
+  <div class="cmd-note">ใช้งานได้เมื่อฟังก์ชันค้นหาถูกสลับเป็น Search หรือ Delta<br>ใช้คำสั่ง SON เพื่อเปลี่ยนฟังก์ชันค้นหาเป็น Search และใช้คำสั่ง DON เพื่อเปลี่ยนเป็น Delta หรือแตะปุ่มตั้งค่าตามลำดับนี้เพื่อเปลี่ยนการตั้งค่า: Home &gt; Display &gt; Cursor &gt; Mode</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">ตำแหน่งค้นหา (Search point)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SPU</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านตำแหน่งค้นหาของหน้าจอบนในโหมดหน้าจอคู่</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ตำแหน่งค้นหา (Search point)</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ค่าที่ค้นหา (Search Values)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LXS</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าค้นหาแกน X หรือหน่วยของหน้าจอล่าง</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ไม่ระบุ: ข้อมูลค่าค้นหาแกน X &nbsp;1: ข้อมูลค่าค้นหาแกน X &nbsp;2: หน่วยแกน X</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าค้นหาแกน X (หน้าจอล่าง)</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LYS</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าค้นหาแกน Y หรือหน่วยของหน้าจอล่าง</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ไม่ระบุ: ข้อมูลค่าค้นหาแกน Y &nbsp;1: ข้อมูลค่าค้นหาแกน Y &nbsp;2: หน่วยแกน Y</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าค้นหาแกน Y (หน้าจอล่าง)</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LXY</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าค้นหาแกน X และ Y หรือหน่วยของหน้าจอล่าง</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ไม่ระบุ: ข้อมูลค่าค้นหาแกน X และ Y &nbsp;1: ข้อมูลค่าค้นหาแกน X และ Y &nbsp;2: หน่วยแกน X และ Y</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าค้นหาแกน X และ Y (หน้าจอล่าง)</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">UXS</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าค้นหาแกน X หรือหน่วยของหน้าจอบน</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ไม่ระบุ: ข้อมูลค่าค้นหาแกน X &nbsp;1: ข้อมูลค่าค้นหาแกน X &nbsp;2: หน่วยแกน X</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าค้นหาแกน X (หน้าจอบน)</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">UYS</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าค้นหาแกน Y หรือหน่วยของหน้าจอบน</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ไม่ระบุ: ข้อมูลค่าค้นหาแกน Y &nbsp;1: ข้อมูลค่าค้นหาแกน Y &nbsp;2: หน่วยแกน Y</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าค้นหาแกน Y (หน้าจอบน)</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">UXY</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าค้นหาแกน X และ Y หรือหน่วยของหน้าจอบน</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ไม่ระบุ: ข้อมูลค่าค้นหาแกน X และ Y &nbsp;1: ข้อมูลค่าค้นหาแกน X และ Y &nbsp;2: หน่วยแกน X และ Y</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าค้นหาแกน X และ Y (หน้าจอบน)</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>P.O.A.</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PAO</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เปิดใช้งานฟังก์ชัน Partial Overall (P.O.A.)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PAF</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ปิดใช้งานฟังก์ชัน Partial Overall (P.O.A.)</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การเน้นการค้นหา (Search Enhancement)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SEO</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เปิดใช้งานฟังก์ชัน Search Enhancement</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SEF</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ปิดใช้งานฟังก์ชัน Search Enhancement</span></div>
+</div>
+</div>

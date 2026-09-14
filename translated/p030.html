@@ -1,0 +1,64 @@
+<!--TITLE:3.10 คำสั่ง Comparator (ต่อ)-->
+<div class="cmd-group">
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CMP</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูล OK/NG ของ block comparator</span></div>
+  <div class="cmd-note">ใช้ไม่ได้กับ shape comparator<br>คำสั่งนี้มีไว้เพื่อความเข้ากันได้กับ CF-4500 หากเขียนโปรแกรมใหม่ ให้ใช้คำสั่ง <span class="code">BCM</span> แทน</div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: OK หรือยังไม่ได้ตัดสิน &nbsp;1: NG (fail)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CMB</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนครั้งของ NG (fail) หรือจำนวนการตัดสินของแต่ละบล็อก</span></div>
+  <div class="cmd-note">คำสั่งนี้มีไว้เพื่อความเข้ากันได้กับ CF-4500 หากเขียนโปรแกรมใหม่ ให้ใช้คำสั่ง <span class="code">BCM</span> แทน</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: จำนวนการตัดสิน &nbsp;1 ถึง 20: หมายเลขบล็อก</div>
+    <div class="lbl">Read value 1</div><div class="val">0: จำนวนการตัดสิน &nbsp;1 ถึง 20: จำนวนครั้งของ NG (fail)</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CER</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านเงื่อนไขสิ้นสุดการตัดสินของ block comparator</span></div>
+  <div class="cmd-note">ค่าจะถูกล้างกลับเป็นศูนย์โดยอัตโนมัติเมื่อ comparator เริ่มทำงาน และหลังจากอ่านคำสั่ง <span class="code">CER</span> แล้ว<br>ใช้ไม่ได้กับ shape comparator</div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: การตัดสินยังไม่สามารถสิ้นสุดได้ &nbsp;1: การตัดสินสิ้นสุดแล้ว</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>เริ่มทำงาน (Start)</div>
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CMT</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สั่งให้ comparator เริ่มทำงาน</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หยุดทำงาน (Stop)</div>
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CMS</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สั่งให้ comparator หยุดทำงาน</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ค่าที่ตั้ง (Set Value)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ABS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าเงื่อนไขการตัดสินของ block comparator</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1 (Argument 2)</div><div class="val">0: SINGLE MODE (0: OFF, 1: ON)<br>0: TIMER (0: OFF, 1: ON)<br>2: START DELAY (0 ถึง 255 [s])<br>3: COMP TIME (0 ถึง 255 [s])<br>4: START CLEAR (0: OFF, 1: ON)<br>5: NG OUT (0: ONE, 1: ALL)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ABG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านเงื่อนไขการตัดสินของ block comparator</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1 (Read value)</div><div class="val">0: SINGLE MODE (0: OFF, 1: ON)<br>0: TIMER (0: OFF, 1: ON)<br>2: START DELAY (0 ถึง 255 [s])<br>3: COMP TIME (0 ถึง 255 [s])<br>4: START CLEAR (0: OFF/1: ON)<br>5: NG OUT (0: ONE, 1: ALL)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DTS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ป้อนพารามิเตอร์ในหน้าจอตั้งค่าเงื่อนไข (Condition setting screen)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ดูรายละเอียดที่หน้า 29 หัวข้อ "DTS and DTC" สำหรับหน้าจอตั้งค่าเงื่อนไข</div>
+    <div class="lbl">Argument 2</div><div class="val">ดูรายละเอียดที่หน้า 29 หัวข้อ "DTS and DTC" สำหรับหมายเลขรายการตั้งค่า</div>
+    <div class="lbl">Argument 3</div><div class="val">ดูรายละเอียดที่หน้า 29 หัวข้อ "DTS and DTC" สำหรับพารามิเตอร์</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DTC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านพารามิเตอร์ในหน้าจอตั้งค่าเงื่อนไข</span></div>
+</div>
+</div>

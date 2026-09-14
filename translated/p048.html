@@ -1,0 +1,66 @@
+<!--TITLE:3.20 คำสั่งฟังก์ชันเกี่ยวกับหน่วย Unit-->
+<h3><span class="h3-num">3.20</span>คำสั่งฟังก์ชันเกี่ยวกับหน่วย Unit (Unit-related Function Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หน่วยแกน X (X-axis Unit)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">XUS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าหน่วยของแกน X</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: Hz &nbsp;2: order &nbsp;3: sec &nbsp;4: r/min</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ตำแหน่งค้นหา (Search Point)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">HMS</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ตั้งค่าตำแหน่งค้นหาไปที่ order ที่ 1 ของการแสดงผล Harmonics (ORDER)</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หน่วย EU (EU Unit)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EAE</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าหน่วย EU</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">หน่วย EU (สูงสุด 7 ตัวอักษร)</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ค่า EU (EU Value)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EAM</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าแรงดันไฟฟ้าต่อ 1 หน่วย EU</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">ค่าตัวเลข (V/EU)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EAN</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า EU ต่อ 1 V</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">ค่าตัวเลข (EU/V)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EAS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าตำแหน่งค้นหาไปยังค่า EU ที่ระบุ</span></div>
+  <div class="cmd-note">หน้าจอต้องอยู่ในโหมด Power Spectrum<br>ใช้งานได้เฉพาะเมื่อฟังก์ชันค้นหาถูกสลับเป็น Search เท่านั้น ใช้คำสั่ง SON เพื่อเปลี่ยนฟังก์ชันค้นหาเป็น Search หรือแตะปุ่มตั้งค่าตามลำดับนี้เพื่อเปลี่ยนการตั้งค่า: Home &gt; Display &gt; Cursor &gt; Mode</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">ค่า EU (EU value)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EAC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่า EU ต่อ 1 V</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ค่าที่อ่านได้ (EU/V): &plusmn;#.####E&plusmn;##</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EAR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าแรงดันไฟฟ้าต่อ 1 EU</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ค่าที่อ่านได้ (V/EU): &plusmn;#.####E&plusmn;##</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หน่วยแกน Y (Y-axis Unit)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">YUM</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">แปลงหน่วยของแกน Y เป็น rms</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: ON &nbsp;2: OFF (0-p) &nbsp;3: p-p</div></div>
+</div>
+</div>

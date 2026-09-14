@@ -1,0 +1,46 @@
+<!--TITLE:3.10 คำสั่ง Comparator (ต่อ)-->
+<div class="cmd-group">
+<div class="cmd-args">
+  <div class="lbl">Argument 1</div><div class="val">ดูรายละเอียดที่หน้า 29 หัวข้อ "DTS and DTC" สำหรับหน้าจอตั้งค่าเงื่อนไข</div>
+  <div class="lbl">Argument 2</div><div class="val">ดูรายละเอียดที่หน้า 29 หัวข้อ "DTS and DTC" สำหรับหมายเลขรายการตั้งค่า</div>
+  <div class="lbl">Read value 1</div><div class="val">ดูรายละเอียดที่หน้า 29 หัวข้อ "DTS and DTC" สำหรับพารามิเตอร์</div>
+</div>
+</div>
+
+<div class="subhead"><span class="sq"></span>DTS and DTC</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>รายการ</th><th>ประเภท</th><th>รายการตั้งค่า</th><th>พารามิเตอร์</th></tr>
+</thead>
+<tbody>
+<tr><td colspan="4">1: COMP CONDITION SET</td></tr>
+<tr><td>1</td><td>Numerical</td><td>SINGLE MODE</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>2</td><td>Numerical</td><td>COMP LIMIT</td><td>0: UPPER &nbsp;1: LOWER &nbsp;2: U&amp;L</td></tr>
+<tr><td>3</td><td>Numerical</td><td>TIMER</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>4</td><td>Numerical</td><td>START DELAY</td><td>1 ถึง 255 [s]</td></tr>
+<tr><td>5</td><td>Numerical</td><td>COMP TIME</td><td>1 ถึง 255 [s]</td></tr>
+<tr><td>6</td><td>Numerical</td><td>START CLEAR</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>7</td><td>Numerical</td><td>COMPARE METHOD</td><td>0: PK.LEVEL &nbsp;1: P.0 &nbsp;2: AREA &nbsp;3: PK.MAX &nbsp;4: LEVEL &nbsp;5: IN.MAX<br>หมายเหตุ: อาร์กิวเมนต์นี้แตกต่างจากคำสั่ง LAN <span class="code">CompareBlockCompLimitFlag</span></td></tr>
+<tr><td>8</td><td>Numerical</td><td>NG OUT</td><td>0: ONE &nbsp;1: ALL</td></tr>
+<tr><td>9</td><td>Numerical</td><td>AREA UP LEVEL</td><td>LOW LEVEL: ค่าใดๆ ไม่เกิน 0 [%]</td></tr>
+<tr><td>10</td><td>Numerical</td><td>AREA LOW LEVEL</td><td>ค่าใดๆ ตั้งแต่ 0 จนถึง UP LEVEL [%]</td></tr>
+<tr><td colspan="4">2: COMP I/O CONTROL</td></tr>
+<tr><td>1</td><td>Character string</td><td>EXT IN 1 [ ]</td><td>สตริงคำสั่ง (สูงสุด 15 ตัวอักษร)</td></tr>
+<tr><td>2</td><td>Numerical</td><td>ON/OFF</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>3</td><td>Character string</td><td>IN2 [ ]</td><td>สตริงคำสั่ง (สูงสุด 15 ตัวอักษร)</td></tr>
+<tr><td>4</td><td>Numerical</td><td>ON/OFF</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>5</td><td>Character string</td><td>IN3 [ ]</td><td>สตริงคำสั่ง (สูงสุด 15 ตัวอักษร)</td></tr>
+<tr><td>6</td><td>Numerical</td><td>ON/OFF</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>7</td><td>Character string</td><td>IN4 [ ]</td><td>สตริงคำสั่ง (สูงสุด 15 ตัวอักษร)</td></tr>
+<tr><td>8</td><td>Numerical</td><td>ON/OFF</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>9</td><td>Character string</td><td>IN5 [ ]</td><td>สตริงคำสั่ง (สูงสุด 15 ตัวอักษร)</td></tr>
+<tr><td>10</td><td>Numerical</td><td>ON/OFF</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>11</td><td>Character string</td><td>IN6 [ ]</td><td>สตริงคำสั่ง (สูงสุด 15 ตัวอักษร)</td></tr>
+<tr><td>12</td><td>Numerical</td><td>ON/OFF</td><td>0: OFF &nbsp;1: ON</td></tr>
+<tr><td>14</td><td>Numerical</td><td>4LEVEL COMP</td><td>0: OFF &nbsp;1: ON</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="warning">ห้ามใช้เครื่องหมายจุลภาค (comma) ในสตริงอักขระ</div>

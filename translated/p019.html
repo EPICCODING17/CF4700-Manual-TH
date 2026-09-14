@@ -1,0 +1,100 @@
+<!--TITLE:3.1 คำสั่งตั้งค่า Input — Sample Setting-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่า Sample (Sample Setting)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SSF</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าจำนวน sample</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">2: 256 &nbsp;3: 512 &nbsp;4: 1024 &nbsp;5: 2048 &nbsp;6: 4096 &nbsp;7: 8192 &nbsp;8: 16384</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SCF</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าประเภทของ sample</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: Internal &nbsp;1: External</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ESL</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าโหมดระดับตรวจจับของ external sample</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 [ExtCh1]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: TTL &nbsp;1: Voltage</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SAO</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าปริมาณ sample overlap</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: Max &nbsp;1: 75% &nbsp;2: 66.7% &nbsp;3: 50% &nbsp;4: 25% &nbsp;5: 0% &nbsp;6: Custom</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SAC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าเปิดหรือปิดการยกเลิก sample A/D overflow</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SOF</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านปริมาณ sample overlap</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: Max &nbsp;1: 75% &nbsp;2: 66.7% &nbsp;3: 50% &nbsp;4: 25% &nbsp;5: 0% &nbsp;6: Custom</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SAD</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการยกเลิก sample A/D overflow (เปิดหรือปิด)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การประมวลผลก่อนแกนเวลา (Time-axis Preprocessing)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TIP</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าเปิดหรือปิดการยกเลิก DC (direct current)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Argument 2</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TPD</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการยกเลิก DC (direct current) (เปิดหรือปิด)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 fix [Ch1]</div>
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่าการวิเคราะห์ Tracking (Tracking Analysis Setting)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TTS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าเวลารวมของการวิเคราะห์ time tracking</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0.0 ถึง 600000.0</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TAM</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะฟังก์ชัน schedule (เปิดหรือปิด)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CTR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวน block ระหว่างการวัดแบบ tracking</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CSR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านความเร็วรอบ (rotation speed)</span></div>
+</div>
+</div>

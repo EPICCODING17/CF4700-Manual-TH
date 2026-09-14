@@ -1,0 +1,46 @@
+<!--TITLE:4.1 ตารางแปลง Trigger Level และ Hysteresis-->
+<div class="subhead"><span class="sq"></span>ตารางแปลงค่า Trigger Level (Trigger Level Conversion)</div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>ช่วงแรงดัน CF-4500</th><th>ช่วงแรงดัน CF-4700</th><th>อัตราส่วน (c = a / b)</th><th>Trigger level (%)</th></tr></thead>
+<tbody>
+<tr><td>0: 10 mVrms</td><td>4: 1 Vrms</td><td>0.01</td><td>Legacy trigger level * 0.01</td></tr>
+<tr><td>1: 31.6 mVrms</td><td>4: 1 Vrms</td><td>0.031</td><td>Legacy trigger level * 0.031</td></tr>
+<tr><td>2: 100 mVrms</td><td>4: 1 Vrms</td><td>0.1</td><td>Legacy trigger level * 0.1</td></tr>
+<tr><td>3: 0.316 Vrms</td><td>4: 1 Vrms</td><td>0.31</td><td>Legacy trigger level * 0.31</td></tr>
+<tr><td>4: 1 Vrms</td><td>4: 1 Vrms</td><td>1</td><td>Same as the legacy trigger level.</td></tr>
+<tr><td>5: 3.16 Vrms</td><td>7: 31.6 Vrms</td><td>0.1</td><td>Legacy trigger level * 0.1</td></tr>
+<tr><td>6: 10 Vrms</td><td>7: 31.6 Vrms</td><td>0.31</td><td>Legacy trigger level * 0.31</td></tr>
+<tr><td>7: 31.6 Vrms</td><td>7: 31.6 Vrms</td><td>1</td><td>Same as the legacy trigger level.</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>ตัวอย่างเช่น หากบนเครื่อง CF-4500 ตั้งช่วงแรงดันไว้ที่ 10 mVrms และ trigger level ไว้ที่ 50% เมื่อช่วงแรงดันบนเครื่อง CF-4700 เป็น 1 Vrms trigger level จะเป็น 50 × 0.01 = 0.5 (%)</p>
+<p>หากใช้งาน hysteresis ด้วย ก็จำเป็นต้องเปลี่ยนค่าเช่นเดียวกับ trigger level หัวข้อถัดไปแสดงชุดการแปลงค่าสำหรับ hysteresis ทั้งนี้คำสั่งตั้งค่า hysteresis ทาง RS-232C ไม่มีอยู่บนเครื่อง CF-4500</p>
+
+<div class="subhead"><span class="sq"></span>ตารางแปลงค่า Hysteresis (Hysteresis Conversion)</div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>ช่วงแรงดัน CF-4500 (a)</th><th>ช่วงแรงดัน CF-4700 (b)</th><th>อัตราส่วน (c = a / b)</th><th>Hysteresis (%)</th></tr></thead>
+<tbody>
+<tr><td>0: 10 mVrms</td><td>1 Vrms</td><td>0.01</td><td>Legacy hysteresis * 0.01</td></tr>
+<tr><td>1: 31.6 mVrms</td><td>1 Vrms</td><td>0.031</td><td>Legacy hysteresis * 0.031</td></tr>
+<tr><td>2: 100 mVrms</td><td>1 Vrms</td><td>0.1</td><td>Legacy hysteresis * 0.1</td></tr>
+<tr><td>3: 0.316 Vrms</td><td>1 Vrms</td><td>0.31</td><td>Legacy hysteresis * 0.31</td></tr>
+<tr><td>4: 1 Vrms</td><td>1 Vrms</td><td>1</td><td>Same as the legacy hysteresis.</td></tr>
+<tr><td>5: 3.16 Vrms</td><td>31.6 Vrms</td><td>0.1</td><td>Legacy hysteresis * 0.1</td></tr>
+<tr><td>6: 10 Vrms</td><td>31.6 Vrms</td><td>0.31</td><td>Legacy hysteresis * 0.31</td></tr>
+<tr><td>7: 31.6 Vrms</td><td>31.6 Vrms</td><td>1</td><td>Same as the legacy hysteresis.</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>ตัวอย่างเช่น หากบนเครื่อง CF-4500 ตั้งช่วงแรงดันไว้ที่ 10 mVrms และ hysteresis ไว้ที่ 2% เมื่อช่วงแรงดันบนเครื่อง CF-4700 เป็น 1 Vrms hysteresis จะเป็น 2 × 0.01 = 0.02 (%)</p>
+
+<div class="subhead"><span class="sq"></span>การแปลงค่าอัตโนมัติเพื่อความเข้ากันได้ (Automatic Conversion for Compatibility)</div>
+<p>เมื่อใช้คำสั่ง AAS ส่งค่าช่วงแรงดันที่เครื่อง CF-4700 ไม่มีให้ใช้งาน เครื่อง CF-4700 จะแปลงค่าช่วงแรงดัน, trigger level ภายใน (%) และ hysteresis (%) โดยอัตโนมัติ</p>
+<p>นอกจากนี้ เมื่อส่งค่า 0–3, 5, 6 ด้วยคำสั่ง AAS และเกิดกระบวนการแปลงค่าช่วงแรงดัน หรือเมื่อส่งคำสั่งตั้งค่า TLS ของ trigger level ภายใน เครื่อง CF-4700 จะแปลงค่าโดยใช้อัตราส่วนของช่วงแรงดัน</p>
+<p>อย่างไรก็ตาม การแปลงค่าจะเกิดขึ้นเฉพาะเมื่อทำการตั้งค่าตามลำดับ "ช่วงแรงดัน" มาก่อน "Trigger level" เท่านั้น ดังนั้นหากตั้งค่าในลำดับย้อนกลับ ("Trigger level" มาก่อน "ช่วงแรงดัน") ช่วงแรงดันจะกลับไปเป็นค่าเริ่มต้น หัวข้อถัดไปแสดงรายการคำสั่งที่เกี่ยวข้องพร้อมอธิบายการทำงานของแต่ละคำสั่ง</p>

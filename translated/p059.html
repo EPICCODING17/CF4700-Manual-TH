@@ -1,0 +1,38 @@
+<!--TITLE:4.1 ตารางค่าเริ่มต้น Trigger Level/Hysteresis-->
+<div class="subhead"><span class="sq"></span>ตารางแปลงค่า Trigger Level ค่าเริ่มต้น (Trigger Level Conversion, Default Values)</div>
+<p>ตารางนี้คำนวณจากค่า trigger level เริ่มต้นที่ 25%</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>ช่วงแรงดัน CF-4500 (a)</th><th>ช่วงแรงดัน CF-4700 (b)</th><th>อัตราส่วน (c = a / b)</th><th>Trigger level (%) ค่าเริ่มต้น</th></tr></thead>
+<tbody>
+<tr><td>0: 10 mVrms</td><td>1 Vrms</td><td>0.01</td><td>25 * 0.01 = 0.25</td></tr>
+<tr><td>1: 31.6 mVrms</td><td>1 Vrms</td><td>0.031</td><td>25 * 0.031 = 0.75</td></tr>
+<tr><td>2: 100 mVrms</td><td>1 Vrms</td><td>0.1</td><td>25 * 0.1 = 2.5</td></tr>
+<tr><td>3: 0.316 Vrms</td><td>1 Vrms</td><td>0.31</td><td>25 * 0.31 = 7.5</td></tr>
+<tr><td>4: 1 Vrms</td><td>1 Vrms</td><td>1</td><td>25</td></tr>
+<tr><td>5: 3.16 Vrms</td><td>31.6 Vrms</td><td>0.1</td><td>25 * 0.1 = 2.5</td></tr>
+<tr><td>6: 10 Vrms</td><td>31.6 Vrms</td><td>0.31</td><td>25 * 0.31 = 7.5</td></tr>
+<tr><td>7: 31.6 Vrms</td><td>31.6 Vrms</td><td>1</td><td>25</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="subhead"><span class="sq"></span>ตารางแปลงค่า Hysteresis ค่าเริ่มต้น (Hysteresis Conversion, Default Values)</div>
+<p>ตารางนี้คำนวณจากค่า hysteresis เริ่มต้นที่ 2%</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>ช่วงแรงดัน CF-4500 (a)</th><th>ช่วงแรงดัน CF-4700 (b)</th><th>อัตราส่วน (c = a / b)</th><th>Hysteresis (%) ค่าเริ่มต้น</th></tr></thead>
+<tbody>
+<tr><td>0: 10 mVrms</td><td>1 Vrms</td><td>0.01</td><td>2 * 0.01 = 0.02</td></tr>
+<tr><td>1: 31.6 mVrms</td><td>1 Vrms</td><td>0.031</td><td>2 * 0.031 = 0.062</td></tr>
+<tr><td>2: 100 mVrms</td><td>1 Vrms</td><td>0.1</td><td>2 * 0.1 = 0.2</td></tr>
+<tr><td>3: 0.316 Vrms</td><td>1 Vrms</td><td>0.31</td><td>2 * 0.31 = 0.62</td></tr>
+<tr><td>4: 1 Vrms</td><td>1 Vrms</td><td>1</td><td>2</td></tr>
+<tr><td>5: 3.16 Vrms</td><td>31.6 Vrms</td><td>0.1</td><td>2 * 0.1 = 0.2</td></tr>
+<tr><td>6: 10 Vrms</td><td>31.6 Vrms</td><td>0.31</td><td>2 * 0.31 = 0.62</td></tr>
+<tr><td>7: 31.6 Vrms</td><td>31.6 Vrms</td><td>1</td><td>2</td></tr>
+</tbody>
+</table>
+</div>

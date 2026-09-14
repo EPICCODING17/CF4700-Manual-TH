@@ -1,0 +1,79 @@
+<!--TITLE:3.21 คำสั่ง Panel Condition Memory-->
+<h3><span class="h3-num">3.21</span>คำสั่ง Panel Condition Memory (Panel Condition Memory Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>เรียกคืน (Recall)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PCL</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">เรียกคืนค่า Panel Condition</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: ค่าเริ่มต้น (Default) &nbsp;1 ถึง 50: หมายเลข Panel Condition Memory</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>บันทึก (Save)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PCS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">บันทึกลง Panel Condition Memory</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">หมายเลข Panel Condition Memory: 1 ถึง 50</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ลบ (Delete)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PCD</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ลบค่า Panel Condition</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">หมายเลข Panel Condition Memory: 1 ถึง 50</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>เรียกคืนอัตโนมัติ (Auto Recall)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PCA</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">เปลี่ยนวิธีการเริ่มต้นระบบด้วย Panel Condition</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: เริ่มด้วยเงื่อนไขก่อนหน้า (Start with previous condition) &nbsp;2: เริ่มด้วยเงื่อนไขใหม่ (Start with new condition) &nbsp;3: เริ่มด้วยเงื่อนไขที่ระบุ (Start with specified condition)</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หมายเลข Panel Condition (Panel Condition Number)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DPC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ระบุหมายเลข Panel Condition สำหรับโหลด/บันทึก</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1 ถึง 50: หมายเลข Panel Condition Memory</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">PAS</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านวิธีการเริ่มต้นระบบด้วย Panel Condition</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: เงื่อนไขก่อนหน้า (Previous condition) &nbsp;1: โปรเจกต์ใหม่ (New project) &nbsp;2: โปรเจกต์ที่ระบุ (Specified project)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MPA</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านหมายเลข Panel Condition ที่ใช้งานอยู่</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">1 ถึง 50: หมายเลข Panel Condition Memory</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การควบคุม (Control)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">RPL</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าฟังก์ชันอ่าน Panel Condition เป็น ON หรือ OFF</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">RIP</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะของฟังก์ชันอ่าน Panel Condition (ON หรือ OFF)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ป้ายชื่อ (Label)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LBC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านเงื่อนไขป้ายชื่อ (Label)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ข้อความของเงื่อนไขป้ายชื่อ (Character string of the label condition)</div></div>
+</div>
+</div>

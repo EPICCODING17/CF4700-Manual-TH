@@ -1,0 +1,40 @@
+<!--TITLE:3.18 คำสั่ง List Display-->
+<h3><span class="h3-num">3.18</span>คำสั่ง List Display (List Display Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>รายการค้นหา (Search List)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SLP</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">เลือกประเภทของ List Search</span></div>
+  <div class="cmd-note">ใช้งานได้เมื่อสลับไปแสดงผลแบบ LIST แล้ว ใช้คำสั่ง LST เพื่อสลับไปแสดงผล LIST หรือแตะปุ่มตั้งค่าตามลำดับนี้เพื่อเปิดใช้งานการเปลี่ยนค่า: Home &gt; DISPLAY &gt; LIST &gt; LIST</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: Peak list &nbsp;2: Arbitrary list &nbsp;3: Harmonic list &nbsp;4: Harmonic (fit) list &nbsp;5: All List</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SLN</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ระบุหมายเลขรายการที่ต้องการแก้ไขใน Search List</span></div>
+  <div class="cmd-note">ใช้งานได้เมื่อประเภทการแสดงผล LIST ถูกสลับเป็น Arbitrary ใช้คำสั่ง SLP เพื่อสลับ LIST TYPE หรือแตะปุ่มตั้งค่าตามลำดับนี้และตั้งเป็น Arbitrary เพื่อเปลี่ยนค่า: Home &gt; DISPLAY &gt; LIST &gt; TYPE</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1 ถึง 40 [รายการ]</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SLS</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ตั้งค่าตำแหน่งค้นหาปัจจุบันใน Search List</span></div>
+  <div class="cmd-note">ใช้งานได้เมื่อประเภทการแสดงผล LIST ถูกสลับเป็น Arbitrary ใช้คำสั่ง SLP เพื่อสลับ LIST TYPE หรือแตะปุ่มตั้งค่าตามลำดับนี้และตั้งเป็น Arbitrary เพื่อเปลี่ยนค่า: Home &gt; DISPLAY &gt; LIST &gt; TYPE</div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LCR</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ล้างค่า Search List ที่เลือกไว้</span></div>
+  <div class="cmd-note">ใช้งานได้เมื่อประเภทการแสดงผล LIST ถูกสลับเป็น Arbitrary ใช้คำสั่ง SLP เพื่อสลับ LIST TYPE หรือแตะปุ่มตั้งค่าตามลำดับนี้และตั้งเป็น Arbitrary เพื่อเปลี่ยนค่า: Home &gt; DISPLAY &gt; LIST &gt; TYPE</div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ข้อมูล List (List Data)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LTR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูล List</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ระบุหมายเลขรายการนับจากบนสุด (List number)</div>
+    <div class="lbl">Argument 2</div><div class="val">ระบุหมายเลขรายการนับจากซ้ายสุด: 1: X &nbsp;2: Y &nbsp;3: Harmonic: เปอร์เซ็นต์เนื้อหา (Content percentage)</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าที่อ่านได้: #.####E&plusmn;##</div>
+  </div>
+</div>
+</div>

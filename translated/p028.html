@@ -1,0 +1,52 @@
+<!--TITLE:3.10 คำสั่ง Comparator (ต่อ)-->
+<div class="cmd-group">
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CBR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าที่ตั้งไว้ของแต่ละบล็อก</span></div>
+  <div class="cmd-note">คำสั่งนี้มีไว้เพื่อความเข้ากันได้กับ CF-4500 หากเขียนโปรแกรมใหม่ ให้ใช้คำสั่ง <span class="code">CBG</span> แทน</div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 20: หมายเลขบล็อก</div>
+    <div class="lbl">Argument 2</div><div class="val">1: ความถี่เริ่มต้น [Hz]<br>2: ความถี่สิ้นสุด [Hz]<br>3: ระดับขีดจำกัดบน<br>4: ระดับขีดจำกัดล่าง<br>5: จำนวนครั้งของ NG<br>6: ค่าแกน Y ของข้อมูลผลลัพธ์ comparator: แอมพลิจูด<br>7: ค่าแกน X ของข้อมูลผลลัพธ์ comparator: ความถี่</div>
+    <div class="lbl">Read value 1</div><div class="val">ค่าที่ตั้งไว้ตรงกับแต่ละพารามิเตอร์</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CLD</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">สลับไปหน้าจอรายการบล็อก</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: หน้าจอรายการบล็อก (Block list screen) &nbsp;2: หน้าจอรูปคลื่น (Waveform screen)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CBS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าของแต่ละบล็อก</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 20: หมายเลขบล็อก</div>
+    <div class="lbl">Argument 2 (Argument 3)</div><div class="val">1: ความถี่เริ่มต้น (0 ถึง 40k [Hz])<br>2: ความถี่สิ้นสุด (0 ถึง 40k [Hz])<br>3: ระดับขีดจำกัดบน (&minus;1.7E+19f ถึง +1.7E+19f)<br>4: ระดับขีดจำกัดล่าง (&minus;1.7E+19f ถึง +1.7E+19f)<br>5: จำนวนครั้งของ NG (0 ถึง 255)<br>6: CompLimit (0: UPPER, 1: LOWER, 2: U&amp;L)<br>7: CompMethod (0: PK LEVEL, 1: P.O, 2: AREA, 3: PK MAX, 4: LEVEL, 5: IN MAX)<br>8: AreaUpLevel (0 ถึง 100[%])<br>9: AreaLowLevel (0 ถึง 100[%])</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CBG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าที่ตั้งไว้ของแต่ละบล็อก</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 20: หมายเลขบล็อก</div>
+    <div class="lbl">Argument 2 (Read value)</div><div class="val">1: ความถี่เริ่มต้น (0 ถึง 40k [Hz])<br>2: ความถี่สิ้นสุด (0 ถึง 40k [Hz])<br>3: ระดับขีดจำกัดบน (&minus;1.7E+19f ถึง +1.7E+19f)<br>4: ระดับขีดจำกัดล่าง (&minus;1.7E+19f ถึง +1.7E+19f)<br>5: จำนวนครั้งของ NG (0 ถึง 255)<br>6: ค่าแกน Y ของข้อมูลผลลัพธ์ comparator: แอมพลิจูด (Amplitude)<br>7: ค่าแกน X ของข้อมูลผลลัพธ์ comparator: ความถี่ (Frequency)<br>8: CompLimit (0: UPPER, 1: LOWER, 2: U&amp;L)<br>9: CompMethod (0: PK LEVEL, 1: P.O, 2: AREA, 3: PK MAX, 4: LEVEL, 5: IN MAX)<br>10: AreaUpLevel (0 ถึง 100[%])<br>11: AreaLowLevel (0 ถึง 100[%])</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่าโหมดการทำงาน (Execution Mode Setting)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">RCM</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าโหมดการทำงานของ comparator</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: BLOCK COMP &nbsp;1: SHAPE COMP</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CRM</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านโหมดการทำงานของ comparator</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: BLOCK COMP &nbsp;1: SHAPE COMP</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SCE</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการแสดงผลหน้าจอทำงานของ comparator (OFF หรือ ON)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+</div>

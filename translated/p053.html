@@ -1,0 +1,67 @@
+<!--TITLE:3.24 คำสั่งอื่นๆ และ 3.25 Data Transfer-->
+<h3><span class="h3-num">3.24</span>คำสั่งอื่นๆ (Other Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ข้อผิดพลาด (Error)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ERN</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านรหัสข้อผิดพลาด (ค่าจะถูกล้างเมื่ออ่านแล้ว)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ดูรายละเอียดที่รหัสข้อผิดพลาด (error code)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EVN</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนข้อผิดพลาดที่เกิดขึ้น</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>อื่นๆ (Others)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CAD</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ล้างข้อมูลว่ามีการเกิด A/D Over หรือไม่</span></div>
+</div>
+</div>
+
+<h3><span class="h3-num">3.25</span>คำสั่ง Data Transfer (Data Transfer Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>จำนวนจุดข้อมูล (Number of Data Points)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BDL</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนจุดข้อมูลภายในตัวเครื่อง</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: Time waveform &nbsp;2: Power spectrum &nbsp;3: Fourier spectrum &nbsp;4: Histogram</div>
+    <div class="lbl">Read value 1</div><div class="val">จำนวนจุดข้อมูล</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">WLC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนข้อมูล waveform ที่กำลังแสดงผล</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: Lower screen &nbsp;2: Upper screen</div>
+    <div class="lbl">Read value 1</div><div class="val">จำนวนจุดข้อมูล</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การอ่านข้อมูล (Data Read)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LDD</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูล waveform ของหน้าจอเดี่ยว หรือของหน้าจอล่างในโหมดสองหน้าจอ ในรูปแบบ ASCII code</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: X-axis value &nbsp;2: Y-axis value &nbsp;3: X-axis value, Y-axis value</div>
+    <div class="lbl">Argument 2</div><div class="val">ตำแหน่งเริ่มต้นของการส่งข้อมูล: 0 ขึ้นไป</div>
+    <div class="lbl">Argument 3</div><div class="val">ตำแหน่งสิ้นสุดของการส่งข้อมูล: 0 ขึ้นไป</div>
+    <div class="lbl">Read value 1</div><div class="val">ข้อมูล Waveform</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">UDD</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูล waveform ของหน้าจอบน ในรูปแบบ ASCII code</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1: X-axis value &nbsp;2: Y-axis value &nbsp;3: X-axis value, Y-axis value</div>
+    <div class="lbl">Argument 2</div><div class="val">ตำแหน่งเริ่มต้นของการส่งข้อมูล: 0 ขึ้นไป</div>
+    <div class="lbl">Argument 3</div><div class="val">ตำแหน่งสิ้นสุดของการส่งข้อมูล: 0 ขึ้นไป</div>
+    <div class="lbl">Read value 1</div><div class="val">ข้อมูล Waveform</div>
+  </div>
+</div>
+</div>

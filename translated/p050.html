@@ -1,0 +1,76 @@
+<!--TITLE:3.22 คำสั่ง Data Memory-->
+<h3><span class="h3-num">3.22</span>คำสั่ง Data Memory (Data Memory Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>หมายเลข Data Memory (Data Memory Number)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MBS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ระบุหมายเลข data memory</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">หมายเลข 1 ถึง 300 ของ data memory</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MBC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านหมายเลข data memory</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">หมายเลข 1 ถึง 300 ของ data memory</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MBU</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เพิ่มหมายเลข data memory ขึ้น</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MBD</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ลดหมายเลข data memory ลง</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">DBL</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ระบุหมายเลข data memory ที่จะโหลด/บันทึก</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1 ถึง 999: หมายเลข Data Memory</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ยูทิลิตี้ (Utilities)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MEM</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าตำแหน่งจัดเก็บข้อมูล (หน่วยความจำภายใน, การ์ด SD, แฟลชไดรฟ์ USB)</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: Internal &nbsp;1: SD &nbsp;2: USB (F:) &nbsp;3: USB (G:)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MMT</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านตำแหน่งจัดเก็บข้อมูล (หน่วยความจำภายใน, การ์ด SD, แฟลชไดรฟ์ USB)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: Internal &nbsp;1: SD &nbsp;2: USB (F:) &nbsp;3: USB (G:)</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>Data Memory</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MRC</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เรียกคืนข้อมูล data memory (Recall)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MST</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">บันทึกข้อมูล data memory (Save)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CMM</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ระบุโหมดการบันทึก data memory</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: Manual &nbsp;&nbsp;2: Auto</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CMC</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ล้างข้อมูล data memory ทั้งหมด</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CBC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ล้างข้อมูล data memory ที่เลือก</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1 ถึง 300: หมายเลขของ data memory</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CPO</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ตั้งค่า data memory ให้อยู่ในโหมดป้องกัน (Protect)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CPF</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ยกเลิกโหมดป้องกันของ data memory</span></div>
+</div>
+</div>

@@ -1,0 +1,66 @@
+<!--TITLE:3.17 คำสั่งฟังก์ชัน Display (ต่อ)-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>แกน X (X-axis)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">XLO</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ตั้งค่าแกน X เป็นสเกล Log</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">XLI</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ตั้งค่าแกน X เป็นสเกล Linear</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>แกน Y (Y-axis)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">YLO</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ตั้งค่าแกน Y เป็นสเกล Log</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">YLI</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ตั้งค่าแกน Y เป็นสเกล Linear</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">YAS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าโหมดสเกลของแกน Y</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: Default &nbsp;1: Auto &nbsp;2: Manual</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ข้อมูลรูปคลื่น (Waveform Information)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">WCC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูลของสัญญาณที่แสดงอยู่บนหน้าจอ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">ดูรายละเอียดในตาราง WCC ด้านล่าง</div>
+    <div class="lbl">Argument 2</div><div class="val">ดูรายละเอียดในตาราง WCC ด้านล่าง</div>
+    <div class="lbl">Read value 1</div><div class="val">ดูรายละเอียดในตาราง WCC ด้านล่าง</div>
+  </div>
+</div>
+
+<div class="note">ตาราง WCC — Argument 1 (เลือกหน้าจอ): 1 = ข้อมูลหน้าจอล่าง (Lower screen information), 2 = ข้อมูลหน้าจอบน (Upper screen information) เหมือนกันทุกแถว ส่วน Argument 2 คือหมายเลขรายการ และ Read value คือค่าที่อ่านได้ของรายการนั้น</div>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Argument 2</th><th>Read value</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>หมายเลขประเภทสัญญาณ (1: Time waveform, 21: Spectrum, 49: Histogram, 53: Octave)</td></tr>
+<tr><td>2</td><td>หมายเลขคุณลักษณะของสัญญาณ (1: REAL or PDF, 2: IMAG or CDF, 3: MAG, 4: PHASE, 7: OCTAVE, 9: LIST)</td></tr>
+<tr><td>3</td><td>จำนวนข้อมูลตัวอย่าง (Sampled)</td></tr>
+<tr><td>4</td><td>จำนวนเส้นวิเคราะห์ (Number of analysis lines)</td></tr>
+<tr><td>5</td><td>ประเภทของสัญญาณนาฬิกาสุ่มตัวอย่าง (0: internal, 1: external)</td></tr>
+<tr><td>6</td><td>ช่วงแรงดันไฟฟ้า (Voltage range) [V]</td></tr>
+<tr><td>7</td><td>&mdash;</td></tr>
+<tr><td>8</td><td>&mdash;</td></tr>
+<tr><td>9</td><td>โหมดการวิเคราะห์ (0: baseband, 1: zoom)</td></tr>
+<tr><td>10</td><td>จำนวนครั้งของการเฉลี่ย (Average times)</td></tr>
+<tr><td>11</td><td>ประเภทของ Window (1: RECT, 2: HANN, 3: FLAT)</td></tr>
+<tr><td>12</td><td>&mdash;</td></tr>
+<tr><td>13</td><td>ความถี่เริ่มต้นการวิเคราะห์ [Hz] (เมื่อ baseband = 0)</td></tr>
+<tr><td>14</td><td>ความถี่สิ้นสุดการวิเคราะห์ [Hz]</td></tr>
+<tr><td>15</td><td>&mdash;</td></tr>
+<tr><td>16</td><td>ค่า EU บนแกน Y (EU/V)</td></tr>
+</tbody>
+</table></div>
+</div>

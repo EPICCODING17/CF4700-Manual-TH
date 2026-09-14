@@ -1,0 +1,83 @@
+<!--TITLE:3.13 คำสั่งฟังก์ชัน Trigger (ต่อ)-->
+<div class="cmd-group">
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TRO</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เปิดใช้งานฟังก์ชัน trigger</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TFR</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">ปิดใช้งานฟังก์ชัน trigger</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>แหล่งสัญญาณ Trigger (Trigger Source)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TGS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าแหล่งสัญญาณ trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: Internal &nbsp;1: External</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TIA</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับแหล่งสัญญาณ trigger ไปที่อินพุตภายใน (Internal)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TEX</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับแหล่งสัญญาณ trigger ไปที่อินพุตภายนอก (External)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TGG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านแหล่งสัญญาณ trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: Internal &nbsp;1: External</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TCV</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านช่องสัญญาณต้นทางของ internal trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: ขึ้นอยู่กับจำนวนแชนแนลที่ใช้งานได้ ตั้งแต่ CH1 ถึง 1 cabinet</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ความชัน Trigger (Trigger Slope)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TSG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านทิศทางความชัน (slope) ของ internal trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: + &nbsp;1: &minus; &nbsp;2: +/&minus;</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TEG</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านทิศทางความชันของ external trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: + &nbsp;1: &minus;</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TSS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าทิศทางความชันของ internal trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: + &nbsp;1: &minus; &nbsp;2: +/&minus;</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TGE</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าทิศทางความชันของ external trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: + &nbsp;1: &minus;</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TPP</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับความชัน trigger ไปเป็นบวก (+)</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TPM</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สลับความชัน trigger ไปเป็นบวก (&minus;)</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ตำแหน่ง Trigger (Trigger Position)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TPS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">กำหนดตำแหน่ง trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">ตำแหน่ง trigger: &minus;8191 ถึง 8191</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TPC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านตำแหน่ง trigger</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ตำแหน่ง trigger: &minus;8191 ถึง 8191</div></div>
+</div>
+</div>

@@ -1,0 +1,80 @@
+<!--TITLE:3.10 คำสั่ง Comparator (ต่อ)-->
+<div class="cmd-group">
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CBW</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">สลับเปิด/ปิดโหมดแสดงรูปคลื่นของหน้าจอทำงาน block comparator</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>เงื่อนไข Comparator (Comparator Condition)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SCC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าจำนวนครั้งการยกเลิกกรณี NG (fail) ของหน่วยความจำ shape comparator แต่ละหน่วย</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0 ถึง 10</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SNV</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนครั้งการยกเลิกกรณี NG (fail) ของหน่วยความจำ shape comparator แต่ละหน่วย</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0 ถึง 10</div></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ฟังก์ชันแยกองค์ประกอบการเปลี่ยนแปลง (Fluctuation Component Extraction Function)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">FBT</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าแบนด์ (1/1 octave, 1/3 octave หรือ Manual)</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: 1/1oct. &nbsp;1: 1/3oct. &nbsp;2: Manual</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">COC</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าว่าจะแสดงกล่องข้อความ "Condition Protect" หรือไม่ เมื่อลงทะเบียนเงื่อนไขการตัดสิน และสั่งให้ทำการตัดสิน</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">FFB</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าแบนด์ (1/1 octave, 1/3 octave หรือ Manual)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: 1/1oct. &nbsp;1: 1/3oct. &nbsp;2: Manual</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">COD</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการแสดงกล่องข้อความ "Condition Protect" (ON หรือ OFF) ซึ่งปรากฏขึ้นเมื่อลงทะเบียนเงื่อนไขการตัดสิน และสั่งให้ทำการตัดสิน</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">HFF</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า analog HP filter</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 (fix Ch1)</div>
+    <div class="lbl">Argument 2</div><div class="val">0: OFF &nbsp;1: 1 kHz &nbsp;2: 10 kHz &nbsp;3: band pass filter</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LFF</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า analog LP filter</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0 (fix Ch1)</div>
+    <div class="lbl">Argument 2</div><div class="val">0: OFF &nbsp;1: 1 kHz &nbsp;2: 10 kHz &nbsp;3: band pass filter</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตัดสิน (Judgment)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BCM</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านข้อมูล OK/NA/NG ของ block comparator</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">&minus;1: NA &nbsp;0: OK &nbsp;1: NG</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CSO</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านผลการตัดสิน (อ่านผลลัพธ์แบบไดนามิกตามการตัดสินของ block/shape)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">&minus;1: NG &nbsp;0: NA &nbsp;1: OK</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CTJ</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านจำนวนการตัดสินทั้งหมด (อ่านผลลัพธ์แบบไดนามิกตามการตัดสินของ block/shape)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0 ถึง 65535</div></div>
+</div>
+</div>

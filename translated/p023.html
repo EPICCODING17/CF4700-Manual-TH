@@ -1,0 +1,85 @@
+<!--TITLE:3.6–3.7 Analysis Setting และ Memory Setting-->
+<h3><span class="h3-num">3.6</span>คำสั่งตั้งค่า Analysis (Analysis Setting Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่า Spectrum (Spectrum Setting)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CSF</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า frequency weighting</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: Flat (Z) &nbsp;1: A-weight &nbsp;2: C-weight</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>กระบวนการ Averaging (Averaging Process)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SAS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าเวลาของกระบวนการ averaging</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0.1 ถึง 999.9</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SAW</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าน้ำหนักของ exponential average</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 65535</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ASV</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านเวลาของกระบวนการ average</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0.1 ถึง 999.9</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">AWV</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านน้ำหนักของ exponential average</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">1 ถึง 65535</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การตั้งค่า Octave (Octave Setting)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CAO</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า frequency weighting สำหรับ bundled octave</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: A-weight &nbsp;2: V.v &nbsp;3: V.h</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การคำนวณ Waveform (Waveform Calculation)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">CAF</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านชนิดการคำนวณข้อมูล</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: + &nbsp;2: &minus; &nbsp;3: * &nbsp;4: /</div>
+  </div>
+</div>
+</div>
+
+<h3><span class="h3-num">3.7</span>คำสั่งตั้งค่า Memory (Memory Setting Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การบันทึกอัตโนมัติ (Auto Save)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MRT</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าชนิดข้อมูลสำหรับการบันทึกอัตโนมัติ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">&minus;1: NG &nbsp;0: All &nbsp;1: OK</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">MSR</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านชนิดข้อมูลสำหรับการบันทึกอัตโนมัติ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">&minus;1: NG &nbsp;0: All &nbsp;1: OK</div>
+  </div>
+</div>
+</div>

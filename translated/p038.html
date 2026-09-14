@@ -1,0 +1,67 @@
+<!--TITLE:3.14 คำสั่งฟังก์ชัน Analysis-->
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>สถานะ Trigger (Trigger Status)</div>
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TSC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านว่า trigger ได้รับการเปิดใช้งานหรือไม่</span></div>
+  <div class="cmd-note">ค่าจะถูกล้างเมื่อทำการอ่าน</div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">0: ไม่ถูกต้อง (Invalid) &nbsp;1: ถูกต้อง (Valid)</div></div>
+</div>
+</div>
+
+<h3><span class="h3-num">3.14</span>คำสั่งฟังก์ชัน Analysis (Analysis Function Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ช่วงความถี่ (Frequency Range)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">FRS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าช่วงความถี่ (Frequency span)</span></div>
+  <div class="cmd-note">ดูรายละเอียดที่หน้า 36 หัวข้อ "Table of frequency ranges"</div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">ช่วงความถี่ / ค่าสถานะ (Frequency range / Flag value)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">FRC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านช่วงความถี่ (Frequency span)</span></div>
+  <div class="cmd-note">ดูรายละเอียดที่หน้า 36 หัวข้อ "Table of frequency ranges"</div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ช่วงความถี่ / ค่าสถานะ (Frequency range / Flag value)</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">FQC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านค่าของช่วงความถี่ (Frequency span)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">ค่าที่อ่านได้ / ช่วงความถี่ [Hz] (Read value / Frequency range)</div></div>
+</div>
+</div>
+
+<div class="subhead"><span class="sq"></span>ตาราง Table of frequency ranges</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>ค่าสถานะช่วงความถี่</th><th>ช่วงความถี่ที่ตั้งไว้</th><th>ค่าสถานะช่วงความถี่</th><th>ช่วงความถี่ที่ตั้งไว้</th></tr>
+</thead>
+<tbody>
+<tr><td>4</td><td>40 kHz</td><td>22</td><td>400 Hz</td></tr>
+<tr><td>7</td><td>20 kHz</td><td>25</td><td>200 Hz</td></tr>
+<tr><td>9</td><td>10 kHz</td><td>27</td><td>100 Hz</td></tr>
+<tr><td>12</td><td>5 kHz</td><td>30</td><td>50 Hz</td></tr>
+<tr><td>13</td><td>4 kHz</td><td>31</td><td>40 Hz</td></tr>
+<tr><td>14</td><td>3.2 kHz</td><td>34</td><td>20 Hz</td></tr>
+<tr><td>16</td><td>2 kHz</td><td>36</td><td>10 Hz</td></tr>
+<tr><td>17</td><td>1.6 kHz</td><td>39</td><td>5 Hz</td></tr>
+<tr><td>18</td><td>1 kHz</td><td>40</td><td>4 Hz</td></tr>
+<tr><td>19</td><td>800 Hz</td><td>43</td><td>2 Hz</td></tr>
+<tr><td>21</td><td>500 Hz</td><td>45</td><td>1 Hz</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ฟังก์ชันหน้าต่าง (Window Function)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">WIS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">กำหนดประเภทของหน้าต่าง (Window)</span></div>
+  <div class="cmd-args"><div class="lbl">Argument 1</div><div class="val">1: Rect &nbsp;2: Hann &nbsp;3: Flat</div></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">WIC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสภาวะหน้าต่าง (Window)</span></div>
+  <div class="cmd-args"><div class="lbl">Read value 1</div><div class="val">1: Rect &nbsp;2: Hann &nbsp;3: Flat</div></div>
+</div>
+</div>

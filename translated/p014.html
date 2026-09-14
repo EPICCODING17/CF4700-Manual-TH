@@ -1,0 +1,20 @@
+<!--TITLE:2. ภาพรวมคำสั่ง RS-232C-->
+<div class="subhead"><span class="sq"></span>2.1 ประเภทของคำสั่ง (Command Types)</div>
+<p>คำสั่งของ RS-232C interface บนเครื่อง CF-4700 FFT Comparator แบ่งเป็น 4 ประเภทดังนี้ (badge สีนี้จะกำกับทุกคำสั่งตลอดทั้งเล่ม):</p>
+<div class="type-legend">
+<div class="type-legend-item"><span class="type-badge type-1"><span class="dot"></span>Type 1 &middot; Execute</span><p>ส่งคำสั่ง 3 ตัวอักษรแล้วจบทันที ไม่มีพารามิเตอร์</p></div>
+<div class="type-legend-item"><span class="type-badge type-2"><span class="dot"></span>Type 2 &middot; Set</span><p>คำสั่ง 3 ตัวอักษร ตามด้วยพารามิเตอร์ที่จำเป็น</p></div>
+<div class="type-legend-item"><span class="type-badge type-3"><span class="dot"></span>Type 3 &middot; Get</span><p>ส่งคำสั่ง 3 ตัวอักษรแล้วอ่านค่ากลับ (ข้อความ)</p></div>
+<div class="type-legend-item"><span class="type-badge type-4"><span class="dot"></span>Type 4 &middot; Get Binary</span><p>ส่งคำสั่ง 3 ตัวอักษรแล้วอ่านค่ากลับ (ไบนารี)</p></div>
+</div>
+<div class="subhead"><span class="sq"></span>2.2 การส่งคำสั่ง</div>
+<p>คำสั่งแต่ละคำสั่งส่งพร้อม terminator เสมอ คำสั่ง Type 1 และ Type 2 สามารถส่งรวมกันเป็นชุด (batch) ได้ ตัวอย่างเช่น ตั้งค่า Averaging Mode เป็น Power Spectrum Arithmetic Mean, ตั้งจำนวนการเฉลี่ยเป็น 16 ครั้ง แล้วเริ่ม Average:</p>
+<div class="cmd-group">
+<div class="cmd-card"><div class="cmd-head"><span class="cmd-code">AMS2</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่า Averaging Mode เป็น Power Spectrum Arithmetic Mean</span></div></div>
+<div class="cmd-card"><div class="cmd-head"><span class="cmd-code">AND16</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งจำนวนครั้งของการเฉลี่ย (Averaging) เป็น 16</span></div></div>
+<div class="cmd-card"><div class="cmd-head"><span class="cmd-code">AST</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">เริ่มการเฉลี่ย (Average Start)</span></div></div>
+</div>
+<p>ตัวอย่างการส่งคำสั่งทั้งสามรวมกัน:</p>
+<div class="codeblock">AMS2AND16AST<span class="cm"> + terminator</span></div>
+<div class="warning"><strong>ข้อควรระวัง:</strong> ห้ามใส่ช่องว่างระหว่างคำสั่งกับค่าตัวเลข (เช่น <span class="code">AMS2</span>, <span class="code">AMS2AND16AST</span>) มิฉะนั้นคำสั่งจะถูกปฏิเสธ เมื่อส่งคำสั่งเป็นชุด สามารถแนบคำสั่ง Type 3 ต่อท้ายชุดคำสั่งได้ หากตรวจพบข้อผิดพลาดหรือคำสั่ง/พารามิเตอร์ที่ไม่ถูกต้อง การทำงานจะหยุดที่จุดนั้นทันทีและกลับสู่สถานะรอรับคำสั่ง</div>
+<p class="small">คำสั่งในคู่มือนี้เขียนด้วยตัวพิมพ์ใหญ่ แต่ตัวพิมพ์เล็กจะถูกแปลงเป็นตัวพิมพ์ใหญ่โดยอัตโนมัติและตรวจจับเป็นคำสั่งได้เช่นกัน</p>

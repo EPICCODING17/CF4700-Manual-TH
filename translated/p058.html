@@ -1,0 +1,30 @@
+<!--TITLE:4.1 คำสั่งที่เกี่ยวข้องกับ Voltage Range-->
+<div class="subhead"><span class="sq"></span>คำสั่งที่เกี่ยวข้อง (Related Commands)</div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>ชื่อคำสั่ง</th><th>Write (W)/Read (R)</th><th>หน้าที่</th><th>พารามิเตอร์</th></tr></thead>
+<tbody>
+<tr><td>AAS</td><td>W</td><td>ตั้งค่าช่วงแรงดัน</td><td>0: 10 mVrms (14.1 mV) &nbsp;1: 31.6 mVrms (44.7 mV) &nbsp;2: 100 mVrms (0.141 V) &nbsp;3: 0.316 Vrms (0.447 V) &nbsp;4: 1 Vrms (1.41 V) &nbsp;5: 3.16 Vrms (4.47 V) &nbsp;6: 10 Vrms (14.1 V) &nbsp;7: 31.6 Vrms (44.7 V)<br>หากตั้งค่าที่ไม่สามารถใช้ได้กับเครื่อง CF-4700 ระบบจะแปลงเป็นช่วงแรงดันที่ใช้งานได้กับเครื่องโดยอัตโนมัติ</td></tr>
+<tr><td>AAR</td><td>R</td><td>อ่านช่วงแรงดัน</td><td>4: 1 Vrms (1.41 V) &nbsp;7: 31.6 Vrms (44.7 V)<br>ส่งคืนค่าที่ถูกตั้งไว้จริงใน H/W<br>ไม่ส่งคืนค่า 0–3, 5 หรือ 6</td></tr>
+<tr><td>AMP</td><td>R</td><td>อ่านช่วงแรงดันเป็นค่าแรงดัน</td><td>1 Vrms หรือ 31.6 Vrms<br>ส่งคืนค่าที่ถูกตั้งไว้จริงใน H/W</td></tr>
+<tr><td>TLS</td><td>W</td><td>ตั้งค่า trigger level เป็นเปอร์เซ็นต์</td><td>Trigger level (%)<br>แปลงค่าที่ตั้งด้วยอัตราส่วนที่แปลงมาจาก AAS</td></tr>
+<tr><td>TLC</td><td>R</td><td>อ่าน trigger level</td><td>Trigger level (%)</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="subhead"><span class="sq"></span>คำอธิบายการทำงาน (Command Description)</div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>คำสั่ง</th><th>คำอธิบาย</th></tr></thead>
+<tbody>
+<tr><td>AAS</td><td>หากส่งค่า 0, 1, 2, 3, 5 หรือ 6 เครื่องจะแปลงช่วงแรงดันตามตาราง Table of Voltage Range Conversion (AAS Command Argument) แล้วตั้งค่าให้กับ H/W<br>แปลง trigger level ตามตาราง Table of Trigger Level Conversion (Default Value) แล้วตั้งค่าเริ่มต้นให้กับ H/W<br>แปลง hysteresis ตามตาราง Table of Hysteresis Conversion (Default Value) แล้วตั้งค่าเริ่มต้นให้กับ H/W<br>หากส่งค่า 4 หรือ 7 เครื่องจะตั้งค่าช่วงแรงดันที่ส่งมาให้กับ H/W โดยตรง</td></tr>
+<tr><td>AAR</td><td>ส่งคืนค่า 4 (1 Vrms) หรือ 7 (31.6 Vrms)</td></tr>
+<tr><td>AMP</td><td>ส่งคืนค่า 1 Vrms หรือ 31.6 Vrms</td></tr>
+<tr><td>TLS</td><td>หากค่าที่ส่งด้วย AAS เป็น 0, 1, 2, 3, 5 หรือ 6 อาร์กิวเมนต์จะถูกแปลงตามตาราง Table of Trigger Level Conversion แล้วตั้งค่าให้กับ H/W*1<br>*1 กระบวนการแปลงนี้จะทำงานต่อเนื่องไปจนกว่าจะเกิดเหตุการณ์ต่อไปนี้: ส่งคำสั่ง AAS 4 หรือ 7 / Condition Initialize / Reset (Home &gt; System &gt; Env Set &gt; Reset) / Condition Load / เปลี่ยนค่าที่ตั้งด้วยตนเอง (ช่วงแรงดัน, trigger level, hysteresis) / ปิดเครื่อง<br>หากค่าที่ส่งด้วย AAS เป็น 4 หรือ 7 ค่าอาร์กิวเมนต์จะถูกตั้งให้กับ H/W โดยไม่มีการเปลี่ยนแปลง</td></tr>
+<tr><td>TLC</td><td>อ่านค่า trigger level % ที่ถูกตั้งไว้กับเครื่อง CF-4700</td></tr>
+</tbody>
+</table>
+</div>

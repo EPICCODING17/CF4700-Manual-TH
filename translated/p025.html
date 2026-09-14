@@ -1,0 +1,80 @@
+<!--TITLE:3.9 คำสั่งตั้งค่า System-->
+<h3><span class="h3-num">3.9</span>คำสั่งตั้งค่า System (System Setting Commands)</h3>
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>ไฟส่องหลังจอ (Back Light)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">ELO</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งค่าเวลา (นาที) จนกว่าไฟส่องหลังจอจะปิดโดยอัตโนมัติ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">1 ถึง 60</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การล็อกการป้อนข้อมูล (Operation Input Lock)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EKL</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ล็อกหรือปลดล็อกหน้าจอ</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>เสียงกดปุ่ม (Key Operation Sound)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">EBO</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">เปิดหรือปิดเสียงกดปุ่ม (key operation sound)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BON</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">สั่งเสียงบัซเซอร์กดปุ่ม</span></div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">BOF</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">หยุดเสียงบัซเซอร์กดปุ่ม</span></div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>การล็อกหน้าจอ (Screen Lock)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">LOC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านสถานะการป้องกันด้วยรหัสผ่านของการล็อกหน้าจอ (เปิดหรือปิด)</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">0: OFF &nbsp;1: ON</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>เวลา (Time)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TRS</span><span class="type-badge type-2"><span class="dot"></span>Type 2</span><span class="cmd-desc">ตั้งเวลานาฬิกา</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Argument 1</div><div class="val">YY-MM-DD hh:mm</div>
+  </div>
+</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">TRC</span><span class="type-badge type-3"><span class="dot"></span>Type 3</span><span class="cmd-desc">อ่านเวลา</span></div>
+  <div class="cmd-args">
+    <div class="lbl">Read value 1</div><div class="val">YYYY/MM/DD hh:mm:ss</div>
+  </div>
+</div>
+</div>
+
+<div class="cmd-group">
+<div class="subhead"><span class="sq"></span>รีเซ็ต (Reset)</div>
+
+<div class="cmd-card">
+  <div class="cmd-head"><span class="cmd-code">SRE</span><span class="type-badge type-1"><span class="dot"></span>Type 1</span><span class="cmd-desc">รีเซ็ตเครื่องหลัก (main unit)</span></div>
+</div>
+<div class="warning">สภาวะการตั้งค่าจะกลับไปเป็นค่าเริ่มต้นจากโรงงาน (factory default)</div>
+</div>

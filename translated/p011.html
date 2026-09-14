@@ -1,0 +1,39 @@
+<!--TITLE:1.2 ข้อกำหนด RS-232C Interface (ต่อ)-->
+<div class="subhead"><span class="sq"></span>ข้อกำหนดการสื่อสาร (Communication Specification)</div>
+<div class="table-wrap"><table>
+<tbody>
+<tr><td><strong>ความยาวตัวอักษร (Character length)</strong></td><td class="tabular">7 / 8 บิต</td></tr>
+<tr><td><strong>การตรวจสอบพาริตี (Parity check)</strong></td><td>NONE / ODD / EVEN</td></tr>
+<tr><td><strong>ความยาว Stop bit</strong></td><td class="tabular">1 / 2 บิต</td></tr>
+<tr><td><strong>การควบคุมการไหลของข้อมูล (Xon/Xoff)</strong></td><td>ไม่มี, X ON/OFF, Hardware</td></tr>
+<tr><td><strong>อักขระปิดท้ายคำสั่ง (Terminator)</strong></td><td><span class="code">CR</span> หรือ <span class="code">CR+LF</span></td></tr>
+<tr><td><strong>โหมดการสื่อสาร</strong></td><td>Asynchronous Full-duplex</td></tr>
+<tr><td><strong>อัตราเร็วในการส่งข้อมูล</strong></td><td class="tabular">1200 / 2400 / 4800 / 9600 / 19200 / 38400 / 57600 / 115200 bps</td></tr>
+<tr><td><strong>สายเชื่อมต่อ</strong></td><td>Cross cable (9-pin female &ndash; 9-pin male)</td></tr>
+</tbody>
+</table></div>
+<div class="subhead"><span class="sq"></span>ค่าเริ่มต้นจากโรงงาน (Default Setting)</div>
+<div class="table-wrap"><table>
+<tbody>
+<tr><td><strong>ความยาวตัวอักษร</strong></td><td class="tabular">8 บิต</td></tr>
+<tr><td><strong>การตรวจสอบพาริตี</strong></td><td>None</td></tr>
+<tr><td><strong>ความยาว Stop bit</strong></td><td class="tabular">1 บิต</td></tr>
+<tr><td><strong>Terminator</strong></td><td><span class="code">CR</span></td></tr>
+<tr><td><strong>อัตราเร็วในการส่งข้อมูล</strong></td><td class="tabular">9600 bps</td></tr>
+</tbody>
+</table></div>
+<div class="subhead"><span class="sq"></span>รายละเอียดขาสัญญาณ (Connector Specifications)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Pin</th><th>สัญญาณ</th><th>หน้าที่</th><th>ทิศทาง</th></tr></thead>
+<tbody>
+<tr><td class="tabular">1</td><td>&mdash;</td><td>ไม่ได้ต่อใช้งาน</td><td>&mdash;</td></tr>
+<tr><td class="tabular">2</td><td><span class="code">RXD</span></td><td>รับข้อมูล</td><td>Input</td></tr>
+<tr><td class="tabular">3</td><td><span class="code">TXD</span></td><td>ส่งข้อมูล</td><td>Output</td></tr>
+<tr><td class="tabular">4</td><td>&mdash;</td><td>ไม่ได้ต่อใช้งาน</td><td>&mdash;</td></tr>
+<tr><td class="tabular">5</td><td><span class="code">GND</span></td><td>กราวด์สัญญาณ</td><td>&mdash;</td></tr>
+<tr><td class="tabular">6</td><td>&mdash;</td><td>ไม่ได้ต่อใช้งาน</td><td>&mdash;</td></tr>
+<tr><td class="tabular">7</td><td><span class="code">RTS</span></td><td>ขอส่งข้อมูล</td><td>Output</td></tr>
+<tr><td class="tabular">8</td><td><span class="code">CTS</span></td><td>พร้อมรับการส่ง</td><td>Input</td></tr>
+<tr><td class="tabular">9</td><td>&mdash;</td><td>ไม่ได้ต่อใช้งาน</td><td>&mdash;</td></tr>
+</tbody>
+</table></div>

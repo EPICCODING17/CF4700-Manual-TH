@@ -96,6 +96,7 @@ button{font:inherit}
 .pagepill{font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 .btn-print,.btn-search{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink-soft);cursor:pointer;font-size:.82rem;font-weight:500}
 .btn-print:hover,.btn-search:hover,.btn-search.active{border-color:var(--brand);color:var(--brand)}
+.icon{width:16px;height:16px;flex:0 0 auto}
 
 /* search */
 .search-panel{position:sticky;top:var(--header-h);z-index:39;max-height:0;overflow:hidden;background:var(--surface);border-bottom:1px solid var(--line);transition:max-height .22s cubic-bezier(.22,1,.36,1)}
@@ -353,8 +354,8 @@ def build():
   </div>
   <div class="topbar-actions">
     <span class="pagepill">หน้า {START}&ndash;{END}</span>
-    <button class="btn-search" id="searchToggle" aria-expanded="false" aria-controls="searchPanel">&#128269;<span class="lbl"> ค้นหา</span></button>
-    <button class="btn-print" onclick="window.print()">&#128438;<span class="lbl"> พิมพ์ / PDF</span></button>
+    <button class="btn-search" id="searchToggle" aria-expanded="false" aria-controls="searchPanel"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16" y2="16"></line></svg><span class="lbl"> ค้นหา</span></button>
+    <button class="btn-print" onclick="window.print()"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg><span class="lbl"> พิมพ์ / PDF</span></button>
   </div>
 </div>
 

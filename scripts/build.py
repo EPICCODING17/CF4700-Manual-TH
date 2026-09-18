@@ -180,8 +180,8 @@ ul{padding-left:24px}
 
 .table-scroll{position:relative;margin:18px 0}
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
-table{width:100%;border-collapse:collapse;min-width:440px}
-th,td{padding:12px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:.88rem}
+table{width:max-content;min-width:100%;border-collapse:collapse}
+th,td{padding:12px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:.88rem;white-space:nowrap}
 th{background:var(--bg);font-size:.76rem;font-weight:600;color:var(--ink-soft);letter-spacing:.02em}
 tr:last-child td{border-bottom:0}
 .scroll-hint{display:none;margin:8px 2px 0;font-size:.72rem;color:var(--muted)}

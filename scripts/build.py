@@ -7,6 +7,8 @@ as the reference pattern for future manual-translation projects — see
 memory `cf4700-manual-redesign-pattern`.
 """
 import base64
+import html
+import json
 import os
 import re
 
@@ -92,8 +94,25 @@ button{font:inherit}
 .topbar-title h1{margin:1px 0 0;font-size:.95rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .topbar-actions{margin-left:auto;display:flex;align-items:center;gap:8px}
 .pagepill{font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
-.btn-print{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink-soft);cursor:pointer;font-size:.82rem;font-weight:500}
-.btn-print:hover{border-color:var(--brand);color:var(--brand)}
+.btn-print,.btn-search{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink-soft);cursor:pointer;font-size:.82rem;font-weight:500}
+.btn-print:hover,.btn-search:hover,.btn-search.active{border-color:var(--brand);color:var(--brand)}
+
+/* search */
+.search-panel{position:sticky;top:var(--header-h);z-index:39;max-height:0;overflow:hidden;background:var(--surface);border-bottom:1px solid var(--line);transition:max-height .22s cubic-bezier(.22,1,.36,1)}
+.search-panel.open{max-height:min(70svh,640px)}
+.search-inner{max-width:1280px;margin:0 auto;padding:16px 20px}
+.search-row{display:flex;gap:8px}
+.search-row input{flex:1;min-width:0;height:44px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font-size:.9rem;outline:none}
+.search-row input:focus{border-color:var(--brand)}
+.search-row button{height:44px;padding:0 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink-soft);cursor:pointer;font-size:.82rem}
+.search-status{margin:10px 2px 0;font-size:.76rem;color:var(--muted)}
+.search-results{margin-top:10px;max-height:46svh;overflow:auto;-webkit-overflow-scrolling:touch;display:grid;gap:4px}
+.search-results button{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:baseline;width:100%;padding:10px 12px;border:0;border-radius:10px;background:transparent;color:var(--ink);text-align:left;cursor:pointer}
+.search-results button:hover,.search-results button:focus-visible{background:var(--brand-soft)}
+.search-results .sr-page{grid-row:1/3;color:var(--brand);font-size:.7rem;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.search-results .sr-title{font-size:.86rem;font-weight:500}
+.search-results .sr-snippet{grid-column:2;font-size:.78rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.search-results mark{background:var(--amber-soft);color:var(--amber);border-radius:3px;padding:0 2px}
 
 .shell{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr);gap:40px;padding:32px 20px 100px}
 .toc{position:sticky;top:calc(var(--header-h) + 24px);align-self:start;max-height:calc(100svh - var(--header-h) - 48px);overflow:auto;-webkit-overflow-scrolling:touch}
@@ -222,17 +241,19 @@ tr:last-child td{border-bottom:0}
 @media (max-width:640px){
   .topbar{padding-inline:14px;gap:10px}
   .topbar-title h1{font-size:.84rem}
-  .btn-print .lbl{display:none}
-  .btn-print{width:38px;padding:0;justify-content:center}
+  .btn-print .lbl,.btn-search .lbl{display:none}
+  .btn-print,.btn-search{width:38px;padding:0;justify-content:center}
   .pagebody{padding:20px 18px 24px}
   .pagebody h3{font-size:1.08rem}
   .cmd-args{grid-template-columns:1fr;gap:2px}
   .cmd-args .lbl{margin-top:6px}
   .compare-shot img{max-height:420px}
   .scroll-hint{display:block}
+  .search-inner{padding:14px 16px}
+  .search-row input,.search-row button{height:46px}
 }
 @media print{
-  .topbar,.toc,.toc-scrim,.compare{display:none}
+  .topbar,.toc,.toc-scrim,.search-panel,.compare{display:none}
   .shell{grid-template-columns:1fr;padding:0}
 }
 """
@@ -253,6 +274,13 @@ def load_page(n):
     return title, body
 
 EXTERNAL_IMAGES = False  # set True to reference pages/pNNN.jpg instead of embedding base64
+
+TAG_RE = re.compile(r"<[^>]+>")
+
+def plain_text(body_html):
+    text = TAG_RE.sub(" ", body_html)
+    text = html.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
 
 def pagecard(n):
     title, body = load_page(n)
@@ -290,6 +318,7 @@ def build():
     )
 
     sections_html = []
+    search_index = []
     for key, label, lo, hi, _ in SECTIONS:
         cards = "\n".join(pagecard(n) for n in range(lo, hi + 1))
         sections_html.append(f"""
@@ -298,6 +327,11 @@ def build():
   <p class="section-range">หน้า {lo}-{hi} จาก {TOTAL_PAGES}</p>
 {cards}
 </section>""")
+        for n in range(lo, hi + 1):
+            title, body = load_page(n)
+            search_index.append({"n": n, "t": title, "s": label, "x": plain_text(body)})
+
+    search_index_json = json.dumps(search_index, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
     html = f"""<!doctype html>
 <html lang="th">
@@ -319,7 +353,19 @@ def build():
   </div>
   <div class="topbar-actions">
     <span class="pagepill">หน้า {START}&ndash;{END}</span>
+    <button class="btn-search" id="searchToggle" aria-expanded="false" aria-controls="searchPanel">&#128269;<span class="lbl"> ค้นหา</span></button>
     <button class="btn-print" onclick="window.print()">&#128438;<span class="lbl"> พิมพ์ / PDF</span></button>
+  </div>
+</div>
+
+<div class="search-panel" id="searchPanel">
+  <div class="search-inner">
+    <div class="search-row">
+      <input id="searchInput" type="search" placeholder="ค้นหาทั้งเล่ม เช่น STE, LAN, Setting Key…" autocomplete="off">
+      <button id="searchClose" type="button">ปิด</button>
+    </div>
+    <p class="search-status" id="searchStatus">พิมพ์คำเพื่อค้นหาทั้ง {TOTAL_PAGES} หน้า</p>
+    <div class="search-results" id="searchResults"></div>
   </div>
 </div>
 
@@ -352,9 +398,70 @@ function closeLightbox(e){{
   document.getElementById('lightbox-img').src = '';
 }}
 document.addEventListener('keydown', function(e){{
-  if(e.key === 'Escape'){{ closeLightbox(); closeToc(); }}
+  if(e.key === 'Escape'){{ closeLightbox(); closeToc(); closeSearch(); }}
 }});
 document.querySelectorAll('.toc nav a').forEach(a => a.addEventListener('click', closeToc));
+
+var SEARCH_INDEX = {search_index_json};
+(function(){{
+  var toggle = document.getElementById('searchToggle');
+  var panel = document.getElementById('searchPanel');
+  var input = document.getElementById('searchInput');
+  var status = document.getElementById('searchStatus');
+  var results = document.getElementById('searchResults');
+
+  window.openSearch = function(){{
+    panel.classList.add('open');
+    toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+    setTimeout(function(){{ input.focus(); }}, 120);
+  }};
+  window.closeSearch = function(){{
+    panel.classList.remove('open');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+  }};
+  toggle.addEventListener('click', function(){{
+    panel.classList.contains('open') ? closeSearch() : openSearch();
+  }});
+  document.getElementById('searchClose').addEventListener('click', closeSearch);
+
+  function esc(s){{ return s.replace(/[&<>]/g, function(c){{ return {{'&':'&amp;','<':'&lt;','>':'&gt;'}}[c]; }}); }}
+
+  function snippet(text, q){{
+    var i = text.toLowerCase().indexOf(q);
+    if(i < 0) return esc(text.slice(0, 90));
+    var start = Math.max(0, i - 30);
+    var before = text.slice(start, i);
+    var match = text.slice(i, i + q.length);
+    var after = text.slice(i + q.length, i + q.length + 60);
+    return (start > 0 ? '&hellip;' : '') + esc(before) + '<mark>' + esc(match) + '</mark>' + esc(after);
+  }}
+
+  input.addEventListener('input', function(){{
+    var q = input.value.trim().toLowerCase();
+    if(!q){{
+      results.innerHTML = '';
+      status.textContent = 'พิมพ์คำเพื่อค้นหาทั้ง {TOTAL_PAGES} หน้า';
+      return;
+    }}
+    var hits = SEARCH_INDEX.filter(function(p){{
+      return p.t.toLowerCase().indexOf(q) > -1 || p.x.toLowerCase().indexOf(q) > -1;
+    }}).slice(0, 40);
+    status.textContent = hits.length ? ('พบ ' + hits.length + ' หน้า') : 'ไม่พบผลลัพธ์';
+    results.innerHTML = hits.map(function(p){{
+      var body = p.t.toLowerCase().indexOf(q) > -1 ? esc(p.t) : snippet(p.x, q);
+      return '<button data-n="' + p.n + '"><span class="sr-page">หน้า ' + p.n + '</span><span class="sr-title">' + esc(p.t) + '</span><span class="sr-snippet">' + body + '</span></button>';
+    }}).join('');
+  }});
+
+  results.addEventListener('click', function(e){{
+    var btn = e.target.closest('button[data-n]');
+    if(!btn) return;
+    location.hash = '#p' + btn.dataset.n;
+    closeSearch();
+  }});
+}})();
 </script>
 </body>
 </html>"""
